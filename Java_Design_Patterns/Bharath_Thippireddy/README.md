@@ -1,137 +1,5 @@
 # Java Design Patterns By Bharath
-
-Java Design Patterns
-Course image
-4. Design Pattern Summary/Review Notes
-Course content
-Play
-1. Course and Instructor Introduction
-2min
-Play
-2. How to make the best of this course
-2min
-Play
-3. Slides Used In the Course
-1min
-Start
-4. Design Pattern Summary/Review Notes
-11min
-information alert
-Schedule learning time
-Learning a little each day adds up. Research shows that students who make learning a habit are more likely to reach their goals. Set time aside to learn and get reminders using your learning scheduler.
-Master the popular Core and Java EE Design Patterns in easy steps
-Rating: 4.5 out of 5
-4.5
-1,601 ratings
-12,928
-Students
-6.5 hours
-Total
-Last updated December 2022
-English
-English
-What you'll learn
-Learn what design patterns are and why we need them
-Understand and implement the Creational Patterns
-Understand and implement the Behavioral Patterns
-Understand and implement the Structural Patterns
-Use Dependency Injection and Inversion of Control Patterns
-Master the java ee presentation layer patterns
-Implement a mini project using the MVC and Business Layer Patterns
-Communicate with other developers through the language of Design
-Proxy Pattern
-Prototype Pattern
-Builder Pattern
-Facade Pattern
-All in easy steps
-Description
-The ONLY course that covers the all the important java core and web design patterns!!
-
----
-
-Sample of the reviews:
-
-The concepts are explained in simple and efficient manner. Its easy to understand and since real world scenarios are used as examples able to better relate and retain the concepts learnt. - suriya n
-
-So far, course seems like a perfect match of what i wanted to learn, and I love the hands on aspect! Looking forward to continuing! Thank you! :- Stacey D McCauley
-
-Amazing info, resources, and very concise and in depth knowledge that I thought would never be in any online video/tutorial as well as the categories of it. I think the Singleton is a bad design pattern, but other than that this course is perfect - Nicholas Powell
-
-Respond
-
----
-
-All source code is available for download
-
-Responsive Instructor - All questions answered within 24 hours
-
-Professional video and audio recordings (check the free previews)
-
-----
-
-
-
-Do you have the knowledge of java and want to master java design patterns, then this course is for you.If you are an experienced java developer who wants to fill in any gaps in your knowledge of java design patterns and learn the common design language to communicate with other developers then this course is for you too.
-
-Patterns are reusable solutions to recurring problems arising during software development.This course will introduce you to the important Core(Gang Of Four) and Java EE design patterns.You will understand what each pattern is ,why we need it and then work on implementing it hands on.
-
-The goal of this course is to help you master the concepts of java design patterns,why we need them and implement them from scratch.By the time you finish this course, you will have gained the understanding of Java Design Patterns ,i.e Creational Patterns,Structural Patterns and Behavioral Patterns.You will also learn the Dependency Injection and Inversion Of Control Patterns.You will master the different layers that make up a java EE application and how the design patterns fit in to those layers.You will implement Presentation Layer patterns such as Front Controller ,Model View Controller (MVC) .You will also work with Data Access Object Pattern to connect and work with databases.You will then use all of those together along with business layer patterns to work on a small use-case/project.
-
-What Will I Learn?
-
-Learn what design patterns are and why we need them
-
-Understand and implement the Creational Patterns
-
-Understand and implement the Behavioral Patterns
-
-Understand and implement the Structural Patterns
-
-Use Dependency Injection and Inversion of Control Patterns
-
-Master the Java EE presentation layer patterns
-
-Implement a mini project using the MVC and Business Layer Patterns
-
-All in simple and easy steps
-
-Who this course is for:
-Students with java background
-Or Students who have completed my core java in easy steps course
-Students who want to master the core and java ee design patterns
-Instructor
-Bharath Thippireddy
-IT Architect and Best Selling Instructor- 600000+ students
-Bharath Thippireddy is an Entrepreneur, Software Architect and Public Speaker who has trained 600000 + students across the planet. He is Oracle Certified Developer, Web Component Developer, Business Component Developer, Web Services Developer.
-
-He loves learning new things both in technology and personal development and shares them on YouTube and his web site. He have mentored students in class room trainings as well as in the corporate world both in India as well as in USA. He has spoken on technical topics at several agile conferences. While in India he also voluntarily teaches interview and soft skills at Vivekananda Kendra.
-
-His trainings will help you master Full Stack Development using Java,Python,JavaScript and DevOps, AWS, Docker, Kubernetes.
-
-From 30+ Courses which currently have 600K+ Learners you can pick a track and master
-
-Spring Boot Project Development using Angular and React
-
-Angular and React project creation with Java or Node backend
-
-Complete Python Stack from core Python to Django REST Framework
-
-Docker , Kubernetes, Maven, Jenkins ,GIT , AWS EC2 ,Elastic Beanstalk,ELB,Auto Scaling and more in easy steps
-
-Java (Java Design Patterns,Java Web Services,Java Messaging Service)
-
-Spring modules ( Spring Security, Spring Boot,Spring Data using Hibernate,Spring Data REST)
-
-Serverless programming using AWS Lambda and more
-
-Requirements
-Java Knowledge
-Knowledge of Spring Boot to work on some of the Java EE Patterns
-© 2022 Udemy, Inc.
-
-4. Design Pattern Summary/Review Notes
-Design Pattern Summary/Review Notes
-Singleton
+## Singleton
 
 A singleton pattern is an object creational pattern that allows our application to create one and only one instance of a particular class, no matter how many times that class is used in our application.
 
@@ -143,14 +11,15 @@ Another good example in the JDBC world, the java database connectivity world is 
 
 
 
-UML
+- UML
+
+![Singleton](https://user-images.githubusercontent.com/69948118/210053284-727b58b1-a22e-4430-b5e2-94e9754552ac.png)
 
 
 
 
-
-Sample Code:
-
+- Sample Code:
+```java
 public class DateUtil implements Serializable,Cloneable {
 
 private static final long serialVersionUID = 1L;
@@ -196,7 +65,7 @@ throw new CloneNotSupportedException();
 }
 
 }
-
+```
 
 
 Factory
