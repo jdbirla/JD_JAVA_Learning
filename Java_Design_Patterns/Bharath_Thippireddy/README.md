@@ -20,51 +20,74 @@ Another good example in the JDBC world, the java database connectivity world is 
 
 - Sample Code:
 ```java
+package com.bharath.patterns.singleton;
+
+import java.io.Serializable;
+
 public class DateUtil implements Serializable,Cloneable {
 
-private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
+	private static volatile DateUtil instance;
 
-private static volatile DateUtil instance;
+	private DateUtil() {
 
-private DateUtil() {
+	}
 
-}
+	public static DateUtil getInstance() {
+		if (instance == null) {
+			synchronized (DateUtil.class) {
+				if (instance == null) {
+					instance = new DateUtil();
+				}
+			}
+		}
+		return instance;
 
-public static DateUtil getInstance() {
+	}
 
-if (instance == null) {
-
-synchronized (DateUtil.class) {
-
-if (instance == null) {
-
-instance = new DateUtil();
-
-}
-
-}
-
-}
-
-return instance;
-
-}
-
-protected Object readResolve() {
-
-return instance;
+	protected Object readResolve() {
+		return instance;
+	}
+	
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		throw new CloneNotSupportedException();
+	}
 
 }
 
-@Override
+```
+- single break using reflection api and solution for this problem is ENUM becauce ENUM doesn't have consturctor
+```java
+package com.bharath.patterns.singleton;
 
-protected Object clone() throws CloneNotSupportedException {
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 
-throw new CloneNotSupportedException();
+public class BreakSingletonUsingReflection {
+	public static void main(String[] args) {
+		DateUtil dateUtil = DateUtil.getInstance();
+		DateUtil dateUtil1 = null;
+		
+		Constructor[] declaredConstructors = DateUtil.class.getDeclaredConstructors();
+		  for (Constructor constructor : declaredConstructors) {
+			constructor.setAccessible(true);
+			try {
+				dateUtil1 = (DateUtil) constructor.newInstance();
+			} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
+					| InvocationTargetException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		  System.out.println(dateUtil.hashCode());
+		  System.out.println(dateUtil1.hashCode());
+
+	}
 
 }
 
-}
 ```
 
 
