@@ -57,7 +57,7 @@ public class DateUtil implements Serializable,Cloneable {
 }
 
 ```
-- single break using reflection api and solution for this problem is ENUM becauce ENUM doesn't have consturctor
+- singleton pattern break using reflection api and solution for this problem is ENUM becauce ENUM doesn't have consturctor
 ```java
 package com.bharath.patterns.singleton;
 
