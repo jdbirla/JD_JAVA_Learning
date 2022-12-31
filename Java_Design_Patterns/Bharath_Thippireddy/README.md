@@ -230,10 +230,44 @@ public class Test {
 
 ```
 
+## Adapter
+If you have used a power adapter then you already know what an adapter pattern is .The job of a power adapter is to adapt it to a particular location and a particular switchboard.For example the same laptop plug pins that work in USA will not work in UK and in India.We will have to use appropriate power adapter that can take our laptop pins into it and on the other side of it it will have pins that can go into the local countries switchboard and it can also adapt to the appropriate range in that country.
 
-Flyweight
+Similarly in the world of programming when we have two applications communicating with each other or two objects using each other and one object invokes the method of another object.Then we have to adapt in some cases.
 
+For example here we have a WeatherFinder class which has a findWeather. By passing in a city you can get the weather and we have an implementation of it which will return the weather back and there is a UI class that wants to use the weather finder . But the UI only knows the zip code of the city. It does not have the city information it only has the zip code but it wants to get the weather of it.
 
+That is where an adapter comes in. We will implement an adapter which will take the zip code. The weather UI will invoke the findTemperature Method on the WeatherAdapter it will pass in the zip code. The weather adapter is responsible for looking up for the appropriate city that matches the zip code and hen invoke the weather finder, take the results and return the results back to the weather UI. So it exactly acts like a power adapter. It takes the inputs from the class that wants to use another class because the inputs here are different from what the other side of the relationship expects.
+
+- UML
+![Factory](https://user-images.githubusercontent.com/69948118/210124457-b5b18eeb-f696-4ccf-a6d4-e544c53cd3d1.png)
+
+- Code Design
+![image](https://user-images.githubusercontent.com/69948118/210124482-45d8ff82-868a-416b-89a7-3c2697d58cae.png)
+
+- Sample code
+```java
+package com.bharath.patterns.adapter;
+
+public class WeatherAdapter {
+
+	public int findTemperature(int zipCode) {
+		String city = null;
+		if (zipCode == 19406) {
+			city = "King Of Prussia";
+		}
+		WeatherFinder finder = new WeatherFinderImpl();
+		int temperature = finder.find(city);
+
+		return temperature;
+
+	}
+
+}
+
+```
+
+## Flyweight
 
 A flyweight design pattern can be used to save memory. A flyweight is a structural design pattern instead of creating a large number of similar objects.We can reduce the number of objects that are created by reusing the objects and saving memory. Memory is a huge concern especially when it comes to mobile applications with limited memory.
 
@@ -251,94 +285,49 @@ Similarly for each rectangle he will how to set the length and the breadth by cr
 
 You will do all that by creating one single circle and one single rectangle he will see what the problem is he will implement the problem first and then you will resolve that problem of multiple object creation by using the fly design pattern in the next few lectures.
 
-UML:
+- UML:
+![FlyWeight](https://user-images.githubusercontent.com/69948118/210124618-44e6022d-a604-4c3a-9bd0-8ca866b0b55e.png)
 
+- Code Design:
+![image](https://user-images.githubusercontent.com/69948118/210124655-742194e3-331f-49ab-8c5a-facc7a0a94c0.png)
+![image](https://user-images.githubusercontent.com/69948118/210124659-8383f27a-919e-490b-978c-224eac166098.png)
+![image](https://user-images.githubusercontent.com/69948118/210124982-3acf2caf-63b8-4dc3-8533-3aee4c202472.png)
 
+- Sample Code:
+```java
+package com.bharath.patterns.flyweight;
 
-
-
-
-
-Sample Code:
+import java.util.HashMap;
+import java.util.Map;
 
 public class ShapeFactory {
 
-private static Map<String, Shape> shapes = new HashMap<>();
+	private static Map<String, Shape> shapes = new HashMap<>();
 
-public static Shape getShape(String type) {
+	public static Shape getShape(String type) {
+		Shape shape = null;
+		if (shapes.get(type) != null) {
+			shape = shapes.get(type);
+		} else {
+			if (type.equals("circle")) {
+				shape = new Circle();
+			} else if (type.equals("rectangle")) {
+				shape = new Rectangle();
+			}
+			shapes.put(type, shape);
+		}
+		return shape;
 
-Shape shape = null;
-
-if (shapes.get(type) != null) {
-
-shape = shapes.get(type);
-
-} else {
-
-if (type.equals("circle")) {
-
-shape = new Circle();
-
-} else if (type.equals("rectangle")) {
-
-shape = new Rectangle();
+	}
 
 }
 
-shapes.put(type, shape);
-
-}
-
-return shape;
-
-}
-
-}
+```
 
 
 
 
 
-
-Adapter
-
-
-
-
-
-
-
-If you have used a power adapter then you already know what an adapter pattern is .The job of a power adapter is to adapt it to a particular location and a particular switchboard.For example the same laptop plug pins that work in USA will not work in UK and in India.We will have to use appropriate power adapter that can take our laptop pins into it and on the other side of it it will have pins that can go into the local countries switchboard and it can also adapt to the appropriate range in that country.
-
-Similarly in the world of programming when we have two applications communicating with each other or two objects using each other and one object invokes the method of another object.Then we have to adapt in some cases.
-
-For example here we have a WeatherFinder class which has a findWeather. By passing in a city you can get the weather and we have an implementation of it which will return the weather back and there is a UI class that wants to use the weather finder . But the UI only knows the zip code of the city. It does not have the city information it only has the zip code but it wants to get the weather of it.
-
-That is where an adapter comes in. We will implement an adapter which will take the zip code. The weather UI will invoke the findTemperature Method on the WeatherAdapter it will pass in the zip code. The weather adapter is responsible for looking up for the appropriate city that matches the zip code and hen invoke the weather finder, take the results and return the results back to the weather UI. So it exactly acts like a power adapter. It takes the inputs from the class that wants to use another class because the inputs here are different from what the other side of the relationship expects.
-
-
-
-public class WeatherAdapter {
-
-public int findTemperature(int zipCode) {
-
-String city = null;
-
-if (zipCode == 19406) {
-
-city = "King Of Prussia";
-
-}
-
-WeatherFinder finder = new WeatherFinderImpl();
-
-int temperature = finder.find(city);
-
-return temperature;
-
-}
-
-}
 
 
 
