@@ -324,17 +324,7 @@ public class ShapeFactory {
 
 ```
 
-
-
-
-
-
-
-
-Command
-
-
-
+## Command
 
 
 A command design pattern is a behavioural design pattern from that gang of four patterns. It is used to encapsulate a request as an object and pass it to an invoker the invoker doe not know how to service the request from the client. It will take the command and pass it to a receiver who knows how to perform the action typically.
@@ -363,54 +353,119 @@ The person need not touch the television or he need not know how to perform the 
 
 The receiver here the television can change the implementation of how the on and off should be performed without impacting the remote control and the person.
 
-Sample Code:
+- UML
+- 
+![Command Pattern](https://user-images.githubusercontent.com/69948118/210125328-a3cff45f-2e01-46fd-98bd-191f5d3ffd0c.png)
 
-public class RemoteControl{
+- Code Design
+ ![image](https://user-images.githubusercontent.com/69948118/210126194-75f9e23d-c9bd-4bb1-b610-41dd2c9471a3.png)
+![image](https://user-images.githubusercontent.com/69948118/210126137-c9691a6d-91ca-4c22-b624-bfe5d6ab987b.png)
 
-private Command command;
+- Sample Code:
+```java
+package com.jd.patterns.command;
 
-public void pressButton(){
+public class RemoteControl {
 
-command.execute();
+	private Command command;
+	
+	
+	public void pressButton()
+	{
+		command.execute();
+	}
+
+	public Command getCommand() {
+		return command;
+	}
+
+	public void setCommand(Command command) {
+		this.command = command;
+	}
+
+}
+package com.jd.patterns.command;
+
+public class Person {
+
+	public static void main(String[] args) {
+		Television television = new Television();
+		RemoteControl remoteControl = new RemoteControl();
+
+		OnCommand onCommand = new OnCommand(television);
+		remoteControl.setCommand(onCommand);
+		remoteControl.pressButton();
+		
+		OffCommand offCommand = new OffCommand(television);
+		remoteControl.setCommand(offCommand);
+		remoteControl.pressButton();
+	}
 
 }
 
-}
 
+```
 
-
-Decorator
-
-
-
-
+## Decorator
 
 A decorator pattern is a behavioural pattern that adds additional functionality to an object dynamically at runtime. A decorator wraps an object with additional behaviour without affecting other objects of the same type. The classes in the input output streams in Java use the decorator pattern to read and write files.
 
-
-
 For example lets consider a pizza shop. We have a pizza and we have a base pizza. A plain pizza, pizza by itself doesn't mean anything it is very abstract. A plain pizza probably it is just the dove without any cheese or veggies or any meat on it. And now when the client wants a plain pizza or he can ask for a veggie pizza or a cheese pizza or meat pizza
-
-
 
 At runtime we can dynamically add all these toppings using a pizza decorator as required. A pizza decorator will be implemented by veggie pizza decorator and a cheese pizza decorator. Each of these bring in additional functionality. So if the client asks for a veggie pizza we are going to use the veggie pizza decorator at run time.
 
-
-
 The client ask for a cheese pizza. We can ask the cheese pizza decorator to decorate the plain base pizza with cheese and with veggies as required. The pizza here is the component the plain pizza is a concrete or a base component. The decorator is the pizza decorator and these two are concrete decorators. Both the veggie pizza decorator and the cheese pizza decorator are called concrete decorators so you are going to implement all of that in the next few lectures.
 
+- UML:
+![Decorator](https://user-images.githubusercontent.com/69948118/210126547-e209248b-81e1-4f9a-94cb-3e334c95d9f3.png)
 
+- Code Design:
+![image](https://user-images.githubusercontent.com/69948118/210126553-f51bf3fd-d128-429c-a807-4f8fc6f4cc2f.png)
+![image](https://user-images.githubusercontent.com/69948118/210126558-dda0a0f9-91e4-4af9-965d-dd43ea7f7b8a.png)
 
+- Samle Code:
 
+```java
+package com.jd.patterns.decorator;
 
-Samle Code:
+public class PizzaDecorator implements Pizza {
 
-public class PizzaShop{
+	private Pizza pizza;
 
-public static void main(String args[]){
+	public PizzaDecorator(Pizza pizza) {
+		this.pizza = pizza;
+	}
 
-Pizza pizza = new VeggiePizzaDecorator(new CheesePizzaDecorator(new PlainPizza()));
+	@Override
+	public void bake() {
+		pizza.bake();
+	}
 
 }
 
+package com.jd.patterns.decorator;
+
+public class CheesePizzaDecorator2 extends PizzaDecorator {
+
+	public CheesePizzaDecorator2(Pizza pizza) {
+		super(pizza);
+	}
+
+	public void bake() {
+		super.bake();
+		System.out.println("Adding cheese toppings");
+	}
+
 }
+package com.jd.patterns.decorator;
+
+public class PizzaShop {
+
+	public static void main(String[] args) {
+		Pizza pizza = new VeggiePizzaDecorator(new CheesePizzaDecorator2(new PlainPizza()));
+		pizza.bake();
+	}
+
+}
+
+```
