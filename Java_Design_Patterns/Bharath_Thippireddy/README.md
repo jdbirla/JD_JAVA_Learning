@@ -2,6 +2,7 @@
 
 # Pattern catalog
 ## GOF Pattern Catalog
+![image](https://user-images.githubusercontent.com/69948118/172313772-21bf1902-2c87-4faa-89a5-7aa5fa772a1e.png)
 
 ### [1.Creational Design Pattern](#creational-design-pattern)
 - [Factory Pattern](#factory-pattern)
