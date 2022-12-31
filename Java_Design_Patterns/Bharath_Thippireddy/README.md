@@ -1,4 +1,54 @@
 # Java Design Patterns By Bharath
+
+# Pattern catalog
+## GOF Pattern Catalog
+
+### 1.Creational Design Pattern
+- Factory Pattern
+- Abstract Factory Pattern
+- Singleton Pattern (## Singleton)
+- Prototype Pattern
+- Builder Pattern.
+
+### 2. Structural Design Pattern
+- Adapter Pattern
+- Bridge Pattern
+- Composite Pattern
+- Decorator Pattern
+- Facade Pattern
+- Flyweight Pattern
+- Proxy Pattern
+
+### 3. Behavioral Design Pattern
+- Chain Of Responsibility Pattern
+- Command Pattern
+- Interpreter Pattern
+- Iterator Pattern
+- Mediator Pattern
+- Memento Pattern
+- Observer Pattern
+- State Pattern
+- Strategy Pattern
+- Template Pattern
+- Visitor Pattern
+
+## JEE Pattern
+### 1.Presentation Layer
+- Intercepting filter
+- Front Controller
+- MVC
+- Context Object
+### 2. Business Layer
+- Business Delegate
+- Transfer Object
+- Session Facade
+- Service Locator
+### 3. Data Access Layer
+- Data Access Object
+### 4. Integration Layer
+- Service Activator
+- Web Service Broker
+
 ## Singleton
 
 A singleton pattern is an object creational pattern that allows our application to create one and only one instance of a particular class, no matter how many times that class is used in our application.
