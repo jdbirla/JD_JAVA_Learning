@@ -89,9 +89,7 @@ public class BreakSingletonUsingReflection {
 }
 
 ```
-
-
-Factory
+## Factory
 
 A factory pattern is a creational pattern that abstracts or hides the object creation process. When you think of factory you can think of a car factory a chocolate factory or a toy factory.A car factory is responsible for manufacturing the cars .A car dealer need not worry about how the car is manufactured. He simply asks the car factory to deliver him some cars. The car factory is responsible for manufacturing them and delivering them to the dealer.
 
@@ -113,49 +111,40 @@ We need not create the instance of the driver manager to create objects of type 
 
 We simply use the static method on the factory class and get the object we need.
 
-UML:
-
-
-
-
-
-
+- UML:
+![Factory](https://user-images.githubusercontent.com/69948118/210121601-0e409e3e-61b2-4ecd-9309-3d814fbaeccd.png)
 
 Another example is a pizza store .A pizza store delivers different types of pizzas.We will a parent interface which is implemented by the veg pizza cheese pizza and meat pizza.The pizza store need not worry about how to create each of these pizzas.It simply asked the pizza factory to deliver the type of pizza it wants or to create a type of pizza it wants.so that it can give it to the customer or it can deliver it to the customer.The pizza factory hides the complexity of creating the different types of pizzas from the pizza store.
 
+- Code Design
+![image](https://user-images.githubusercontent.com/69948118/210123051-248fe999-5a3a-482b-be7f-91a78e9b579b.png)
 
-
-Sample Code:
+- Sample Code:
+```java
+package com.bharath.patterns.factory;
 
 public class PizzaFactory {
 
-public static Pizza createPizza(String type) {
+	public static Pizza createPizza(String type) {
+		Pizza p = null;
 
-Pizza p = null;
+		if (type.equals("cheese")) {
+			p = new CheesePizza();
+		} else if (type.equals("chicken")) {
+			p = new ChickenPizza();
+		} else if (type.equals("veggie")) {
+			p = new VeggiePizza();
+		}
 
-if (type.equals("cheese")) {
-
-p = new CheesePizza();
-
-} else if (type.equals("chicken")) {
-
-p = new ChickenPizza();
-
-} else if (type.equals("veggie")) {
-
-p = new VeggiePizza();
+		return p;
+	}
 
 }
 
-return p;
-
-}
-
-}
+```
 
 
-
-Abstract Factory
+## Abstract Factory
 
 Now that you have mastered the Factory design pattern learning and implementing the Abstract Factory pattern will be quite easy because an abstract factory is a factory of factories.That is a factory pattern was hiding the details of object creation and factory of factories or an abstract factory.hides the creation of the factory itself.
 
@@ -167,36 +156,79 @@ Similarly within that database we can have employ information and department inf
 
 It simply creates the factory we need. when we have multiple factories we see in our application.
 
-UML:
+- UML:
+![Abstract Factory](https://user-images.githubusercontent.com/69948118/210122829-f46c621c-5fb8-491c-a228-813f746999d5.png)
 
+- Code design
+![image](https://user-images.githubusercontent.com/69948118/210123039-ff05d27b-c8f1-46cc-98ef-bdf9f1f9a8a2.png)
+- Sample Code:
 
-
-
-
-Sample Code:
+```java
+package com.bharath.patterns.abstractfactory;
 
 public class DaoFactoryProducer {
 
-public static DaoAbstractFactory produce(String factoryType) {
+	public static DaoAbstractFactory produce(String factoryType) {
+		DaoAbstractFactory daf = null;
 
-DaoAbstractFactory daf = null;
+		if (factoryType.equals("xml")) {
+			daf = new XMLDaoFactory();
+		} else if (factoryType.equals("db")) {
+			daf = new DBDaoFactory();
+		}
 
-if (factoryType.equals("xml")) {
+		return daf;
 
-daf = new XMLDaoFactory();
+	}
+}
 
-} else if (factoryType.equals("db")) {
+```
 
-daf = new DBDaoFactory();
+## Template Method:
+
+The template method pattern is a behavioural pattern. And as the name itself says it provides a base template method. When we are working with inheritance in our applications we provide a base template method that should be used by the child classes. The child classes can override certain methods but they should use the base template method as is.
+
+For example we have a data renderer class which can read the data, process the data and then render or display that data to the end user.But in our application we want to render the data in the same way no matter in which format the data is coming in that is if it is xml data or if it is CSV data. We want to render it using the render method in the base class reading the data and processing that data is up to the child classes. The child classes can override the readData and the processData.But we want to provide a base template method with all the implementation in it in that data renderer superclass. This pattern is called template method ,as we are providing a template for a particular method from the parent class that should be used by the child classes.
+
+- UML
+![Template Method](https://user-images.githubusercontent.com/69948118/210122993-6402a96d-dddf-43eb-8dba-b3e970472a41.png)
+
+-Code Design
+![image](https://user-images.githubusercontent.com/69948118/210123096-61874573-20eb-4173-a02c-1a7028a581e5.png)
+
+- Code Sample:
+```java
+package com.jd.patterns.templateMethod;
+
+public abstract class DataRenderer {
+	
+	public void render()
+	{
+		String data = readData();
+		String processData = processData(data);
+		System.out.println(processData);
+	}
+	
+	public abstract String readData();
+	public abstract String processData(String data);
+	
 
 }
 
-return daf;
+package com.jd.patterns.templateMethod;
+
+public class Test {
+	public static void main(String[] args) {
+		DataRenderer dataRenderer = new XMLDataRenderer();
+		dataRenderer.render();
+		CSVDataRenderer csvdataRenderer = new CSVDataRenderer();
+		csvdataRenderer.render();
+	}
 
 }
 
-}
 
+```
 
 
 Flyweight
@@ -265,37 +297,6 @@ return shape;
 
 
 
-Template Method:
-
-
-
-The template method pattern is a behavioural pattern. And as the name itself says it provides a base template method. When we are working with inheritance in our applications we provide a base template method that should be used by the child classes. The child classes can override certain methods but they should use the base template method as is.
-
-
-
-For example we have a data renderer class which can read the data, process the data and then render or display that data to the end user.But in our application we want to render the data in the same way no matter in which format the data is coming in that is if it is xml data or if it is CSV data. We want to render it using the render method in the base class reading the data and processing that data is up to the child classes. The child classes can override the readData and the processData.But we want to provide a base template method with all the implementation in it in that data renderer superclass. This pattern is called template method ,as we are providing a template for a particular method from the parent class that should be used by the child classes.
-
-
-
-Code Sample:
-
-public abstract class DataRenderer{
-
-public void render(){
-
-String data = readData();
-
-String processedData = processData(data);
-
-System.out.println(processedData);
-
-}
-
-public abstract String readData();
-
-public abstract String processData(String data);
-
-}
 
 
 
