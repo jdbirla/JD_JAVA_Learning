@@ -640,17 +640,18 @@ public class Test {
 package com.jd.patterns.facade;
 
 public class OrderFacade {
-	public void processOrder(String name , int quantity) {
+	private OrderProcessor orderProcessor = new OrderProcessor();
 
-		OrderProcessor orderProcessor = new OrderProcessor();
-		if (orderProcessor.checkStock(name)) {
-			String orderId = orderProcessor.placrOrder(name, quantity);
-			orderProcessor.shipOrder(orderId);
+	public void processOrder(String name , int quantity) {
+		if (orderProcessor .checkStock(name)) {
+			String orderId = orderProcessor .placrOrder(name, quantity);
+			orderProcessor .shipOrder(orderId);
 		}
 
 	}
 
 }
+
 
 package com.jd.patterns.facade;
 
