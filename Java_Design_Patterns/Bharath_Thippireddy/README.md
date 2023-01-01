@@ -632,7 +632,43 @@ public class Test {
 ```
 
 
+### Facade Pattern
+![image](https://user-images.githubusercontent.com/69948118/210161077-90b01979-91db-4a49-9c57-7664dd3c5248.png)
+![image](https://user-images.githubusercontent.com/69948118/210161070-170344d6-723d-4cad-93b2-865977a91fbb.png)
+- sample code
+```java
+package com.jd.patterns.facade;
 
+public class OrderFacade {
+	public void processOrder(String name , int quantity) {
+
+		OrderProcessor orderProcessor = new OrderProcessor();
+		if (orderProcessor.checkStock(name)) {
+			String orderId = orderProcessor.placrOrder(name, quantity);
+			orderProcessor.shipOrder(orderId);
+		}
+
+	}
+
+}
+
+package com.jd.patterns.facade;
+
+public class Test {
+
+	public static void main(String[] args) {
+//		OrderProcessor orderProcessor = new OrderProcessor();
+//		if (orderProcessor.checkStock("Macbook")) {
+//			String orderId = orderProcessor.placrOrder("mack", 5);
+//			orderProcessor.shipOrder(orderId);
+//		}
+		OrderFacade orderFacade = new OrderFacade();
+		orderFacade.processOrder("MacBook", 5);
+	}
+
+}
+
+```
 ---
 
 <h2 id="behavioral-design-pattern">3. Behavioral Design Pattern</h2>
