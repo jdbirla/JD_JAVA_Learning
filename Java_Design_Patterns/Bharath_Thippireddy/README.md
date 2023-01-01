@@ -397,6 +397,64 @@ public class PizzaShop {
 }
 
 ```
+- Proxy Pattern(#proxy-pattern)
+![image](https://user-images.githubusercontent.com/69948118/210158942-fe56be23-55f2-494b-8b33-23234a552bde.png)
+![image](https://user-images.githubusercontent.com/69948118/210158948-06099b07-70bc-4258-8a43-f6247fcb0278.png)
+![image](https://user-images.githubusercontent.com/69948118/210158958-2364bc15-3ddb-444b-937f-5d299222822c.png)
+![image](https://user-images.githubusercontent.com/69948118/210158965-27c80057-3114-40cf-84dd-7a7aff5cda9f.png)
+- sample code
+```java
+package com.jd.patterns.proxy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CustomerProxyImpl implements Customer{
+
+	CustomerImpl customerImpl = new CustomerImpl();
+	
+	@Override
+	public int getId() {
+		return customerImpl.getId();
+	}
+
+	@Override
+	public List<Order> getOrders() {
+		ArrayList<Order> arrayList = new ArrayList<Order>();
+		Order order1 = new Order();
+		order1.setId(1);
+		order1.setProductName("Iphone");
+		order1.setQuantity(100);
+
+		arrayList.add(order1);
+		
+		Order order2 = new Order();
+		order2.setId(2);
+		order2.setProductName("Mac");
+		order2.setQuantity(200);
+		
+		arrayList.add(order2);
+
+		return arrayList;
+	}
+
+}
+package com.jd.patterns.proxy;
+
+public class Test {
+
+	public static void main(String[] args) {
+  Customer customer = new CustomerProxyImpl();
+       System.out.println(customer.getId());
+       System.out.println(customer.getOrders());
+	}
+
+}
+
+```
+
+
+
 ---
 
 <h2 id="behavioral-design-pattern">3. Behavioral Design Pattern</h2>
