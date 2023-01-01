@@ -239,6 +239,11 @@ public class DaoFactoryProducer {
 }
 
 ```
+### Prototype Pattern
+![image](https://user-images.githubusercontent.com/69948118/210159699-f12f1a4f-e515-4c1e-b695-37e6dd6a8ca8.png)
+![image](https://user-images.githubusercontent.com/69948118/210159703-9c172fd5-0dcb-4404-8203-ec8ad053e84e.png)
+
+---
 <h2 id="structural-design-pattern">2.Structural Design Pattern</h2>
 
 ## Adapter Pattern
