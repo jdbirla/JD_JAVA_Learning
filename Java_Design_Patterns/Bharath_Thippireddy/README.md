@@ -397,7 +397,7 @@ public class PizzaShop {
 }
 
 ```
-- Proxy Pattern
+### Proxy Pattern
 ![image](https://user-images.githubusercontent.com/69948118/210158942-fe56be23-55f2-494b-8b33-23234a552bde.png)
 ![image](https://user-images.githubusercontent.com/69948118/210158948-06099b07-70bc-4258-8a43-f6247fcb0278.png)
 ![image](https://user-images.githubusercontent.com/69948118/210158958-2364bc15-3ddb-444b-937f-5d299222822c.png)
