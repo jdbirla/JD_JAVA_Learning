@@ -242,7 +242,66 @@ public class DaoFactoryProducer {
 ### Prototype Pattern
 ![image](https://user-images.githubusercontent.com/69948118/210159699-f12f1a4f-e515-4c1e-b695-37e6dd6a8ca8.png)
 ![image](https://user-images.githubusercontent.com/69948118/210159703-9c172fd5-0dcb-4404-8203-ec8ad053e84e.png)
+```java
+package com.jd.patterns.prototype;
 
+public class Game implements Cloneable {
+
+	private int id;
+	private String name;
+	private Membership membership;
+	
+	@Override
+	protected Game clone() throws CloneNotSupportedException {
+		Game game= (Game) super.clone();
+		game.setMembership(new Membership());
+		return game;
+	}
+	
+	public Game(Game game) {
+		this.id = game.id;
+		this.name = game.name;
+		this.membership = new Membership();
+
+	}
+	public Game() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Game [id=" + id + ", name=" + name + ", membership=" + getMembership() + "]";
+	}
+
+	public Membership getMembership() {
+		return membership;
+	}
+
+	public void setMembership(Membership membership) {
+		this.membership = membership;
+	}
+
+
+
+}
+
+```
 ---
 <h2 id="structural-design-pattern">2.Structural Design Pattern</h2>
 
