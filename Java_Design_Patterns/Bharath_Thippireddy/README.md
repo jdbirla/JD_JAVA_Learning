@@ -804,4 +804,14 @@ public class Person {
 
 ```
 
+### Iterator Pattern
+![image](https://user-images.githubusercontent.com/69948118/210161241-86c0da16-19e5-42b1-8241-57c3f86115b5.png)
+
+
+
+
+
+
+
+
 
