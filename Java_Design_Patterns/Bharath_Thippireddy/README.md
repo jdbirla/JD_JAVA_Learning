@@ -824,6 +824,51 @@ public class Person {
 ![image](https://user-images.githubusercontent.com/69948118/210195057-2c263a6f-a77d-43f8-b2d8-10876c985adf.png)
 ![image](https://user-images.githubusercontent.com/69948118/210195104-8d88f6af-7b7f-486e-b5fa-5dd951acd198.png)
 
+```java
+package com.bharath.patterns.interceptingfilter;
+
+import java.io.IOException;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+
+@WebFilter("/*")
+public class UserAgentFilter implements Filter {
+
+	public void destroy() {
+	}
+
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
+
+		String userAgentHeader = ((HttpServletRequest) request).getHeader("User-Agent");
+		System.out.println(userAgentHeader);
+		if (userAgentHeader.contains("Chrome")) {
+			chain.doFilter(request, response);
+		} else {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("badBrowser.jsp");
+			dispatcher.forward(request, response);
+		}
+
+	}
+
+	public void init(FilterConfig fConfig) throws ServletException {
+	}
+
+}
+
+```
+### Front Conroller
+![image](https://user-images.githubusercontent.com/69948118/210206380-0cf861c9-a0db-477d-b384-4c489b47d7ed.png)
+
+### Mini Project
+![image](https://user-images.githubusercontent.com/69948118/210209112-6494567d-8ba1-40d4-81ab-096516e9e559.png)
 
 
 
