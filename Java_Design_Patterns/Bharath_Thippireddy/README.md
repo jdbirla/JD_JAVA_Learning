@@ -50,6 +50,7 @@
 - Service Activator
 - Web Service Broker
 
+### 5. [Inversion of Control Pattern(IOC)](#inversion-of-control-pattern)
 ---
 
 <h2 id="creational-design-pattern">1.Creational Design Pattern</h2>
@@ -807,6 +808,15 @@ public class Person {
 ### Iterator Pattern
 ![image](https://user-images.githubusercontent.com/69948118/210161241-86c0da16-19e5-42b1-8241-57c3f86115b5.png)
 
+---
+## JEE Patterns
+
+## Inversion of Control Pattern
+![image](https://user-images.githubusercontent.com/69948118/210162136-04695fa1-48f4-48ce-a588-fa56b9d17630.png)
+
+## Java EE Basics
+![image](https://user-images.githubusercontent.com/69948118/210194819-ba8a9ba6-2bb4-4e8d-9423-08e1872289b0.png)
+![image](https://user-images.githubusercontent.com/69948118/210194801-13bf94f7-462d-492d-9c83-d47357a86b45.png)
 
 
 
