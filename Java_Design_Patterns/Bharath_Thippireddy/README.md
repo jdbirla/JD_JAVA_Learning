@@ -754,6 +754,118 @@ public class Client {
 
 }
 ```
+### Bridge Pattern
+![image](https://user-images.githubusercontent.com/69948118/172505388-84ed0d19-924b-4413-bd7b-3ffb1fd46b6d.png)
+![image](https://user-images.githubusercontent.com/69948118/172505541-7bd73d74-1586-4622-b9bb-09e7464a16b3.png)
+
+```java
+package bridge;
+
+abstract class TV {
+  Remote remote;
+  
+  TV(Remote r) {
+    this.remote = r;
+  }
+  
+  abstract void on();
+  abstract void off();
+}
+
+class Sony extends TV {
+  Remote remoteType;
+  Sony(Remote r) {
+    super(r);
+    this.remoteType = r;
+  }
+  
+  public void on(){
+    System.out.print("Sony TV ON: ");
+    remoteType.on();
+  }
+    
+  public void off(){
+    System.out.print("Sony TV OFF: ");
+    remoteType.off();
+  }
+}
+    
+class Philips extends TV {
+  Remote remoteType;
+  
+  Philips(Remote r) {
+    super(r);
+    this.remoteType = r;
+  }
+  
+  public void on(){
+    System.out.print("Philips TV ON: ");
+    remoteType.on();
+  }
+    
+  public void off(){
+    System.out.print("Philips TV OFF: ");
+    remoteType.off();
+  }
+}
+
+interface Remote {
+  public void on();
+  public void off();
+}
+
+class OldRemote implements Remote {
+
+  @Override
+  public void on() {
+    System.out.println("ON with Old Remote");
+  }
+
+  @Override
+  public void off() {
+    System.out.println("OFF with old Remote");
+  }
+  
+}
+
+class NewRemote implements Remote {
+
+  @Override
+  public void on() {
+    System.out.println("ON with New Remote");
+  }
+
+  @Override
+  public void off() {
+    System.out.println("OFF with New Remote");
+  }
+  
+}
+
+public class Client {
+  public static void main(String[] args) {
+    TV sonyOldRemote = new Sony(new OldRemote());
+    sonyOldRemote.on();
+    sonyOldRemote.off();
+    System.out.println();
+    
+    TV sonyNewRemote = new Sony(new NewRemote());
+    sonyNewRemote.on();
+    sonyNewRemote.off();
+    System.out.println();
+    
+    TV philipsOldRemote = new Philips(new OldRemote());
+    philipsOldRemote.on();
+    philipsOldRemote.off();
+    System.out.println();
+    
+    TV philipsNewRemote = new Philips(new NewRemote());
+    philipsNewRemote.on();
+    philipsNewRemote.off();
+    
+  }
+}
+```
 ---
 
 <h2 id="behavioral-design-pattern">3. Behavioral Design Pattern</h2>
