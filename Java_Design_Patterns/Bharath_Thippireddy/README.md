@@ -35,7 +35,7 @@
 
 ## JEE Pattern
 ### 1.Presentation Layer
-- Intercepting filter
+- [Intercepting filter](#intercepting-filter)
 - Front Controller
 - MVC
 - Context Object
@@ -817,9 +817,12 @@ public class Person {
 ## Java EE Basics
 ![image](https://user-images.githubusercontent.com/69948118/210194819-ba8a9ba6-2bb4-4e8d-9423-08e1872289b0.png)
 ![image](https://user-images.githubusercontent.com/69948118/210194801-13bf94f7-462d-492d-9c83-d47357a86b45.png)
+![image](https://user-images.githubusercontent.com/69948118/210194926-0dcfcb09-a52a-45a1-a3de-6a1411a84b16.png)
 
-
-
+## Presentation Tier - Patterns
+### Intercepting Filter
+![image](https://user-images.githubusercontent.com/69948118/210195057-2c263a6f-a77d-43f8-b2d8-10876c985adf.png)
+![image](https://user-images.githubusercontent.com/69948118/210195104-8d88f6af-7b7f-486e-b5fa-5dd951acd198.png)
 
 
 
