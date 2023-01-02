@@ -673,6 +673,87 @@ public class Test {
 }
 
 ```
+
+### Composite Pattern
+![image](https://user-images.githubusercontent.com/69948118/172500727-69bd4e54-6c5e-44bf-98a7-43174e2888f7.png)
+![image](https://user-images.githubusercontent.com/69948118/172501001-23a2c3ce-2f41-4ae3-90f0-c2111e318427.png)
+```java
+package composite;
+
+import java.util.ArrayList;
+import java.util.List;
+
+abstract class Account {
+  public abstract float getBalance();
+}
+
+class DepositeAccount extends Account {
+  private String accountNo;
+  private float accountBalance;
+
+  public DepositeAccount(String accountNo, float accountBalance) {
+    super();
+    this.accountNo = accountNo;
+    this.accountBalance = accountBalance;
+  }
+
+  public float getBalance() {
+    return accountBalance;
+  }
+
+}
+
+class SavingAccount extends Account {
+  private String accountNo;
+  private float accountBalance;
+
+  public SavingAccount(String accountNo, float accountBalance) {
+    super();
+    this.accountNo = accountNo;
+    this.accountBalance = accountBalance;
+  }
+
+  public float getBalance() {
+    return accountBalance;
+  }
+}
+
+class CompositeAccount extends Account {
+  private float totalBalance;
+  private List<Account> accountList = new ArrayList<Account>();
+
+  public float getBalance() {
+    totalBalance = 0;
+    for (Account f : accountList) {
+      totalBalance = totalBalance + f.getBalance();
+    }
+    return totalBalance;
+  }
+
+  public void addAccount(Account acc) {
+    accountList.add(acc);
+  }
+
+  public void removeAccount(Account acc) {
+    accountList.add(acc);
+  }
+}
+
+public class Client {
+
+  public static void main(String[] args) {
+    CompositeAccount component = new CompositeAccount();
+
+    component.addAccount(new DepositeAccount("DA001", 100));
+    component.addAccount(new DepositeAccount("DA002", 150));
+    component.addAccount(new SavingAccount("SA001", 200));
+
+    float totalBalance = component.getBalance();
+    System.out.println("Total Balance : " + totalBalance);
+  }
+
+}
+```
 ---
 
 <h2 id="behavioral-design-pattern">3. Behavioral Design Pattern</h2>
