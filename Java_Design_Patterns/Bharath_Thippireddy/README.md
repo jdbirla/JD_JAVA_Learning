@@ -33,10 +33,10 @@
 - [Template Pattern](#template-pattern)
 - [Visitor Pattern](#visitor-pattern)
 
-## JEE Pattern
+## [JEE Pattern](#jee-pattern)
 ### 1.Presentation Layer
 - [Intercepting filter](#intercepting-filter)
-- Front Controller
+- [Front Controller](#front-conroller)
 - MVC
 - Context Object
 ### 2. Business Layer
@@ -51,6 +51,8 @@
 - Web Service Broker
 
 ### 5. [Inversion of Control Pattern(IOC)](#inversion-of-control-pattern)
+
+### 6. [Mini Project](#mini-project)
 ---
 
 <h2 id="creational-design-pattern">1.Creational Design Pattern</h2>
