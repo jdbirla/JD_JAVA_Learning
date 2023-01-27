@@ -1,1 +1,10 @@
 # Java_8_Notes_Durga
+![image](https://user-images.githubusercontent.com/69948118/215027803-155aae6e-a85b-4063-813a-ba93a68c9f8d.png)
+![image](https://user-images.githubusercontent.com/69948118/215027814-124f30a3-40b7-491d-b51d-09bc974e0533.png)
+![image](https://user-images.githubusercontent.com/69948118/215027819-4d3f4b1f-f345-4f97-b9a0-b0070027c5ee.png)
+![image](https://user-images.githubusercontent.com/69948118/215027827-7492881f-aa1c-4e49-8187-36933e42b605.png)
+![image](https://user-images.githubusercontent.com/69948118/215027832-10a6614d-ed14-4a18-9455-b43f3c2c297f.png)
+![image](https://user-images.githubusercontent.com/69948118/215027836-98002bd3-8ec8-4d53-8228-1a4268944b1e.png)
+![image](https://user-images.githubusercontent.com/69948118/215027843-6b137a3b-2ede-4d0c-9076-8d6d5bd55239.png)
+![image](https://user-images.githubusercontent.com/69948118/215027850-8d4b5c9d-2880-4b43-b8c0-5327510f07ca.png)
+![image](https://user-images.githubusercontent.com/69948118/215027862-f421a838-1f5c-4aa7-8a62-aaed19f9992a.png)
