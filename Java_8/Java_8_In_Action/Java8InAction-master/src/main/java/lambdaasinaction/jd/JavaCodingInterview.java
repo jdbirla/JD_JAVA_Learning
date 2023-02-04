@@ -258,6 +258,15 @@ public class JavaCodingInterview {
 		System.out
 				.println("Que 13: Wrtie a program to sort employee based on salary and collect into map by department");
 
+		 Map<String, List<Employee>> employeesByDepartment =
+                employees.stream()
+                        .sorted(Comparator.comparing(Employee::getSalary))
+                        .collect(Collectors.groupingBy(Employee::getDept));
+
+        System.out.println("Employees by department: " + employeesByDepartment);
+		//Employees by department: {DEV=[Employee{id=108, name='Mrp', grade='A', dept='DEV', salary=70000.0, address=[Address [city=Kolkata, country=India], Address [city=Bhopal, country=India]]}, Employee{id=103, name='Abhijit', grade='C', dept='DEV', salary=80000.0, address=[Address [city=Kolkata, country=India], Address [city=Bhopal, country=India]]}], BAU=[Employee{id=104, name='Bhupendra', grade='D', dept='BAU', salary=50000.0, address=[Address [city=Indore, country=India], Address [city=Mumbai, country=India]]}], Lead=[Employee{id=105, name='Niranjan', grade='A', dept='Lead', salary=120000.0, address=[Address [city=Chennai, country=India], Address [city=Tokyo, country=Japan]]}], IT=[Employee{id=102, name='Raju', grade='B', dept='IT', salary=70000.0, address=[Address [city=Chennai, country=India], Address [city=Bangalore, country=India]]}, Employee{id=106, name='Sunil', grade='B', dept='IT', salary=80000.0, address=[Address [city=Chennai, country=India], Address [city=Bangalore, country=India]]}], Manager=[Employee{id=101, name='Ram', grade='A', dept='Manager', salary=60000.0, address=[Address [city=Indore, country=India], Address [city=Pune, country=India]]}, Employee{id=107, name='Gajanand', grade='A', dept='Manager', salary=120000.0, address=[Address [city=Indore, country=India], Address [city=Pune, country=India]]}]}
+
+		
 		Map<String, List<Employee>> collect8 = EmployeeDatabase.getEmployees().stream()
 				.collect(Collectors.groupingBy(Employee::getDept, Collectors.toList())).entrySet().stream()
 				.sorted(Map.Entry.comparingByKey((c1, c2) -> c1.compareTo(c2)))
