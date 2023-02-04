@@ -250,6 +250,11 @@ public class JavaCodingInterview {
 		collect7.forEach((k, v) -> System.out
 				.println("BinaryOperator:: Key : " + k + "\t\t" + "Value : " + v.orElseGet(() -> new Employee())));
 
+		        Map<String, Optional<Employee>> collect6 = EmployeeDatabase.getEmployees().stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.maxBy(Comparator.comparing(e -> e.getSalary()))));
+      collect6.forEach((k,v) -> {
+            System.out.println(k+' '+v.get());
+        });
+		
 		System.out
 				.println("Que 13: Wrtie a program to sort employee based on salary and collect into map by department");
 
