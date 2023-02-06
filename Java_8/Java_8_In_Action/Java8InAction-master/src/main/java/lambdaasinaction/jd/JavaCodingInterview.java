@@ -126,6 +126,17 @@ public class JavaCodingInterview {
 		Map<Integer, Long> collect2 = myList7.stream()
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 		System.out.println(collect2);
+		System.out.println("Find duplicate integer and delete them");
+
+		List<Integer> list = Arrays.asList(1, 2, 3, 4, 2, 3, 1);
+
+		Map<Integer, Long> counted = list.stream()
+			.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+		List<Integer> result = counted.entrySet().stream()
+			.filter(entry -> entry.getValue() == 1)
+			.map(Map.Entry::getKey)
+			.collect(Collectors.toList());
 
 		System.out.println(
 				"-=============================================================================================================");
@@ -186,15 +197,7 @@ public class JavaCodingInterview {
 
 		myList2.stream().filter(a -> !s.add(a)).forEach(System.out::println);
 		
-		List<Integer> list = Arrays.asList(1, 2, 3, 4, 2, 3, 1);
-
-		Map<Integer, Long> counted = list.stream()
-			.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
-		List<Integer> result = counted.entrySet().stream()
-			.filter(entry -> entry.getValue() == 1)
-			.map(Map.Entry::getKey)
-			.collect(Collectors.toList());
+		
 
 		System.out.println("----------------------------------------------------");
 		myList2.stream().filter(a -> !s.add(a)).collect(Collectors.toSet()).forEach(System.out::println);
@@ -267,6 +270,10 @@ public class JavaCodingInterview {
 
 		myList6.stream().sorted(Comparator.comparing(Integer::intValue).reversed()).forEach(System.out::println);
 
+		
+		System.out.println(
+				"-=============================================================================================================");
+		
 		System.out.println("Que 8: Sort the Employee list using inside object adress in which city is available?");
 		List<Employee> empList = EmployeeDatabase.getEmployees();
 
@@ -288,23 +295,23 @@ public class JavaCodingInterview {
 				"Que 12: Assume you have list of employee in various dept, WAP to find highest paid employee from each dept");
 
 		BinaryOperator<Employee> be = (a, b) -> a.getSalary() > b.getSalary() ? a : b;
+		
 		Map<String, Optional<Employee>> collect7 = EmployeeDatabase.getEmployees().stream()
 				.collect(Collectors.groupingBy(Employee::getDept, Collectors.reducing(be)));
+		
 		collect7.forEach((k, v) -> System.out
 				.println("BinaryOperator:: Key : " + k + "\t\t" + "Value : " + v.orElseGet(() -> new Employee())));
 
-		        Map<String, Optional<Employee>> collect6 = EmployeeDatabase.getEmployees().stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.maxBy(Comparator.comparing(e -> e.getSalary()))));
-      collect6.forEach((k,v) -> {
-            System.out.println(k+' '+v.get());
-        });
+		        Map<String, Optional<Employee>> collect6 = EmployeeDatabase.getEmployees().stream()
+				                                         .collect(Collectors.groupingBy(Employee::getDept, Collectors.maxBy(Comparator.comparing(e -> e.getSalary()))));
+			 collect6.forEach((k,v) -> {System.out.println(k+' '+v.get()););
 		
-		System.out
-				.println("Que 13: Wrtie a program to sort employee based on salary and collect into map by department");
+		System.out.println("Que 13: Wrtie a program to sort employee based on salary and collect into map by department");
 
 		 Map<String, List<Employee>> employeesByDepartment =
-                employees.stream()
-                        .sorted(Comparator.comparing(Employee::getSalary))
-                        .collect(Collectors.groupingBy(Employee::getDept));
+								employees.stream()
+									.sorted(Comparator.comparing(Employee::getSalary))
+									.collect(Collectors.groupingBy(Employee::getDept));
 
         System.out.println("Employees by department: " + employeesByDepartment);
 		//Employees by department: {DEV=[Employee{id=108, name='Mrp', grade='A', dept='DEV', salary=70000.0, address=[Address [city=Kolkata, country=India], Address [city=Bhopal, country=India]]}, Employee{id=103, name='Abhijit', grade='C', dept='DEV', salary=80000.0, address=[Address [city=Kolkata, country=India], Address [city=Bhopal, country=India]]}], BAU=[Employee{id=104, name='Bhupendra', grade='D', dept='BAU', salary=50000.0, address=[Address [city=Indore, country=India], Address [city=Mumbai, country=India]]}], Lead=[Employee{id=105, name='Niranjan', grade='A', dept='Lead', salary=120000.0, address=[Address [city=Chennai, country=India], Address [city=Tokyo, country=Japan]]}], IT=[Employee{id=102, name='Raju', grade='B', dept='IT', salary=70000.0, address=[Address [city=Chennai, country=India], Address [city=Bangalore, country=India]]}, Employee{id=106, name='Sunil', grade='B', dept='IT', salary=80000.0, address=[Address [city=Chennai, country=India], Address [city=Bangalore, country=India]]}], Manager=[Employee{id=101, name='Ram', grade='A', dept='Manager', salary=60000.0, address=[Address [city=Indore, country=India], Address [city=Pune, country=India]]}, Employee{id=107, name='Gajanand', grade='A', dept='Manager', salary=120000.0, address=[Address [city=Indore, country=India], Address [city=Pune, country=India]]}]}
