@@ -172,6 +172,11 @@ public class JavaCodingInterview {
 	  List<String> collect10 = customers.stream().map(Customer::getPhoneNumbers).flatMap(List::stream).collect(Collectors.toList());
 
 		System.out.println(collect10);
+				System.out.println("------------------------------------------------------------");
+
+		List<String> collect4 = employees.stream().map(Employee::getAddress).flatMap(List::stream)
+			            .map(ad -> ad.getCity()).distinct().collect(Collectors.toList());
+            System.out.println("collect4 :"+collect4);
 		
 		System.out.println(
 				"-=============================================================================================================");
