@@ -68,6 +68,7 @@ public class JavaCodingInterview {
 				"----------------------------------------JDCounting----------------------------------------------");
 
 		System.out.println("Que3:How to count occurrences of each character of a String in Java 8?");
+		System.out.println("Que3: WAP using stream to find frequncy of each character in given string");
 
 		String someString = "JAVA PROGRAMMER";
 		char[] strArray = someString.toCharArray();
