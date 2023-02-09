@@ -138,6 +138,27 @@ public class JavaCodingInterview {
 			.filter(entry -> entry.getValue() == 1)
 			.map(Map.Entry::getKey)
 			.collect(Collectors.toList());
+		System.out.println("--------------------------------------------------------------");
+
+				System.out.println("Find second or nth most frequent occurance in word it will give result as LinkedHashMap ");
+                      String stJitendra = "aaababddd";
+                Map<String, Long> collect = Arrays.stream(stJitendra.split("")).collect(Collectors.groupingBy(Function.identity() ,Collectors.counting()));
+               // collect.forEach((k,v) -> System.out.println("collect :->"+ k +" : "+v));
+        LinkedHashMap<String, Long> collect1 = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .limit(2)
+                .skip(1)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+        collect1.forEach((k,v) -> System.out.println("collect1 :->"+ k +" : "+v));
+		//Output://collect1 :->d : 3
+
+		System.out.println("Find second or nth most frequent occurance in word it will give result charact ");
+		
+			String s = Arrays.stream(stJitendra.split("")).sorted(Comparator.reverseOrder())
+				.skip(1)
+				.findFirst()
+				.orElseGet(null);
+			System.out.println(" String :"+s);
+		     //Output:// String :d
 
 		System.out.println(
 				"-=============================================================================================================");
@@ -277,8 +298,7 @@ public class JavaCodingInterview {
 		myList6.stream().sorted(Comparator.comparing(Integer::intValue).reversed()).forEach(System.out::println);
 
 		
-		System.out.println(
-				"-=============================================================================================================");
+		System.out.println("--------------------------------------------------------------");
 		
 		System.out.println("Que 8: Sort the Employee list using inside object adress in which city is available?");
 		List<Employee> empList = EmployeeDatabase.getEmployees();
@@ -292,6 +312,18 @@ public class JavaCodingInterview {
 				.collect(Collectors.toList());
 		System.out.println("Sort by Address city: " + empsortbycity);
 
+		System.out.println("Que 9: Second highest salary from employee list return as employee object ");
+					Employee employee = EmployeeDatabase.getEmployees().stream()
+							.sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
+							.skip(1)
+							.findFirst()
+							.orElseGet(null);
+						System.out.println(employee);
+//Employee{id=105, name='Niranjan', grade='A', dept='Lead', salary=110000.0, address=[Address [city=Chennai, country=India], Address [city=Tokyo, country=Japan]]}
+
+		
+		
+		
 		System.out.println(
 				"-=============================================================================================================");
 
