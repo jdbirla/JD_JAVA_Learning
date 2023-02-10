@@ -384,7 +384,25 @@ public class JavaCodingInterview {
 				.collect(Collectors.toMap(a -> a.getKey(), b -> b.getValue(), (es1, es2) -> es1, LinkedHashMap::new));
 
 		collect9.forEach((key, value) -> System.out.println("Key : " + key + "\t\t" + "Value : " + value));
-
+		System.out.println("--------------------------------------------------------------------");
+System.out.println("Que 14: Given a list of employees and a list of departments, write a Java program to group the employees based on their department and
+				    then sort the groups of employees based on the average salary of each department in descending order.");
+	 Map<String, Double> collect = EmployeeDatabase.getEmployees()
+                .stream().collect(Collectors.groupingBy(
+                        Employee::getDept,
+                        Collectors.averagingDouble(Employee::getSalary)
+                ));
+        //collect.forEach((k,v) -> System.out.println(k + " : " +v));
+      Stream<Map.Entry<String, Double>> sorted = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()));
+                      sorted.forEach(s -> System.out.println(s.getKey() + " " +s.getValue()));
+		  ```
+		   Lead 110000.0
+			Manager 90000.0
+			DEV 75000.0
+			IT 75000.0
+			BAU 50000.0
+		   ```
+		   
 		System.out.println(
 				"-=============================================================================================================");
 
