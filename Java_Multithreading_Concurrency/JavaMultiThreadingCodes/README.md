@@ -1,5 +1,10 @@
 # Java Multithreading
-![MultiThreading_notes_page-0001](https://user-images.githubusercontent.com/69948118/216860424-24ccf2c7-d1ef-457f-9d0f-625734d9fd15.jpg)
+![image](https://user-images.githubusercontent.com/69948118/218248122-89606f49-e043-45d1-a699-1526a8f79d7e.png)
+![image](https://user-images.githubusercontent.com/69948118/218248139-f48fafa2-3c41-4ed1-894d-ae47b22f6c7f.png)
+![image](https://user-images.githubusercontent.com/69948118/218248195-bc74b331-64a2-4800-a162-7ea6eef4865c.png)
+
+
+---
 ![MultiThreading_notes_page-0002](https://user-images.githubusercontent.com/69948118/216860431-df312d41-a72c-4340-816a-3fb21eae1896.jpg)
 ![MultiThreading_notes_page-0003](https://user-images.githubusercontent.com/69948118/216860442-435bcea9-f69c-43a0-b55d-d5279cf31225.jpg)
 ![MultiThreading_notes_page-0004](https://user-images.githubusercontent.com/69948118/216860447-04a74d60-4d86-4312-8d07-0ebf32bea231.jpg)
