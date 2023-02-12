@@ -44,7 +44,7 @@ public class ForkJoinSum extends RecursiveAction {
     }
 
     public static void main(String[] args) {
-        int end=5000;
+        int end=100;
         List<Long> data = LongStream.rangeClosed(0, end).boxed().collect(Collectors.toList());
         ForkJoinPool pool = new ForkJoinPool();
         System.out.println("Pool Parallelism: " + pool.getParallelism());

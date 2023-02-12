@@ -29,7 +29,6 @@ public class SumOfNumbersUsingCallable {
         ExecutorService executor = Executors.newFixedThreadPool(2);
         List<Callable<Integer>> taskList = Arrays.asList(callable1,callable2);
         List<Future<Integer>> results = executor.invokeAll(taskList);
-
         int k=0;
         int sum =0;
         for (Future<Integer> result: results){
@@ -39,6 +38,7 @@ public class SumOfNumbersUsingCallable {
         System.out.println("Sum from the threads is: " + sum);
         System.out.println("Correct sum from IntStream.sum is: " + total);
         executor.shutdown();
+
 
 
 

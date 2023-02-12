@@ -15,11 +15,11 @@ public class ExecutorRunnable {
             System.out.println(Thread.currentThread().getName() + " Finished executing at: " + LocalDateTime.now());
         };
 
-        ExecutorService executor = Executors.newFixedThreadPool(10);
+        ExecutorService executor = Executors.newFixedThreadPool(1);
         System.out.println("First Example - executing task with execute() method ");
         executor.execute(runnable);
 
-        System.out.println("Second Example - executing task with submit() method");
+       System.out.println("Second Example - executing task with submit() method");
         Future<String> result = executor.submit(runnable, "COMPLETED");
 
         while (!result.isDone()){

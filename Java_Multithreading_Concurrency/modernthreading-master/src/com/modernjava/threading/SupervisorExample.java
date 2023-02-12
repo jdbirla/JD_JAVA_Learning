@@ -6,7 +6,7 @@ public class SupervisorExample {
         Worker2 worker2 = new Worker2();
         try {
             worker1.executeWork();
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

@@ -8,7 +8,7 @@ public class CourseNotifier {
         //one for the instructor who is writing the course
 
         new Thread (() ->{
-            synchronized (course){
+          synchronized (course){
                 System.out.println(Thread.currentThread().getName() + " is waiting for the course:"
                         + course.getTitle());
                 try {
@@ -20,7 +20,7 @@ public class CourseNotifier {
                 System.out.println(Thread.currentThread().getName() + " the course: " + course.getTitle()
                  + " is now completed");
                 course.notify();
-            }
+           }
 
 
         }, "StudentA").start();

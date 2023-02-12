@@ -1,6 +1,6 @@
 package com.modernjava.threading;
 
-public class FastFoodRestaurantSynchronizedBlock {
+public class  FastFoodRestaurantSynchronizedBlock {
     private String lastClientName;
     private int numberOfBurgersSold;
 
