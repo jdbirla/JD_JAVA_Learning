@@ -141,34 +141,70 @@ docker exec -it <Container Id> /bin/bash  (execute the the commands in the bash 
 ---
 	
 ## SonarQube in a docker contianer with external Database
-	
- 
- 
+- dockercompose.yml
+```yaml
+version: "3.8"
 
-sonar-example
+services:
+  sonarqube:
+    image: techforum/sonarqube-with-custom-plugins-aem:latest
+    container_name: sonarqube
+    depends_on:
+      - db
+    ports:
+      - "9000:9000"
+    networks:
+      - sonarnet
+    environment:
+      - sonar.jdbc.username=sonar
+      - sonar.jdbc.password=sonar
+      - sonar.jdbc.url=jdbc:postgresql://db:5432/sonar
+      - SONARQUBE_ADMIN_PASSWORD=Welcome1
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_logs:/opt/sonarqube/logs
+  db:
+    image: postgres:latest
+    container_name: postgres
+    networks:
+      - sonarnet
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+      - POSTGRES_DB=sonar
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
 
-What is sonar how to get start with it | Example
-```
-Plugins:
-org.sonarsource.scanner.maven sonar-maven-plugin 3.4.0.905 org.jacoco jacoco-maven-plugin 0.8.1
+networks:
+  sonarnet:
+    driver: bridge
 
-jacoco cmd:
-
-clean org.jacoco:jacoco-maven-plugin:prepare-agent install
-sonar cmd:
-
-mvn sonar:sonar
-
-```
-
-1.  Install the SonarQube plugin for Eclipse.
-
-2.  Configure your SonarQube server.
-
-3.  Link your workspace project to the copy on SonarQube.
-
-4.  Add the SonarQube views to your current perspective.
+volumes:
+  sonarqube_data:
+  sonarqube_logs:
+  postgresql_data:
+  ```
+ ---
+ ## Sonarlint connected mode with eclipse and sonarQube in docker
+ - add plugin in eclipse sonarlint
+ - sonarlinit standlone mode
+ ![image](https://user-images.githubusercontent.com/69948118/224470673-b4cccc69-6f9f-4bb4-ab80-176aa5bbb751.png)
+- sonar qube connected mode
+- create project
+![image](https://user-images.githubusercontent.com/69948118/224470765-02b78185-c55a-490b-9557-42cc4b478776.png)
+![image](https://user-images.githubusercontent.com/69948118/224470804-c3c0b09a-7759-4198-b133-85cde6831d92.png)
+![image](https://user-images.githubusercontent.com/69948118/224470811-ee7fe593-894c-473e-ab1f-14bbfce9ffd3.png)
+![image](https://user-images.githubusercontent.com/69948118/224470827-4d3e2bae-8c82-4a05-910d-b4687a8bff09.png)
+![image](https://user-images.githubusercontent.com/69948118/224470845-8cea2624-1f2c-4d8c-9772-380cf1404290.png)
+![image](https://user-images.githubusercontent.com/69948118/224470943-e6cab1df-2d4b-45bb-8527-5dd93cc37418.png)
 
 ---
+## Code Coverage Report with jaCOCO, maven and SonarQube
+- https://github.com/techforum-repo/youttubedata/tree/master/test-coverage-report-jacoco
+- first check if jacoco plugins installed in sonarQube in below URL
+![image](https://user-images.githubusercontent.com/69948118/224471125-f103ce4f-d28b-4c2f-aa57-826c649e70fd.png)
+![image](https://user-images.githubusercontent.com/69948118/224471735-c0d5fa15-d947-4d67-b6a5-cc06693bc2dc.png)
+- We can generate jacoco coverage using eclipse also enabling plugin eclemma
 
+---
 
