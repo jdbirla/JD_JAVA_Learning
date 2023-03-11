@@ -1,0 +1,17 @@
+# Jira
+![image](https://user-images.githubusercontent.com/69948118/224474659-fc762062-92e7-46a3-b123-85339f45f201.png)
+![image](https://user-images.githubusercontent.com/69948118/224474761-6ce9f7c7-8613-44a6-82f2-40f2aab15fcc.png)
+- Create sprint
+![image](https://user-images.githubusercontent.com/69948118/224474889-13b4ca9b-dd10-41a7-9313-a21ca3aba822.png)
+![image](https://user-images.githubusercontent.com/69948118/224474899-d99a6e31-d31f-40ac-be8e-3dccf8c6aac9.png)
+![image](https://user-images.githubusercontent.com/69948118/224474925-cf91c233-93f9-46dd-9ab0-ae06426480e9.png)
+![image](https://user-images.githubusercontent.com/69948118/224475008-b34cd296-6d99-4fb8-a76b-8ed2ab6d26d4.png)
+![image](https://user-images.githubusercontent.com/69948118/224475191-58823252-f10f-4278-a376-849b16322359.png)
+![image](https://user-images.githubusercontent.com/69948118/224475206-cea00940-493b-485b-b37a-3e1c17c964ea.png)
+![image](https://user-images.githubusercontent.com/69948118/224475257-d254656c-8e89-4268-8b12-f1b19439803d.png)
+![image](https://user-images.githubusercontent.com/69948118/224475277-f05fa931-50a4-47fc-9ced-d05d7e6d1bba.png)
+![image](https://user-images.githubusercontent.com/69948118/224475286-b1a1e434-23d9-418a-b5b1-0462fe239b29.png)
+![image](https://user-images.githubusercontent.com/69948118/224475402-5bac5e5b-ce6a-492f-8756-28b44d18736d.png)
+![image](https://user-images.githubusercontent.com/69948118/224475468-a321b003-d384-4bc2-b67b-995911954e16.png)
+![image](https://user-images.githubusercontent.com/69948118/224475473-33d6627b-5095-4704-bf11-a6a3ab57ebe2.png)
+![image](https://user-images.githubusercontent.com/69948118/224475480-1d021f33-7fc2-4327-a7d8-2cae2b54ede5.png)
