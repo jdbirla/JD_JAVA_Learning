@@ -61,17 +61,24 @@ mvn sonar:sonar
 
 
 ---
-## Sonarlint Connected Mode with Eclipse and SonarQube(Docker) 
+## SonarQube in Docker container and boostrap the quality configuration
  - src : https://www.youtube.com/watch?v=PPWeiHz7X00 , https://www.youtube.com/watch?v=cvMCfmZ2XZ0
- - 
-![image](https://user-images.githubusercontent.com/69948118/178614858-7f2a1076-dfcc-4388-8b0f-50b6c220636c.png)
-
-
-
-
-
-
-### Code Quality 
+ - https://www.youtube.com/watch?v=PPWeiHz7X00&list=PLS9bA57u8gj_p6G1or9xcq_W2BLYNxTvB&index=1&ab_channel=TechForum
+ - github : https://github.com/techforum-repo/docker-projects
+ - github : https://gist.github.com/techforum-repo/ce8387c174d92e75add7a9660ecbbc1f
+1. get sonar image fomr ocker  `docker pull sonaqube`
+docker pull <<Image Name>> e.g docker pull sonarqube
+2. run docker container
+```
+	docker run -d --name sonarqube -p 9000:9000 sonarqube:latest (-d In background, --name associate name for the container)
+```
+3. we add custom configuration and gates
+	
+	
+	
+ 
+ 
+ 
 
 sonar-example
 
