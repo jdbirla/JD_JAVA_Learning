@@ -2,6 +2,8 @@
 
 ## Java Source Code Analysis using SonarQube in Eclipse 
 - src : https://www.youtube.com/watch?v=hyBznKcoKEg  , code : https://github.com/Java-Techie-jt/sonar-example
+- code smell , bugs and vulnerabilities
+- 
 ```java
 Plugins:
 org.sonarsource.scanner.maven sonar-maven-plugin 3.4.0.905 org.jacoco jacoco-maven-plugin 0.8.1
