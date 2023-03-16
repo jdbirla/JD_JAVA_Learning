@@ -50,7 +50,35 @@ System.out.println("String to LocalDate : " + d1);  //String to LocalDate : 2011
 ```
 ### java.time.LocalTime: 
 - It deals in time only. It is useful for representing human-based time of day, such as movie times, or the opening and closing times of the local library.
+```java
+LocalTime time = LocalTime.now();  
+System.out.println(time);  //15:19:47.459
+LocalTime time = LocalTime.of(10,43,12);  
+System.out.println(time);  //10:43:12
 
+LocalTime time1 = LocalTime.of(10,43,12);  
+System.out.println(time1);  //10:43:12
+
+LocalTime time2=time1.minusHours(2);  
+LocalTime time3=time2.minusMinutes(34);  
+System.out.println(time3);  //08:09:12
+
+ZoneId zone1 = ZoneId.of("Asia/Kolkata");  
+ZoneId zone2 = ZoneId.of("Asia/Tokyo");  
+LocalTime time1 = LocalTime.now(zone1);  
+System.out.println("India Time Zone: "+time1);  //India Time Zone: 14:56:43.087
+
+LocalTime time2 = LocalTime.now(zone2);  
+System.out.println("Japan Time Zone: "+time2);   //Japan Time Zone: 18:26:43.103
+
+long hours = ChronoUnit.HOURS.between(time1, time2);  
+System.out.println("Hours between two Time Zone: "+hours);   //Hours between two Time Zone: 3
+
+long minutes = ChronoUnit.MINUTES.between(time1, time2);  
+System.out.println("Minutes between two time zone: "+minutes);  //Minutes between two time zone: 210
+
+
+```
 ### java.time.LocalDateTime: 
 - It handles both date and time, without a time zone. It is a combination of LocalDate with LocalTime.
 
