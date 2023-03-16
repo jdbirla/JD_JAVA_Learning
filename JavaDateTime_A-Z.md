@@ -81,17 +81,52 @@ System.out.println("Minutes between two time zone: "+minutes);  //Minutes betwee
 ```
 ### java.time.LocalDateTime: 
 - It handles both date and time, without a time zone. It is a combination of LocalDate with LocalTime.
+```java
+ LocalDateTime now = LocalDateTime.now();  
+ System.out.println("Before Formatting: " + now);  
+ DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");  //Before Formatting: 2017-01-13T17:09:
+ String formatDateTime = now.format(format);  
+ System.out.println("After Formatting: " + formatDateTime);  //After Formatting: 13-01-2017 17:09:42
 
+LocalDateTime a = LocalDateTime.of(2017, 2, 13, 15, 56);    
+System.out.println(a.get(ChronoField.DAY_OF_WEEK));  //1
+System.out.println(a.get(ChronoField.DAY_OF_YEAR));  //44
+
+```
 ### java.time.ZonedDateTime: 
 - It combines the LocalDateTime class with the zone information given in ZoneId class. It represent a complete date time stamp along with timezone information.
+```java
+LocalDateTime  ldt = LocalDateTime.of(2017, Month.JANUARY,  19,   15,   26);  
+ZoneId  india = ZoneId.of("Asia/Kolkata");   
+ZonedDateTime zone1  = ZonedDateTime.of(ldt, india);   
+System.out.println("In India Central Time Zone: " + zone1);  //In India Central Time Zone: 2017-01-19T15:26+05:30[Asia/Kolka
+ZoneId  tokyo = ZoneId.of("Asia/Tokyo");   
+ZonedDateTime zone2   = zone1.withZoneSameInstant(tokyo);   
+System.out.println("In Tokyo Central Time Zone:"  + zone2);  //In Tokyo Central Time Zone:2017-01-19T18:56+09:00[Asia/Tokyo]
 
+```
 ### java.time.OffsetTime: 
 - It handles time with a corresponding time zone offset from Greenwich/UTC, without a time zone ID.
-AD
+```java
+OffsetTime offset = OffsetTime.now();  
+int h = offset.get(ChronoField.HOUR_OF_DAY);  
+System.out.println(h);  /16
+int m = offset.get(ChronoField.MINUTE_OF_DAY);  
+System.out.println(m);  //970
+int s = offset.get(ChronoField.SECOND_OF_DAY);  
+System.out.println(s);  //58224
+```
 
 ### java.time.OffsetDateTime: 
 - It handles a date and time with a corresponding time zone offset from Greenwich/UTC, without a time zone ID.
-
+```java
+OffsetDateTime offsetDT = OffsetDateTime.now();  
+System.out.println(offsetDT);  //2023-03-16T11:29:47.678630300+05:30
+  
+ LocalDateTime now = LocalDateTime.now();  
+ System.out.println("Before Formatting: " + now); //Before Formatting: 2023-03-16T11:29:47.679628900
+ 
+```
 ### java.time.Clock : 
 - It provides access to the current instant, date and time in any given time-zone. Although the use of the Clock class is optional, this feature allows us to test your code for other time zones, or by using a fixed clock, where time does not change.
 
