@@ -50,7 +50,12 @@ https://sci-hub.se/
 ### Want to practice for your next job interview /zoom presentation /speech?
 ![image](https://user-images.githubusercontent.com/69948118/234613182-e89554b5-3fad-4548-9d9c-7ca331353c5a.png)
 ![image](https://user-images.githubusercontent.com/69948118/234613691-469bb600-13f5-43f0-bd88-ea95799ddbc5.png)
+![image](https://user-images.githubusercontent.com/69948118/234614664-778c178b-ddfe-4c1b-afc3-35b30065c67c.png)
+![image](https://user-images.githubusercontent.com/69948118/234615121-3046807e-5817-413a-8cca-ffa7bb4a6475.png)
 
+### No need to remember any excel formula 
+![image](https://user-images.githubusercontent.com/69948118/234617466-251a5916-d744-4dfc-8915-f8ee0e7be675.png)
+![image](https://user-images.githubusercontent.com/69948118/234617801-597cd4c6-5ab8-4a57-9fa4-1c8efbe39665.png)
 
 
 
