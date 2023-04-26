@@ -17,5 +17,21 @@
 ![image](https://user-images.githubusercontent.com/69948118/234600627-c1c01a2d-c89f-4645-8d50-4f59da1c71ef.png)
 ![image](https://user-images.githubusercontent.com/69948118/234601773-142f20dd-de34-4e6b-bf7b-df557d5b31d5.png)
 ![image](https://user-images.githubusercontent.com/69948118/234602599-9697173c-dce6-41fa-8ccb-39e9646b5be1.png)
-- https://slidesgpt.com/  : using chat GPT research and PPT presentation
-- https://slidesgo.com/ : templates
+####  https://slidesgpt.com/  : using chat GPT research and PPT presentation
+![image](https://user-images.githubusercontent.com/69948118/234605465-eca2a12e-6887-40aa-bfa5-0de639423772.png)
+![image](https://user-images.githubusercontent.com/69948118/234605486-c7139eb7-1b2c-4810-a267-bb17b6a5e040.png)
+![image](https://user-images.githubusercontent.com/69948118/234605579-ce6374d9-523d-477f-8724-c9ba2fc443fb.png)
+
+#### https://slidesgo.com/ : templates
+
+![image](https://user-images.githubusercontent.com/69948118/234605693-b20479d0-41a5-4759-9eab-2cf071610a4b.png)
+
+### Junk emails 
+![image](https://user-images.githubusercontent.com/69948118/234606008-9718c8ca-6b3c-4051-aeb8-f3e52ed980af.png)
+
+### Paywall
+![image](https://user-images.githubusercontent.com/69948118/234607027-88789e9f-3ee5-41eb-a94a-93654643e3b1.png)
+![image](https://user-images.githubusercontent.com/69948118/234607514-2760eed7-f3c3-487a-99bb-6711ea6206b4.png)
+
+## Research paper free of cost
+https://sci-hub.se/
