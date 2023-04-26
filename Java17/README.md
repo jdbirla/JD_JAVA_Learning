@@ -81,10 +81,20 @@ Code/Formulas/SQL to English
 ![image](https://user-images.githubusercontent.com/69948118/234623249-8fb56ff8-4075-43f5-890d-9a711997999a.png)
 
 
+## Summary
+![image](https://user-images.githubusercontent.com/69948118/234628708-fdfc5850-a7e5-4dbd-b38a-28f5c43aab5d.png)
+![image](https://user-images.githubusercontent.com/69948118/234628888-632f77ed-9411-4b67-9a53-63aabf0030f0.png)
+![image](https://user-images.githubusercontent.com/69948118/234629290-70c83226-4c30-47b6-ae74-1899677703fd.png)
+![image](https://user-images.githubusercontent.com/69948118/234629671-d354b6dc-4a2f-410b-9d66-bfaedac4c1a6.png)
+
 
 
 ## Chat
 ```
+Aditya be10x 
+List of tools covered so far: 1. Chatgpt 2. gamma.app 3. Slidesgo 4. unroll.me 5. 12ft.io 6. Merlin google chrome extension 7. Askyourpdf 8. yoodli 9. formula dog 10. Formula dog 11. signal hire
+Aditya be10x 
+https://www.signalhire.com
 Aditya be10x 
 https://formula.dog/
 Jitendra
