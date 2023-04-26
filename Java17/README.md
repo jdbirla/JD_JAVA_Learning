@@ -77,6 +77,8 @@ Code/Formulas/SQL to English
 ### Want to find out the email id/phone number of any person on LinkedIn for free
 ![image](https://user-images.githubusercontent.com/69948118/234621370-4839a01b-e2f2-452e-9f4b-6b1c258ae420.png)
 ![image](https://user-images.githubusercontent.com/69948118/234622152-5c9cb480-4a48-4d4a-afc7-c9f96fce31d0.png)
+![image](https://user-images.githubusercontent.com/69948118/234622947-304570fd-aaa2-4363-a0f8-b9a5c1999a27.png)
+![image](https://user-images.githubusercontent.com/69948118/234623249-8fb56ff8-4075-43f5-890d-9a711997999a.png)
 
 
 
