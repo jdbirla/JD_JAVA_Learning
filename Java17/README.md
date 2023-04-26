@@ -47,6 +47,10 @@ https://sci-hub.se/
 ![image](https://user-images.githubusercontent.com/69948118/234612170-12fc1045-3e2f-4129-a94b-18c04e08572d.png)
 ![image](https://user-images.githubusercontent.com/69948118/234612563-770fa9ad-9434-439e-b787-49887c5ed654.png)
 
+### Want to practice for your next job interview /zoom presentation /speech?
+![image](https://user-images.githubusercontent.com/69948118/234613182-e89554b5-3fad-4548-9d9c-7ca331353c5a.png)
+![image](https://user-images.githubusercontent.com/69948118/234613691-469bb600-13f5-43f0-bd88-ea95799ddbc5.png)
+
 
 
 
