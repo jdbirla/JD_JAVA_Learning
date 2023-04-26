@@ -39,4 +39,5 @@ https://sci-hub.se/
 ## summarize any long article/bog /linked post or any type of content
 ![image](https://user-images.githubusercontent.com/69948118/234609569-8fea3570-2cca-4cde-bf4e-99ad1a41e1d7.png)
 ![image](https://user-images.githubusercontent.com/69948118/234609811-d3e389c2-c5b0-4ddc-b483-05a6294965f7.png)
+![image](https://user-images.githubusercontent.com/69948118/234609991-a8107e1e-b142-4f9c-912f-c7e38570f5dd.png)
 
