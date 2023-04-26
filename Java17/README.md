@@ -33,11 +33,22 @@
 ![image](https://user-images.githubusercontent.com/69948118/234607027-88789e9f-3ee5-41eb-a94a-93654643e3b1.png)
 ![image](https://user-images.githubusercontent.com/69948118/234607514-2760eed7-f3c3-487a-99bb-6711ea6206b4.png)
 
-## Research paper free of cost
+### Research paper free of cost
 https://sci-hub.se/
 
-## summarize any long article/bog /linked post or any type of content
+### summarize any long article/bog /linked post or any type of content
 ![image](https://user-images.githubusercontent.com/69948118/234609569-8fea3570-2cca-4cde-bf4e-99ad1a41e1d7.png)
 ![image](https://user-images.githubusercontent.com/69948118/234609811-d3e389c2-c5b0-4ddc-b483-05a6294965f7.png)
 ![image](https://user-images.githubusercontent.com/69948118/234609991-a8107e1e-b142-4f9c-912f-c7e38570f5dd.png)
+![image](https://user-images.githubusercontent.com/69948118/234610713-bac272de-5068-4467-b43c-11f624e9e977.png)
+
+### Want to read any sort of PDF very fast?
+![image](https://user-images.githubusercontent.com/69948118/234611992-e4a8d843-d22f-45ed-a803-e821a680e244.png)
+![image](https://user-images.githubusercontent.com/69948118/234612170-12fc1045-3e2f-4129-a94b-18c04e08572d.png)
+
+
+
+
+
+
 
