@@ -70,7 +70,54 @@ Code/Formulas/SQL to English
 ![image](https://user-images.githubusercontent.com/69948118/234617801-597cd4c6-5ab8-4a57-9fa4-1c8efbe39665.png)
 ![image](https://user-images.githubusercontent.com/69948118/234618668-8d03682b-c659-47b5-8bae-0ce6390a4414.png)
 
+### Want to understand complicated excel formulas in plain english language
+![image](https://user-images.githubusercontent.com/69948118/234619310-522ed573-3021-4d1c-b2dc-ea30186a7072.png)
+![image](https://user-images.githubusercontent.com/69948118/234619377-a3fe8982-d580-4979-8ca4-cc8b06b2ef12.png)
 
+
+## Chat
+Aditya be10x 
+https://formula.dog/
+Jitendra
+email
+Aditya be10x 
+https://app.yoodli.ai/
+Aditya be10x 
+askyourpdf.com
+Aditya be10x 
+https://chrome.google.com/webstore/detail/merlin-chatgpt-assistant/camppjleccjaphfdbohjdohecfnoikec
+Aditya be10x 
+Merlin chrome extension
+Aditya be10x 
+https://sci-hub.se/
+Aditya be10x 
+https://12ft.io/
+Jitendra
+what is rollup?
+Aditya be10x 
+https://unroll.me/
+Aditya be10x 
+https://unroll.me/
+Aditya be10x 
+https://slidesgo.com/
+Jitendra
+yes
+Aditya be10x 
+I am working in swiggy as a marketing manager. Zomato has just launched the zomato gold suscription. My boss at Swiggy has asked me to prepare a 10 page presentation on zomato gold and its implication on swiggy's business. Can you give me the outline for it?
+Aditya be10x 
+https://gamma.app/
+Aditya be10x 
+gamma.app
+Jitendra
+yes
+Aditya be10x 
+https://chat.openai.com/chat
+Jitendra
+email
+Jitendra
+email
+Jitendra
+super
 
 
 
