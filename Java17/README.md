@@ -76,6 +76,7 @@ Code/Formulas/SQL to English
 
 
 ## Chat
+```
 Aditya be10x 
 https://formula.dog/
 Jitendra
@@ -113,6 +114,7 @@ yes
 Aditya be10x 
 https://chat.openai.com/chat
 Jitendra
+```
 email
 Jitendra
 email
