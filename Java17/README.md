@@ -54,8 +54,21 @@ https://sci-hub.se/
 ![image](https://user-images.githubusercontent.com/69948118/234615121-3046807e-5817-413a-8cca-ffa7bb4a6475.png)
 
 ### No need to remember any excel formula 
+```
+English to MS Excel/Google Sheet/Airtable
+
+English to Regex
+
+English to VBA Code
+
+English to SQL New
+
+Code/Formulas/SQL to English
+```
+
 ![image](https://user-images.githubusercontent.com/69948118/234617466-251a5916-d744-4dfc-8915-f8ee0e7be675.png)
 ![image](https://user-images.githubusercontent.com/69948118/234617801-597cd4c6-5ab8-4a57-9fa4-1c8efbe39665.png)
+![image](https://user-images.githubusercontent.com/69948118/234618668-8d03682b-c659-47b5-8bae-0ce6390a4414.png)
 
 
 
