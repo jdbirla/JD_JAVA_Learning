@@ -74,6 +74,12 @@ Code/Formulas/SQL to English
 ![image](https://user-images.githubusercontent.com/69948118/234619310-522ed573-3021-4d1c-b2dc-ea30186a7072.png)
 ![image](https://user-images.githubusercontent.com/69948118/234619377-a3fe8982-d580-4979-8ca4-cc8b06b2ef12.png)
 
+### Want to find out the email id/phone number of any person on LinkedIn for free
+![image](https://user-images.githubusercontent.com/69948118/234621370-4839a01b-e2f2-452e-9f4b-6b1c258ae420.png)
+![image](https://user-images.githubusercontent.com/69948118/234622152-5c9cb480-4a48-4d4a-afc7-c9f96fce31d0.png)
+
+
+
 
 ## Chat
 ```
