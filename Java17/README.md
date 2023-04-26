@@ -45,6 +45,7 @@ https://sci-hub.se/
 ### Want to read any sort of PDF very fast?
 ![image](https://user-images.githubusercontent.com/69948118/234611992-e4a8d843-d22f-45ed-a803-e821a680e244.png)
 ![image](https://user-images.githubusercontent.com/69948118/234612170-12fc1045-3e2f-4129-a94b-18c04e08572d.png)
+![image](https://user-images.githubusercontent.com/69948118/234612563-770fa9ad-9434-439e-b787-49887c5ed654.png)
 
 
 
