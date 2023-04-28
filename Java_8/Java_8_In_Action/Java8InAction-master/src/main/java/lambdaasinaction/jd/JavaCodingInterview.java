@@ -153,10 +153,10 @@ public class JavaCodingInterview {
 
 		System.out.println("Find second or nth most frequent occurance in word it will give result charact ");
 		
-			String s = Arrays.stream(stJitendra.split("")).sorted(Comparator.reverseOrder())
-				.skip(1)
-				.findFirst()
-				.orElseGet(null);
+			 String s = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .limit(2)
+                .skip(1).map(Map.Entry::getKey)
+                .findFirst().get();
 			System.out.println(" String :"+s);
 		     //Output:// String :d
 
