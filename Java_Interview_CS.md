@@ -62,9 +62,7 @@ Will this code compile?
 ```java
 class Animal {
 String name;
-public Animal() {
-this.name = "Default Name";
-}
+
 // This is called a one argument constructor.
 public Animal(String name) {
 this.name = name;
