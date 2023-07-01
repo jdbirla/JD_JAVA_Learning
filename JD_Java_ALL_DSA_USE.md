@@ -1,5 +1,21 @@
 # JD_Java_ALL_DSA_USE
 
+# Table of contents
+
+- [JD_Java_ALL_DSA_USE](#jd_java_all_dsa_use)
+  - [Array](#array)
+  - [ArrayList:](#arraylist)
+  - [LinkedList](#linkedlist)
+  - [Stack:](#stack)
+  - [Queue:](#queue)
+  - [Hashtable:](#hashtable)
+  - [HashSet:](#hashset)
+  - [TreeSet](#treeset)
+  - [LinkedHashSet:](#linkedhashset)
+  - [HashMap:](#hashmap)
+  - [TreeMap:](#treemap)
+  - [LinkedHashMap:](#linkedhashmap)
+
 ## Array
 - A fixed-size collection of elements of the same type, accessed by an index.
 ```java
