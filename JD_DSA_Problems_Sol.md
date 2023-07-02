@@ -469,53 +469,93 @@ public class MissingNumber {
 
 ```
 
-## 
-- 
+## Rotate an array by K positions.
+```
+N=6 and k=2
+If Arr[] = {1, 2, 3, 4, 5, 6} and k=2
+then rotated array will be  {5, 6, 1, 2,  3,  4}
+ ```
+- Array rotation after 1 step
+6 1 2 3 4 5 
+- Array rotation after 2 step
+5 6 1 2 3 4 
+
 ```java
+package com.jd.interviewprep.dsa.prob;
+
+public class RotateArrayByKPoition {
+	public static void main(String[] args) {
+
+		int arr[] = { 1, 2, 3, 4, 5, 6 };
+
+		rotateBruteForce(arr, 2);
+
+	}
+
+	public static int[] rotateBruteForce(int[] nums, int k) {
+		for (int i = 0; i < k; i++) {
+			for (int j = nums.length - 1; j > 0; j--) {
+				// move each number by 1 place
+				int temp = nums[j];
+				nums[j] = nums[j - 1];
+				nums[j - 1] = temp;
+			}
+			System.out.println("Array rotation after " + (i + 1) + " step");
+			printArray(nums);
+			System.out.println();
+		}
+		return nums;
+	}
+	public static void printArray(int []arr)
+    {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
 
 ```
 
+##  Implement a stack using array.
+- https://java2blog.com/implement-stack-using-array-in-java/
+
+
+## implement a stack using Linked List.
+- https://java2blog.com/implement-stack-using-linked-list-in-java/
+
+
+## Implement Stack using two Queues in java
+
+- https://java2blog.com/implement-stack-using-two-queues-in-java/
+
+
+## Sort a Stack using another stack
+
+- https://java2blog.com/sort-stack-using-another-stack/
+
+## Queue implementation in java
+- https://java2blog.com/implement-queue-using-array-in-java/
+
+## Implement Queue using Linked List in java
+
+- https://java2blog.com/implement-queue-using-linked-list-in-java/
+
+## Implement singly linked list in java
+- https://java2blog.com/implement-singly-linked-list-in-java/
+
+## Reverse a linked list in java
+- https://java2blog.com/how-to-reverse-linked-list-in-java/
+
+## Find the middle element of a linked list in java
+- https://java2blog.com/find-middle-element-of-linkedlist-in/
+
+## Find nth element from end of linked list
+- https://java2blog.com/find-nth-element-from-end-of-linked-list/
+
+## How to check if linked list is palindrome in java
+- https://www.java2blog.com/how-to-check-if-linked-list-is/
+
+## Doubly Linked List in java
+- https://java2blog.com/doubly-linked-list-java/
+
 ## 
-- 
-```java
-
-```
-
-
-## 
-- 
-```java
-
-```
-
-
-## 
-- 
-```java
-
-```
-
-
-## 
-- 
-```java
-
-```
-
-## 
-- 
-```java
-
-```
-
-## 
-- 
-```java
-
-```
-
-## 
-- 
-```java
-
-```
