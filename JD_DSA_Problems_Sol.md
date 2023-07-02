@@ -1,6 +1,10 @@
 # JD_DSA_Problems_Solutions
 
-
+- JavaTPoint:
+    - All Programs: https://www.javatpoint.com/java-programs
+- Java2Blog
+    - https://java2blog.com/java-coding-interview-questions/
+      
 ##  How do you reverse a string in Java?
 - Output: hello world
 StringBuilder : dlrow olleh
