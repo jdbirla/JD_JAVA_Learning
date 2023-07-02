@@ -2,7 +2,8 @@
 
 
 ##  How do you reverse a string in Java?
-
+- Output: hello world
+StringBuilder : dlrow olleh
 ```java
 package com.jd.interviewprep.dsa.prob;
 
