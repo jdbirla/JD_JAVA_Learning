@@ -3,6 +3,7 @@
 # Table of contents
 
 - [JD_Java_ALL_DSA_USE](#jd_java_all_dsa_use)
+  - [DSA Table](#dsa-table)
   - [Array](#array)
   - [ArrayList:](#arraylist)
   - [LinkedList](#linkedlist)
@@ -15,6 +16,29 @@
   - [HashMap:](#hashmap)
   - [TreeMap:](#treemap)
   - [LinkedHashMap:](#linkedhashmap)
+ 
+## DSA Table
+| Data Structure | Complexity (Average Case) | Complexity (Worst Case) | Explanation and Use Cases |
+|----------------|--------------------------|-------------------------|---------------------------|
+| Array          | Access: O(1) <br> Search: O(n) <br> Insertion: O(n) <br> Deletion: O(n) | Access: O(1) <br> Search: O(n) <br> Insertion: O(n) <br> Deletion: O(n) | Arrays are used to store a fixed-size sequence of elements. They offer constant-time access by index but have linear-time complexity for search, insertion, and deletion. Suitable when the size is known in advance and frequent random access is required. |
+| ArrayList      | Access: O(1) <br> Search: O(n) <br> Insertion: O(n) <br> Deletion: O(n) | Access: O(1) <br> Search: O(n) <br> Insertion: O(n) <br> Deletion: O(n) | ArrayList is an ordered dynamic array implementation. It offers constant-time access by index but has linear-time complexity for search, insertion, and deletion. Suitable when frequent random access and dynamic resizing are required. |
+| LinkedList     | Access: O(n) <br> Search: O(n) <br> Insertion: O(1) <br> Deletion: O(1) | Access: O(n) <br> Search: O(n) <br> Insertion: O(1) <br> Deletion: O(1) | LinkedList is a linear data structure where elements are linked using pointers. It offers constant-time insertion and deletion at both ends but has linear-time complexity for access and search. Suitable when frequent insertions and deletions are required, but random access is less important. |
+| Stack          | Access: O(n) <br> Search: O(n) <br> Insertion: O(1) <br> Deletion: O(1) | Access: O(n) <br> Search: O(n) <br> Insertion: O(1) <br> Deletion: O(1) | Stack is a last-in, first-out (LIFO) data structure. It offers constant-time insertion and deletion at one end but has linear-time complexity for access and search. Suitable for managing function calls, expression evaluation, and undo operations. |
+| Queue          | Access: O(n) <br> Search: O(n) <br> Insertion: O(1) <br> Deletion: O(1) | Access: O(n) <br> Search: O(n) <br> Insertion: O(1) <br> Deletion: O(1) | Queue is a first-in, first-out (FIFO) data structure. It offers constant-time insertion and deletion at opposite ends but has linear-time complexity for access and search. Suitable for managing tasks in a sequential manner, such as message queues and process scheduling. |
+| HashSet        | Access: N/A <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | Access: N/A <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | HashSet is an unordered collection of unique elements. It offers constant-time complexity for search, insertion, and deletion but does not provide direct access by index. Suitable for checking membership and eliminating duplicates. |
+| PriorityQueue | Access: O(1
+
+) <br> Search: O(n) <br> Insertion: O(log n) <br> Deletion: O(log n) | Access: O(1) <br> Search: O(n) <br> Insertion: O(log n) <br> Deletion: O(log n) | PriorityQueue is an ordered collection of elements where the element with the highest priority is always at the front. It offers constant-time access to the highest-priority element but logarithmic time complexity for search, insertion, and deletion. Suitable for implementing priority-based algorithms like Dijkstra's algorithm and event scheduling. |
+| TreeSet        | Access: O(log n) <br> Search: O(log n) <br> Insertion: O(log n) <br> Deletion: O(log n) | Access: O(log n) <br> Search: O(log n) <br> Insertion: O(log n) <br> Deletion: O(log n) | TreeSet is an ordered set implemented using a self-balancing binary search tree. It offers logarithmic time complexity for search, insertion, and deletion. Suitable when maintaining a sorted collection of unique elements is required. |
+| LinkedHashSet  | Access: O(1) <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | Access: O(1) <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | LinkedHashSet is an ordered set that maintains the insertion order of elements. It offers constant-time complexity for search, insertion, and deletion. Suitable when the order of insertion is important, and uniqueness of elements is required. |
+| HashMap        | Access: O(1) <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | Access: O(n) <br> Search: O(n) <br> Insertion: O(n) <br> Deletion: O(n) | HashMap is an unordered collection of key-value pairs. It offers constant-time complexity for search, insertion, and deletion, assuming a good hash function and uniform distribution of keys. Suitable for fast retrieval and storage of key-value pairs. |
+| TreeMap        | Access: O(log n) <br> Search: O(log n) <br> Insertion: O(log n) <br> Deletion: O(log n) | Access: O(log n) <br> Search: O(log n) <br> Insertion: O(log n) <br> Deletion: O(log n) | TreeMap is an ordered map implemented using a self-balancing binary search tree. It offers logarithmic time complexity for search, insertion, and deletion. Suitable when maintaining a sorted collection of key-value pairs is required. |
+| LinkedHashMap  | Access: O(1) <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | Access: O(1) <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | LinkedHashMap is an ordered map that maintains the insertion order of key-value pairs. It offers constant-time complexity for search, insertion, and deletion. Suitable when the order of insertion is important and fast access to key-value pairs is required. |
+| Hashtable      | Access: N/A <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | Access: N/A <br
+
+> Search: O(n) <br> Insertion: O(n) <br> Deletion: O(n) | Hashtable is an implementation of a hash table that stores key-value pairs. It offers constant-time complexity for search, insertion, and deletion assuming a good hash function and uniform distribution of keys. Suitable for fast retrieval and storage of key-value pairs but has been largely replaced by HashMap in modern Java programming. |
+
+Please note that the time complexities mentioned are for average or amortized cases and may vary in certain scenarios.
 
 ## Array
 - A fixed-size collection of elements of the same type, accessed by an index.
