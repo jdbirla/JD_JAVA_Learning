@@ -124,3 +124,38 @@ public class FabonacciNumber {
 
 ```
 
+##  How do you check whether a string is a palindrome in Java?
+- A palindrome string is the same string backwards or forwards
+- Output: madam is a palindrome.
+
+```java
+package com.jd.interviewprep.dsa;
+
+public class PalindromeString {
+
+	public static void main(String[] args) {
+		String str = "madam"; // Example string
+
+		if (isPalindrome(str)) {
+			System.out.println(str + " is a palindrome.");
+		} else {
+			System.out.println(str + " is not a palindrome.");
+		}
+
+	}
+
+	public static Boolean isPalindrome(String input) {
+
+		int length = input.length();
+		for (int i = 0; i < length / 2; i++) {
+			if (input.charAt(i) != input.charAt(length - 1 - i)) {
+				return false;
+			}
+		}
+		return true;
+
+	}
+}
+
+```
+
