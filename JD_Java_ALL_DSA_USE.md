@@ -32,11 +32,8 @@
 | HashMap        | Access: O(1) <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | Access: O(n) <br> Search: O(n) <br> Insertion: O(n) <br> Deletion: O(n) | HashMap is an unordered collection of key-value pairs. It offers constant-time complexity for search, insertion, and deletion, assuming a good hash function and uniform distribution of keys. Suitable for fast retrieval and storage of key-value pairs. |
 | TreeMap        | Access: O(log n) <br> Search: O(log n) <br> Insertion: O(log n) <br> Deletion: O(log n) | Access: O(log n) <br> Search: O(log n) <br> Insertion: O(log n) <br> Deletion: O(log n) | TreeMap is an ordered map implemented using a self-balancing binary search tree. It offers logarithmic time complexity for search, insertion, and deletion. Suitable when maintaining a sorted collection of key-value pairs is required. |
 | LinkedHashMap  | Access: O(1) <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | Access: O(1) <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | LinkedHashMap is an ordered map that maintains the insertion order of key-value pairs. It offers constant-time complexity for search, insertion, and deletion. Suitable when the order of insertion is important and fast access to key-value pairs is required. |
-| Hashtable      | Access: N/A <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | Access: N/A <br
+| Hashtable      | Access: N/A <br> Search: O(1) <br> Insertion: O(1) <br> Deletion: O(1) | Access: N/A <br> Search: O(n) <br> Insertion: O(n) <br> Deletion: O(n) | Hashtable is an implementation of a hash table that stores key-value pairs. It offers constant-time complexity for search, insertion, and deletion assuming a good hash function and uniform distribution of keys. Suitable for fast retrieval and storage of key-value pairs but has been largely replaced by HashMap in modern Java programming. |
 
-> Search: O(n) <br> Insertion: O(n) <br> Deletion: O(n) | Hashtable is an implementation of a hash table that stores key-value pairs. It offers constant-time complexity for search, insertion, and deletion assuming a good hash function and uniform distribution of keys. Suitable for fast retrieval and storage of key-value pairs but has been largely replaced by HashMap in modern Java programming. |
-
-Please note that the time complexities mentioned are for average or amortized cases and may vary in certain scenarios.
 
 ## Array
 - A fixed-size collection of elements of the same type, accessed by an index.
