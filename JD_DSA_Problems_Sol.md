@@ -159,3 +159,363 @@ public class PalindromeString {
 
 ```
 
+## How can you find the factorial of an integer in Java?
+- OutPut: Factorial of 5 is: 120
+
+```java
+package com.jd.interviewprep.dsa.prob;
+
+public class Factorial {
+	public static void main(String[] args) {
+		int number = 5; // Example number
+
+		long factorial = calculateFactorialIterative(number);
+
+		System.out.println("Factorial of " + number + " is: " + factorial);
+		 factorial = calculateFactorialRecursive(number);
+
+		System.out.println("Factorial of " + number + " is: " + factorial);
+	}
+
+	public static long calculateFactorialIterative(int number) {
+		long factorial = 1;
+		for (int i = 1; i <= number; i++) {
+			factorial *= i;
+		}
+		return factorial;
+	}
+
+	public static long calculateFactorialRecursive(int number) {
+		if (number <= 1) {
+			return 1;
+		} else {
+			return number * calculateFactorialRecursive(number - 1);
+		}
+	}
+}
+
+```
+## How do you reverse a linked list in Java?
+```java
+package com.jd.interviewprep.dsa.prob;
+
+import java.util.LinkedList;
+
+public class LinkedListReverse {
+public static void main(String[] args) {
+	LinkedList<Integer> ll = new LinkedList<>();
+
+	ll.add(1);
+	ll.add(2);
+	ll.add(3);
+
+	System.out.println(ll);
+
+	LinkedList<Integer> ll1 = new LinkedList<>();
+
+	ll.descendingIterator().forEachRemaining(ll1::add);
+
+	System.out.println(ll1);
+}
+}
+
+```
+
+## How do you implement a binary search in Java?
+- If the key is less than the middle element, then you now need to search only in the first half of the array.
+- If the key is greater than the middle element, then you need to search only in the second half of the array.
+- If the key is equal to the middle element in the array, then the search ends.
+- Finally, if the key is not found in the whole array, then it should return -1. This indicates that the element is not present.
+```java
+package com.jd.interviewprep.dsa.prob;
+
+public class BinarySearch {
+	public static void main(String[] args) {
+		int[] arr = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+        int target = 12;
+
+        int result = binarySearch(arr, target);
+
+        if (result == -1) {
+            System.out.println("Element not found in the array.");
+        } else {
+            System.out.println("Element found at index " + result);
+        }
+	}
+	
+    public static int binarySearch(int[] arr, int target) {
+		int left = 0;
+        int right = arr.length - 1;
+
+        while (left <= right) {
+            int mid = (left + right) / 2;
+
+            if (arr[mid] == target) {
+                return mid;
+            } else if (arr[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+
+        return -1; // Element not found
+    
+	}
+}
+
+```
+
+## Write Java program that checks if two arrays contain the same elements.
+
+```java
+package com.jd.interviewprep.dsa.prob;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+public class ArraySameElements {
+
+	public static void main(String[] args) {
+		Integer[] a1 = { 1, 2, 3, 2, 1 };
+		Integer[] a2 = { 1, 2, 3 };
+		Integer[] a3 = { 1, 2, 3, 4 };
+
+		System.out.println(sameElements(a1, a2));
+		System.out.println(sameElements(a1, a3));
+	}
+
+	static boolean sameElements(Object[] array1, Object[] array2) {
+		Set<Object> uniqueElements1 = new HashSet<>(Arrays.asList(array1));
+		Set<Object> uniqueElements2 = new HashSet<>(Arrays.asList(array2));
+
+		// if size is different, means there will be a mismatch
+		if (uniqueElements1.size() != uniqueElements2.size())
+			return false;
+
+		for (Object obj : uniqueElements1) {
+			// element not present in both?
+			if (!uniqueElements2.contains(obj))
+				return false;
+		}
+
+		return true;
+	}
+}
+```
+
+## Write a java program to check if two Strings are anagram in java?
+- Two string are anagrams if they have same characters but in different order. For example: Angel and Angle are anagrams
+- String word = "java2blog";       String anagram = "aj2vabgol";
+```java
+package com.jd.interviewprep.dsa.prob;
+
+import java.util.Arrays;
+
+public class StringAnagram {
+  public static void main(String[] args) {
+
+      String word = "java2blog";
+      String anagram = "aj2vabgol";
+
+      System.out.println("java2blog and aj2vabgol are anagrams :" + isAnagramUsingStringMethods(word, anagram));
+      System.out.println("java2blog and aj2vabgol are anagrams using sort:" + isAnagramUsingArraySort(word, anagram));
+
+}
+  public static boolean isAnagramUsingStringMethods(String word, String anagram) {
+      if (word.length() != anagram.length())
+          return false;
+
+      for (int i = 0; i < word.length(); i++) {
+          char c = word.charAt(i);
+          int index = anagram.indexOf(c);
+          // If index of any character is -1, then two strings are not anagrams
+          // If index of character is not equal to -1, then remove the chacter from the
+          // String
+          if (index != -1) {
+              anagram = anagram.substring(0, index) + anagram.substring(index + 1, anagram.length());
+          } else
+              return false;
+      }
+      return anagram.isEmpty();
+  }
+  public static boolean isAnagramUsingArraySort(String word, String anagram) {
+	  
+      String sortedWord = sortChars(word);
+      String sortedAnagram = sortChars(anagram);
+
+      return sortedWord.equals(sortedAnagram);
+  }
+
+  public static String sortChars(String word) {
+      char[] wordArr = word.toLowerCase().toCharArray();
+      Arrays.sort(wordArr);
+      return String.valueOf(wordArr);
+  }
+}
+
+```
+
+## How to check if one String is rotation of another String in java?
+- OutPut: java2blog and blogjava2 are rotation of each other : true
+java2blog and avablog2j are rotation of each other : false
+
+```java
+package com.jd.interviewprep.dsa.prob;
+
+public class StringRotation {
+	 public static void main(String[] args) {
+		 
+	        System.out.println(
+	                "java2blog and blogjava2 are rotation of each other : " + isRotation("java2blog", "blogjava2"));
+	        System.out.println(
+	                "java2blog and avablog2j are rotation of each other : " + isRotation("java2blog", "avablog2j"));
+	 
+	    }
+	 
+	    public static boolean isRotation(String str, String rotation) {
+	        String str2 = str + str;
+	 
+	        if (str2.contains(rotation)) {
+	            return true;
+	        }
+	        return false;
+	 
+	    }
+}
+
+```
+
+## Find first non repeated character in String in java?
+- One of the interview question is “How will you find first non repeating character in String.”
+For example:
+If input string is “analogy”,  then program should return ‘n’
+If input string is “easiest”, then program should return ‘a’
+- Algorithm:
+Get character while looping over String
+Put this character in LinkedHashMap with count. If character is already there, increase count by 1.
+Get count from LinkedHashMap while iterating. If count is 1,return that character as LinkedHashMap maintains insertion order.
+
+```java
+package com.jd.interviewprep.dsa.prob;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class GetFirstNonRepeatingCharacter {
+	public static void main(String[] args) {
+		System.out
+				.println("First non repeated character for String analogy is : " + getNonRepeatedCharacter("analogy"));
+		System.out
+				.println("First non repeated character for String easiest is : " + getNonRepeatedCharacter("easiest"));
+	}
+
+	public static Character getNonRepeatedCharacter(String str) {
+		Map<Character, Integer> countCharacters = new LinkedHashMap<Character, Integer>();
+		for (int i = 0; i < str.length() - 1; i++) {
+			Character c = str.charAt(i);
+			if (!countCharacters.containsKey(c)) {
+				countCharacters.put(c, 1);
+			} else {
+				countCharacters.put(c, countCharacters.get(c) + 1);
+			}
+		}
+		// As LinkedHashMap maintains insertion order, first character with
+		// count 1 should return first non repeated character
+		for (Entry<Character, Integer> e : countCharacters.entrySet()) {
+			if (e.getValue() == 1)
+				return e.getKey();
+
+		}
+		return null;
+
+	}
+}
+
+```
+
+## Java program to find missing number in an array
+
+- int[] arr1={7,5,6,1,4,2};
+Missing numner : 3
+
+```java
+package com.jd.interviewprep.dsa.prob;
+
+public class MissingNumber {
+	public static void main(String[] args) {
+		 
+        int[] arr1={7,5,6,1,4,2};
+        System.out.println("Missing number from array arr1: "+missingNumber(arr1));
+        int[] arr2={5,3,1,2};
+        System.out.println("Missing number from array arr2: "+missingNumber(arr2));
+ 
+    }
+ 
+    public static int missingNumber(int[] arr)
+    {
+        int n=arr.length+1;
+        int sum=n*(n+1)/2;
+        int restSum=0;
+        for (int i = 0; i < arr.length; i++) {
+            restSum+=arr[i];
+        }
+        int missingNumber=sum-restSum;
+        return missingNumber;
+    }
+}
+
+```
+
+## 
+- 
+```java
+
+```
+
+## 
+- 
+```java
+
+```
+
+
+## 
+- 
+```java
+
+```
+
+
+## 
+- 
+```java
+
+```
+
+
+## 
+- 
+```java
+
+```
+
+## 
+- 
+```java
+
+```
+
+## 
+- 
+```java
+
+```
+
+## 
+- 
+```java
+
+```
