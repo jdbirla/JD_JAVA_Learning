@@ -604,7 +604,7 @@ public class LargestSmallestNumberInArray {
 }
 
 ```
-## Java program to find missing number in an array:
+### Java program to find missing number in an array:
 
 ```java
 package com.jd.interviewprep.dsa.prob;
@@ -643,7 +643,7 @@ public class FindMissingNumberInArray {
 
 ```
 
-## Java program to find minimum element in a sorted and rotated array :
+### Java program to find minimum element in a sorted and rotated array :
 - Use Binary Seach Algo
 ```java
 package com.jd.interviewprep.dsa.prob;
@@ -669,6 +669,223 @@ public class MinimumElementSortedAndRotatedArray {
 		return arr[low];
 	}
 
+}
+
+```
+
+### Find second largest number in an array
+
+```java
+package com.jd.interviewprep.dsa.prob.array;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class SecondLargestArray {
+	
+	public static void main(String[] args) {
+        int[] arr1={7,5,6,1,4,2};
+        
+       System.out.println("Using Stream on Arrays : "+usingStream(arr1));
+       System.out.println("Using Iterator on Arrays : "+findSecondLargestNumberInTheArray(arr1));
+
+	}
+	
+	public static int usingStream(int arr[])
+	{
+		
+		Integer integer = Arrays.stream(arr)
+		.boxed()
+		.sorted(Comparator.comparing(Integer::intValue).reversed())
+		.limit(2)
+		.skip(1)
+		.findFirst()
+		.get();
+		
+		return integer;
+		
+	}
+	
+	public static int findSecondLargestNumberInTheArray(int array[])
+    {
+        // Initialize these to the smallest value possible
+        int highest = Integer.MIN_VALUE;
+        int secondHighest = Integer.MIN_VALUE;
+ 
+        // Loop over the array
+        for (int i = 0; i < array.length; i++) { 
+            // If current element is greater than highest 
+            if (array[i] > highest) {
+ 
+                // assign second highest element to highest element 
+                secondHighest = highest;
+ 
+                // highest element to current element
+                highest = array[i];
+            } else if (array[i] > secondHighest && array[i]!=highest)
+                // Just replace the second highest
+                secondHighest = array[i];
+        }
+ 
+        // After exiting the loop, secondHighest now represents the second
+        // largest value in the array
+        return secondHighest;
+    }
+
+}
+
+```
+
+### Find the number occurring odd number of times in an array
+
+```java
+package com.jd.interviewprep.dsa.prob.array;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class OddTimesElementInArray {
+	public static void main(String[] args) {
+		int array[] = new int[] { 20, 40, 50, 40, 50, 20, 30, 30, 50, 20, 40, 40, 20 };
+
+		System.out.println("getOddTimesElementHashing :" + getOddTimesElementHashing(array));
+		System.out.println("Get odd time lelemt in array uding stream :" + getOddTimesElementUsingStream(array));
+
+	}
+
+	public static int getOddTimesElementHashing(int ar[]) {
+		int i;
+
+		HashMap<Integer, Integer> elements = new HashMap<Integer, Integer>();
+		for (i = 0; i < ar.length; i++) {
+			int element = ar[i];
+			if (elements.get(element) == null) {
+				elements.put(element, 1);
+
+			} else
+				elements.put(element, elements.get(element) + 1);
+		}
+		for (Entry<Integer, Integer> entry : elements.entrySet()) {
+			if (entry.getValue() % 2 == 1) {
+				return entry.getKey();
+			}
+
+		}
+		return -1;
+	}
+	public static int getOddTimesElementUsingStream(int arr[]) {
+		
+         Integer key = Arrays.stream(arr)
+         .boxed()
+         .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
+         .entrySet()
+         .stream()
+         .filter(e->e.getValue()%2!=0)
+         .findFirst()
+         .get()
+         .getKey();
+	
+		return key;
+	}
+	
+	
+}
+
+```
+
+### Find a Pair Whose Sum is Closest to zero in Array
+
+```java
+package com.jd.interviewprep.dsa.prob.array;
+
+public class FindPairWithMinSum {
+
+	public static void main(String[] args) {
+		int array[] = { 1, 30, -5, 70, -8, 20, -40, 60 };
+		findPairWithMinSumBruteForce(array);
+	}
+
+	public static void findPairWithMinSumBruteForce(int arr[]) {
+		if (arr.length < 2)
+			return;
+		// Suppose 1st two element has minimum sum
+		int minimumSum = arr[0] + arr[1];
+		int pair1stIndex = 0;
+		int pair2ndIndex = 1;
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
+				int tempSum = arr[i] + arr[j];
+				if (Math.abs(tempSum) < Math.abs(minimumSum)) {
+					pair1stIndex = i;
+					pair2ndIndex = j;
+					minimumSum = tempSum;
+				}
+			}
+		}
+		System.out.println(" The pair whose sum is closest to zero : " + arr[pair1stIndex] + " " + arr[pair2ndIndex]);
+	}
+
+}
+
+```
+
+### find sum of two pairs equals to given number in given arrays values.
+``java
+package com.jd.interviewprep.dsa.prob.array;
+
+public class FindPairWithTargetSum {
+	public static void main(String[] args) {
+		int arr[] = { 1, 5, 7, -1, 5 };
+		int n = arr.length;
+		int sum = 6;
+		printPairs(arr, n, sum);
+	}
+
+	static void printPairs(int arr[], int n, int sum) {
+		// int count = 0;
+
+		// Consider all possible pairs
+		// and check their sums
+		for (int i = 0; i < n; i++)
+			for (int j = i + 1; j < n; j++)
+				if (arr[i] + arr[j] == sum)
+					System.out.println("(" + arr[i] + ", " + arr[j] + ")");
+	}
+}
+
+```
+
+### Find Common elements in two array using java8
+```java
+package com.jd.interviewprep.dsa.prob.array;
+
+import java.util.Arrays;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class FindCommonValuesInJava8 {
+
+	public static void main(String[] args) {
+		int arr1[] = { 5, 7, 2, 8, 9 };
+		int arr2[] = { 6, 10, 2, 8, 4 };
+
+		System.out.println(" find comman value in two arrays :" + findCommonValues(arr1, arr2));
+	}
+
+	public static Set<Integer> findCommonValues(int arr1[], int arr2[]) {
+		Set<Integer> set1 = Arrays.stream(arr1).boxed().collect(Collectors.toSet());
+		Set<Integer> set2 = Arrays.stream(arr2).boxed().collect(Collectors.toSet());
+		set1.retainAll(set2);
+
+		return set1;
+
+	}
 }
 
 ```
