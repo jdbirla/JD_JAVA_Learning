@@ -4,6 +4,48 @@
     - All Programs: https://www.javatpoint.com/java-programs
 - Java2Blog
     - https://java2blog.com/java-coding-interview-questions/
+
+# Table of contents
+
+- [JD_DSA_Problems_Solutions](#jd_dsa_problems_solutions)
+  - [How do you reverse a string in Java?](#how-do-you-reverse-a-string-in-java)
+  - [Write a Java program to print a Fibonacci sequence using recursion.](#write-a-java-program-to-print-a-fibonacci-sequence-using-recursion)
+  - [How do you check whether a string is a palindrome in Java?](#how-do-you-check-whether-a-string-is-a-palindrome-in-java)
+  - [How can you find the factorial of an integer in Java?](#how-can-you-find-the-factorial-of-an-integer-in-java)
+  - [How do you reverse a linked list in Java?](#how-do-you-reverse-a-linked-list-in-java)
+  - [How do you implement a binary search in Java?](#how-do-you-implement-a-binary-search-in-java)
+  - [Write Java program that checks if two arrays contain the same elements.](#write-java-program-that-checks-if-two-arrays-contain-the-same-elements)
+  - [Write a java program to check if two Strings are anagram in java?](#write-a-java-program-to-check-if-two-strings-are-anagram-in-java)
+  - [How to check if one String is rotation of another String in java?](#how-to-check-if-one-string-is-rotation-of-another-string-in-java)
+  - [Find first non repeated character in String in java?](#find-first-non-repeated-character-in-string-in-java)
+  - [Java program to find missing number in an array](#java-program-to-find-missing-number-in-an-array)
+  - [Rotate an array by K positions.](#rotate-an-array-by-k-positions)
+  - [Implement a stack using array.](#implement-a-stack-using-array)
+  - [implement a stack using Linked List.](#implement-a-stack-using-linked-list)
+  - [Implement Stack using two Queues in java](#implement-stack-using-two-queues-in-java)
+  - [Sort a Stack using another stack](#sort-a-stack-using-another-stack)
+  - [Queue implementation in java](#queue-implementation-in-java)
+  - [Implement Queue using Linked List in java](#implement-queue-using-linked-list-in-java)
+  - [Implement singly linked list in java](#implement-singly-linked-list-in-java)
+  - [Reverse a linked list in java](#reverse-a-linked-list-in-java)
+  - [Find the middle element of a linked list in java](#find-the-middle-element-of-a-linked-list-in-java)
+  - [Find nth element from end of linked list](#find-nth-element-from-end-of-linked-list)
+  - [How to check if linked list is palindrome in java](#how-to-check-if-linked-list-is-palindrome-in-java)
+  - [Doubly Linked List in java](#doubly-linked-list-in-java)
+  - [Array Problems](#array-problems)
+    - [Java code to find Smallest and Largest Element in an Array :](#java-code-to-find-smallest-and-largest-element-in-an-array-)
+    - [Java program to find missing number in an array:](#java-program-to-find-missing-number-in-an-array)
+    - [Java program to find minimum element in a sorted and rotated array :](#java-program-to-find-minimum-element-in-a-sorted-and-rotated-array-)
+    - [Find second largest number in an array](#find-second-largest-number-in-an-array)
+    - [Find the number occurring odd number of times in an array](#find-the-number-occurring-odd-number-of-times-in-an-array)
+    - [Find a Pair Whose Sum is Closest to zero in Array](#find-a-pair-whose-sum-is-closest-to-zero-in-array)
+    - [find sum of two pairs equals to given number in given arrays values.](#find-sum-of-two-pairs-equals-to-given-number-in-given-arrays-values)
+    - [Find Common elements in two array using java8](#find-common-elements-in-two-array-using-java8)
+    - [Find Different values in Two Arrays](#find-different-values-in-two-arrays)
+    - [Separate 0s and 1s in an array](#separate-0s-and-1s-in-an-array)
+    - [Find First repeating element in array](#find-first-repeating-element-in-array)
+    - [Check if Array Elements are Consecutive](#check-if-array-elements-are-consecutive)
+    - [Rotate an Array left and right by k position](#rotate-an-array-left-and-right-by-k-position)
       
 ##  How do you reverse a string in Java?
 - Output: hello world
