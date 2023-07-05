@@ -139,6 +139,17 @@ public class JavaCodingInterview {
 			.map(Map.Entry::getKey)
 			.collect(Collectors.toList());
 		System.out.println("--------------------------------------------------------------");
+		System.out.println("Find second largest element in array");
+
+		  int[] arr1={7,5,6,1,4,2};
+		Integer integer = Arrays.stream(arr1)
+		.boxed()
+		.sorted(Comparator.comparing(Integer::intValue).reversed())
+		.limit(2)
+		.skip(1)
+		.findFirst()
+		.get();
+		System.out.println("--------------------------------------------------------------");
 
 				System.out.println("Find second or nth most frequent occurance in word it will give result as LinkedHashMap ");
                       String stJitendra = "aaababddd";
