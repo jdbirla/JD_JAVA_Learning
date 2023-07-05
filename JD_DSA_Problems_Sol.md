@@ -809,6 +809,7 @@ public class FindPairWithMinSum {
 	public static void main(String[] args) {
 		int array[] = { 1, 30, -5, 70, -8, 20, -40, 60 };
 		findPairWithMinSumBruteForce(array);
+		findPairWithClosestToXBruteForce(array, 31);
 	}
 
 	public static void findPairWithMinSumBruteForce(int arr[]) {
@@ -831,12 +832,35 @@ public class FindPairWithMinSum {
 		System.out.println(" The pair whose sum is closest to zero : " + arr[pair1stIndex] + " " + arr[pair2ndIndex]);
 	}
 
+	public static void findPairWithClosestToXBruteForce(int arr[], int X) {
+		if (arr.length < 2)
+			return;
+		// Suppose 1st two element has minimum diff with X
+		int minimumDiff = Math.abs(arr[0] + arr[1] - X);
+		int pair1stIndex = 0;
+		int pair2ndIndex = 1;
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
+				int tempDiff = Math.abs(arr[i] + arr[j] - X);
+
+				if (tempDiff < minimumDiff) {
+					pair1stIndex = i;
+					pair2ndIndex = j;
+					minimumDiff = tempDiff;
+				}
+			}
+		}
+		System.out.println(" The pair whose sum is closest to X using brute force method: " + arr[pair1stIndex] + " "
+				+ arr[pair2ndIndex]);
+	}
+
 }
+
 
 ```
 
 ### find sum of two pairs equals to given number in given arrays values.
-``java
+```java
 package com.jd.interviewprep.dsa.prob.array;
 
 public class FindPairWithTargetSum {
@@ -858,10 +882,9 @@ public class FindPairWithTargetSum {
 					System.out.println("(" + arr[i] + ", " + arr[j] + ")");
 	}
 }
-
 ```
-
 ### Find Common elements in two array using java8
+
 ```java
 package com.jd.interviewprep.dsa.prob.array;
 
@@ -889,3 +912,47 @@ public class FindCommonValuesInJava8 {
 }
 
 ```
+### Separate 0s and 1s in an array
+
+
+```java
+package com.jd.interviewprep.dsa.prob.array;
+
+public class Separate0s1sSolution1 {
+
+	public static void main(String[] args) {
+		int arr[]={0,1,0,0,1,1,1,0,1};
+		  System.out.println("Original Array: ");
+		  for (int i = 0; i < arr.length; i++) {
+		   System.out.print(arr[i]+" ");
+		  }
+		  arr=separate0s1sSolution1(arr);
+		  System.out.println("n===========================");
+		  System.out.println("Solution 1");
+		  System.out.println("nArray after separating 0's and 1's : ");
+		  for (int i = 0; i < arr.length; i++) {
+		   System.out.print(arr[i]+" ");
+		  }
+	}
+	public static int[] separate0s1sSolution1(int arr[])
+	 {
+	  int count=0;
+	  for (int i = 0; i < arr.length; i++) {
+	   if(arr[i]==0)
+	   {
+	    count++;
+	   }
+	  }
+	  for (int i = 0; i < count; i++) {
+	   arr[i]=0;
+	  }
+	  for (int i = count; i < arr.length; i++) {
+	   arr[i]=1;
+	  }
+	  return arr;
+	 }
+	 
+}
+```
+
+### 
