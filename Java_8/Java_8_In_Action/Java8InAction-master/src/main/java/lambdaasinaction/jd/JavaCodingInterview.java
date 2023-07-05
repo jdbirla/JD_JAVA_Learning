@@ -43,25 +43,27 @@ public class JavaCodingInterview {
 		.findFirst()
 		.get();
 		
-System.out.println("Find second or nth most frequent occurance in word it will give result as LinkedHashMap ");
-                      String stJitendra = "aaababddd";
-                Map<String, Long> collect = Arrays.stream(stJitendra.split("")).collect(Collectors.groupingBy(Function.identity() ,Collectors.counting()));
-               // collect.forEach((k,v) -> System.out.println("collect :->"+ k +" : "+v));
+        System.out.println("Find second or nth most frequent occurance in word it will give result as LinkedHashMap ");
+              String stJitendra = "aaababddd";
+            Map<String, Long> collect = Arrays.stream(stJitendra.split("")).collect(Collectors.groupingBy(Function.identity() ,Collectors.counting()));
+         
         LinkedHashMap<String, Long> collect1 = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .limit(2)
                 .skip(1)
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
         collect1.forEach((k,v) -> System.out.println("collect1 :->"+ k +" : "+v));
-		//Output://collect1 :->d : 3
+		//Output://collect1 :-> d : 3
 
-		System.out.println("Find second or nth most frequent occurance in word it will give result charact ");
-			 String s = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+System.out.println("Find second or nth most frequent occurance in word it will give result charact ");
+		
+		String s = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .limit(2)
                 .skip(1).map(Map.Entry::getKey)
                 .findFirst().get();
-			System.out.println(" String :"+s);
-		     //Output:// String :d
+	System.out.println(" String :"+s);
+		//Output:// String :d
 
+		
 		System.out.println("Que 9: Second highest salary from employee list return as employee object ");
 					Employee employee = EmployeeDatabase.getEmployees().stream()
 							.sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
@@ -72,6 +74,7 @@ System.out.println("Find second or nth most frequent occurance in word it will g
 //Employee{id=105, name='Niranjan', grade='A', dept='Lead', salary=110000.0, address=[Address [city=Chennai, country=India], Address [city=Tokyo, country=Japan]]}
 
 
+		
 		System.out.println("Que 9: Second highest salary from map where salary value may duplicate");
 					 Map<String, Integer> emap = new HashMap<>();
 					        emap.put("Ram", 1000);
