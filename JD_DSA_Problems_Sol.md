@@ -1006,4 +1006,75 @@ public static void main(String[] args) {
 }
 
 ```
+### Check if Array Elements are Consecutive
 
+```java
+package com.jd.interviewprep.dsa.prob.array;
+
+import java.util.Arrays;
+
+public class ConsecutiveElementsInArray {
+public static void main(String[] args) {
+	int[] array = {5, 3, 4, 1, 2};
+
+    int min = Arrays.stream(array).min().getAsInt();
+    int max = Arrays.stream(array).max().getAsInt();
+
+    if (max - min == array.length - 1) {
+        System.out.println("The elements are consecutive");
+    } else {
+        System.out.println("The elements are not consecutive");
+    }
+}
+}
+
+```
+### Rotate an Array left and right by k position
+```java
+package com.jd.interviewprep.dsa.prob.array;
+
+public class RotateAnArrayByKPosition {
+	public static void main(String[] args) {
+		int Array[] = { 1, 2, 3, 4, 5 };
+
+		int K = 2;
+		rightRotateBruteForce(Array, K);
+		leftRotateBruteForce(Array, K);
+
+	}
+
+	public static int[] rightRotateBruteForce(int[] nums, int k) {
+		for (int i = 0; i < k; i++) {
+			for (int j = nums.length - 1; j > 0; j--) {
+				// move each number by 1 place
+				int temp = nums[j];
+				nums[j] = nums[j - 1];
+				nums[j - 1] = temp;
+			}
+			System.out.println("Array rotation after " + (i + 1) + " step");
+			printArray(nums);
+			System.out.println();
+		}
+		return nums;
+	}
+	public static int[] leftRotateBruteForce(int[] nums, int k) {
+		for (int i = 0; i < k; i++) {
+			for (int j = 0 ; j <nums.length -1; j++) {
+				// move each number by 1 place
+				int temp = nums[j];
+				nums[j] = nums[j + 1];
+				nums[j + 1] = temp;
+			}
+			System.out.println("Array rotation after " + (i + 1) + " step");
+			printArray(nums);
+			System.out.println();
+		}
+		return nums;
+	}
+	public static void printArray(int[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+	}
+}
+```
