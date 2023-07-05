@@ -30,7 +30,66 @@ public class JavaCodingInterview {
 	}
 
 	public static void main(String[] args) {
+				System.out.println("---------------------Second highest----------------------------------------------");
+
+          System.out.println("Find second largest element in array");
+
+		  int[] arr1={7,5,6,1,4,2};
+		Integer integer = Arrays.stream(arr1)
+		.boxed()
+		.sorted(Comparator.comparing(Integer::intValue).reversed())
+		.limit(2)
+		.skip(1)
+		.findFirst()
+		.get();
 		
+System.out.println("Find second or nth most frequent occurance in word it will give result as LinkedHashMap ");
+                      String stJitendra = "aaababddd";
+                Map<String, Long> collect = Arrays.stream(stJitendra.split("")).collect(Collectors.groupingBy(Function.identity() ,Collectors.counting()));
+               // collect.forEach((k,v) -> System.out.println("collect :->"+ k +" : "+v));
+        LinkedHashMap<String, Long> collect1 = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .limit(2)
+                .skip(1)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+        collect1.forEach((k,v) -> System.out.println("collect1 :->"+ k +" : "+v));
+		//Output://collect1 :->d : 3
+
+		System.out.println("Find second or nth most frequent occurance in word it will give result charact ");
+			 String s = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .limit(2)
+                .skip(1).map(Map.Entry::getKey)
+                .findFirst().get();
+			System.out.println(" String :"+s);
+		     //Output:// String :d
+
+		System.out.println("Que 9: Second highest salary from employee list return as employee object ");
+					Employee employee = EmployeeDatabase.getEmployees().stream()
+							.sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
+							.skip(1)
+							.findFirst()
+							.orElseGet(null);
+						System.out.println(employee);
+//Employee{id=105, name='Niranjan', grade='A', dept='Lead', salary=110000.0, address=[Address [city=Chennai, country=India], Address [city=Tokyo, country=Japan]]}
+
+
+		System.out.println("Que 9: Second highest salary from map where salary value may duplicate");
+					 Map<String, Integer> emap = new HashMap<>();
+					        emap.put("Ram", 1000);
+					        emap.put("Raju", 2000);
+					        emap.put("Ramaan", 3000);
+					        emap.put("JD", 3000);
+
+				        int secondHighestSalary = emap.values().stream()
+				                .distinct()
+				                .sorted((a, b) -> b - a)
+				                .skip(1)
+				                .findFirst()
+				                .orElse(Integer.MIN_VALUE);
+
+				        Map<String, Integer> result = emap.entrySet().stream()
+				                .filter(e -> e.getValue() == secondHighestSalary)
+				                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        System.out.println(result);
 		System.out.println("-------------------------------JDTraversing----------------------------------------------");
 
 		System.out.println("Que1:How to print keys & values of a Map in Java 8 ?");
@@ -139,37 +198,10 @@ public class JavaCodingInterview {
 			.map(Map.Entry::getKey)
 			.collect(Collectors.toList());
 		System.out.println("--------------------------------------------------------------");
-		System.out.println("Find second largest element in array");
-
-		  int[] arr1={7,5,6,1,4,2};
-		Integer integer = Arrays.stream(arr1)
-		.boxed()
-		.sorted(Comparator.comparing(Integer::intValue).reversed())
-		.limit(2)
-		.skip(1)
-		.findFirst()
-		.get();
+		
 		System.out.println("--------------------------------------------------------------");
 
-				System.out.println("Find second or nth most frequent occurance in word it will give result as LinkedHashMap ");
-                      String stJitendra = "aaababddd";
-                Map<String, Long> collect = Arrays.stream(stJitendra.split("")).collect(Collectors.groupingBy(Function.identity() ,Collectors.counting()));
-               // collect.forEach((k,v) -> System.out.println("collect :->"+ k +" : "+v));
-        LinkedHashMap<String, Long> collect1 = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-                .limit(2)
-                .skip(1)
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
-        collect1.forEach((k,v) -> System.out.println("collect1 :->"+ k +" : "+v));
-		//Output://collect1 :->d : 3
-
-		System.out.println("Find second or nth most frequent occurance in word it will give result charact ");
-		
-			 String s = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-                .limit(2)
-                .skip(1).map(Map.Entry::getKey)
-                .findFirst().get();
-			System.out.println(" String :"+s);
-		     //Output:// String :d
+				
 
 		System.out.println(
 				"-=============================================================================================================");
@@ -323,15 +355,7 @@ public class JavaCodingInterview {
 				.collect(Collectors.toList());
 		System.out.println("Sort by Address city: " + empsortbycity);
 
-		System.out.println("Que 9: Second highest salary from employee list return as employee object ");
-					Employee employee = EmployeeDatabase.getEmployees().stream()
-							.sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
-							.skip(1)
-							.findFirst()
-							.orElseGet(null);
-						System.out.println(employee);
-//Employee{id=105, name='Niranjan', grade='A', dept='Lead', salary=110000.0, address=[Address [city=Chennai, country=India], Address [city=Tokyo, country=Japan]]}
-
+		
 		
 		
 		
