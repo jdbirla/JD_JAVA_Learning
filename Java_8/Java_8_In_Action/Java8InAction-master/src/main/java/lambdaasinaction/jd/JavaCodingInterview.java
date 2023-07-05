@@ -63,6 +63,10 @@ System.out.println("Find second or nth most frequent occurance in word it will g
 	System.out.println(" String :"+s);
 		//Output:// String :d
 
+
+		
+
+
 		
 		System.out.println("Que 9: Second highest salary from employee list return as employee object ");
 					Employee employee = EmployeeDatabase.getEmployees().stream()
@@ -73,6 +77,17 @@ System.out.println("Find second or nth most frequent occurance in word it will g
 						System.out.println(employee);
 //Employee{id=105, name='Niranjan', grade='A', dept='Lead', salary=110000.0, address=[Address [city=Chennai, country=India], Address [city=Tokyo, country=Japan]]}
 
+		System.out.println("Que 9: Second highest salary from map ");
+		Map<String, Integer> emap = new HashMap<>();
+					        emap.put("Ram", 1000);
+					        emap.put("Raju", 2000);
+					        emap.put("Ramaan", 3000);
+		  Map<String, Integer> collect = emap.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.comparing(Integer::intValue).reversed()))
+                .limit(2)
+                .skip(1)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        collect.forEach((k, v) -> System.out.println(k + ": "+ v));
 
 		
 		System.out.println("Que 9: Second highest salary from map where salary value may duplicate");
