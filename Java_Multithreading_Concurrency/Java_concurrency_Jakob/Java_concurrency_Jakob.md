@@ -1,5 +1,6 @@
 # Java_concurrency_Jakob
 Source: Java Concurrency and Multithreading - Introduction(# https://www.youtube.com/watch?v=mTGdtC9f4EU&list=PLL8woMHwr36EDxjUoCzboZjedsnhLP1j4)
+- https://jenkov.com/tutorials/java-concurrency/index.html
 ![image](https://user-images.githubusercontent.com/69948118/215028932-6c28a184-f537-473a-a9ae-76634bdb8215.png)
 ![image](https://user-images.githubusercontent.com/69948118/215028942-446d2197-b78f-476a-96fa-0e31a57d2406.png)
 ![image](https://user-images.githubusercontent.com/69948118/215028950-e671afa2-be3e-4be2-b3ba-0d347816598a.png)
