@@ -1,6 +1,131 @@
 # Java_concurrency_Jakob
 Source: Java Concurrency and Multithreading - Introduction(# https://www.youtube.com/watch?v=mTGdtC9f4EU&list=PLL8woMHwr36EDxjUoCzboZjedsnhLP1j4)
 - https://jenkov.com/tutorials/java-concurrency/index.html
+## Java Concurrency and Multithreading - Introduction
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/a4a715d2-e7bb-4fb1-8494-71cf6aa8b460)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/a374c303-d957-4d2d-9de0-857131891320)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/38a14a20-7884-4f29-8069-c1371cbb17c7)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/37ace1f0-7763-499a-b146-0f6c0a8db09a)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/3c4d25e2-75d3-4693-801a-1ab6f1edb3dc)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/1cad516f-af76-4f69-8a04-1c85b9f268d0)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/99cffb38-1577-4576-a282-67cde5247a2a)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/5074b050-9e5f-46b3-96d7-d394a4d57278)
+
+##  Java Threads - Creating, starting and stopping threads in Java 
+### How to Stop a thread
+```java
+package creating.threads;
+
+/**
+ * Created by jd birla on 11-07-2023 at 15:09
+ */
+public class ThreadExample8 {
+    public static class MyRunnable implements Runnable {
+
+        private boolean doStop = false;
+
+        public synchronized void doStop() {
+            this.doStop = true;
+        }
+
+        private synchronized boolean isStopRequested() {
+            return this.doStop;
+        }
+
+        private void sleep(long millis) {
+            try {
+                Thread.sleep(millis);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        @Override
+        public void run() {
+            System.out.println("StoppableRunnable running");
+            while (!isStopRequested()) {
+                // keep doing what this thread should do.
+
+                try {
+                    Thread.sleep(1000);
+                    System.out.println("...");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+            System.out.println("StoppableRunnable stopped");
+
+        }
+    }
+
+    public static void main(String[] args) {
+        MyRunnable myRunnable = new MyRunnable();
+
+        Thread thread = new Thread(myRunnable, "The Thread JD");
+
+        thread.start();
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Requesting stop");
+        myRunnable.doStop();
+        System.out.println("stop requested");
+
+    }
+}
+
+```
+### Join and deamon
+- **deamon** : when we set a threadd as deamon it will stop when main thread will stop
+- **join** :  join method will join the thread with the current running thread , in below example main thread is waiting to complete for thread 
+```java
+package creating.threads;
+
+/**
+ * Created by jd birla on 11-07-2023 at 15:27
+ */
+public class ThreadExample9 {
+
+    public static void main(String[] args) {
+        Runnable runnable = () -> {
+            for (int i = 0; i < 5; i++) {
+                sleep(1000);
+                System.out.println("running");
+            }
+        };
+
+        Thread thread = new Thread(runnable);
+        thread.setDaemon(true);
+        thread.start();
+
+        try {
+            thread.join(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    private static void sleep(int i) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+
+```
+
+##  Java Virtual Threads 
+
+
+
+
 ![image](https://user-images.githubusercontent.com/69948118/215028932-6c28a184-f537-473a-a9ae-76634bdb8215.png)
 ![image](https://user-images.githubusercontent.com/69948118/215028942-446d2197-b78f-476a-96fa-0e31a57d2406.png)
 ![image](https://user-images.githubusercontent.com/69948118/215028950-e671afa2-be3e-4be2-b3ba-0d347816598a.png)
