@@ -131,8 +131,111 @@ public class ThreadExample9 {
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/605687b4-7bcf-42d3-969f-d5a8f88fef7e)
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/5f5ed209-c9e2-4035-b5ab-efe6d6ba3423)
 
+- MyRunnable
+```java
+package memory.model;
+
+/**
+ * Created by jd birla on 11-07-2023 at 15:50
+ */
+public class MyRunnable implements Runnable {
+
+    private int  count = 0;
+    private  PassingObject passingObject = null;
+
+    public MyRunnable(PassingObject passingObject) {
+        this.passingObject = passingObject;
+    }
+
+    @Override
+    public void run() {
+        MyObject myObject = new MyObject();
+        System.out.println(" myObject : "+myObject);
+        System.out.println(" passingObject : "+passingObject);
+
+        for (int i = 0; i < 1_000_000; i++) {
+         synchronized (this)
+            {
+                this.count++;
+
+          }
+
+        }
+        System.out.println(Thread.currentThread().getName() + " : " + this.count);
+    }
+
+}
+
+```
+- SeprateObjects
+```java
+package memory.model;
+
+/**
+ * Created by jd birla on 11-07-2023 at 15:49
+ */
+public class SeprateObjects {
+
+    public static void main(String[] args) {
+        PassingObject passingObject = new PassingObject();
+        Runnable runnable1 = new MyRunnable(passingObject);
+        Runnable runnable2 = new MyRunnable(passingObject);
+        Thread thread1 = new Thread(runnable1);
+        Thread thread2 = new Thread(runnable2);
+
+        thread1.start();
+        thread2.start();
+
+//        myObject : memory.model.MyObject@5d9c386
+//        passingObject : memory.model.PassingObject@591e7753
+//        myObject : memory.model.MyObject@2024773f
+//        passingObject : memory.model.PassingObject@591e7753
+//        Thread-1 : 1000000
+//        Thread-0 : 1000000
+    }
+}
+
+```
+- SharedObjects
+```java
+package memory.model;
+
+/**
+ * Created by jd birla on 11-07-2023 at 15:53
+ */
+public class SharedObjects {
+
+    public static void main(String[] args) {
+        PassingObject passingObject = new PassingObject();
+        Runnable runnable = new MyRunnable(passingObject);
+        Thread thread1 = new Thread(runnable);
+        Thread thread2 = new Thread(runnable );
+
+        thread1.start();
+        thread2.start();
+// Before synchronization
+//        myObject : memory.model.MyObject@5d9c386
+//        passingObject : memory.model.PassingObject@591e7753
+//        myObject : memory.model.MyObject@3ff9a510
+//        passingObject : memory.model.PassingObject@591e7753
+//        Thread-0 : 886372
+//        Thread-1 : 1868476
+
+//After applying only synchronization
+//        myObject : memory.model.MyObject@1648f0de
+//        passingObject : memory.model.PassingObject@4c8f3013
+//        myObject : memory.model.MyObject@65738596
+//        passingObject : memory.model.PassingObject@4c8f3013
+//        Thread-0 : 1954068
+//        Thread-1 : 2000000
 
 
+
+
+    }
+}
+
+```
 
 
 
