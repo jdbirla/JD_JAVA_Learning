@@ -121,7 +121,18 @@ public class ThreadExample9 {
 
 ```
 
-##  Java Virtual Threads 
+###  The Java Memory Model - The Basics 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/1cfaeeed-1497-4d4c-96dc-4e29bdc4dc43)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/22786ad1-a4f1-40a4-8fca-ff32b6514732)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/9e813f5b-7bb4-46cf-8d8e-18fbb296bd42)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/dae5195d-4016-4964-b78e-e878bb83090f)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/69fa64cb-cca7-427c-8674-f33713f884d6)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/c7b45e29-76da-45d3-9ad4-0f54b3218f05)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/605687b4-7bcf-42d3-969f-d5a8f88fef7e)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/5f5ed209-c9e2-4035-b5ab-efe6d6ba3423)
+
+
+
 
 
 
