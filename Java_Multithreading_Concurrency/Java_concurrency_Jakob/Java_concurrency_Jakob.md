@@ -237,6 +237,48 @@ public class SharedObjects {
 
 ```
 
+##  Java Happens Before Guarantee - Java Memory Model - Part 2 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/6177b383-f9b3-4529-890a-6e7bf6f75377)
+
+- The Java "happens-before" guarantee is a concept that defines the ordering of actions in a multi-threaded program. It ensures that the results of one thread's actions are visible to another thread in a consistent and predictable manner.
+
+- In easy language, the happens-before guarantee can be understood as a set of rules that determine when changes made by one thread become visible to other threads. These rules help prevent unexpected and inconsistent behavior in concurrent programs.
+
+- Here are a few key points to understand about the happens-before guarantee:
+
+1. Program order: Actions within a single thread are guaranteed to occur in the order specified by the program. This means that if you have a sequence of operations in your code, they will be executed in the same order.
+
+2. Volatile variables: If a write operation is performed on a volatile variable by one thread, and a read operation is performed on the same variable by another thread, the read operation is guaranteed to see the updated value.
+
+3. Synchronization: Actions performed within a synchronized block or method have a happens-before relationship with subsequent actions in another synchronized block or method. This ensures that changes made within a synchronized block are visible to other threads when they subsequently acquire the same lock.
+
+4. Thread start and termination: The start of a thread guarantees that all actions in the thread's constructor happen before any actions performed by that thread. Similarly, any actions performed by a thread happen before any actions performed by a thread that detects the first thread has terminated (either by joining or by using the `isAlive()` method).
+
+5. Thread interruptions: If one thread interrupts another thread, the interrupting thread is guaranteed to see the effects of all actions performed by the interrupted thread before the interruption.
+
+- These are just a few examples of the happens-before rules. The happens-before guarantee ensures that threads can safely communicate and coordinate their actions, providing consistency and predictability in concurrent programs.
+- By following these rules, developers can write correct and reliable multi-threaded programs in Java, ensuring that shared data is accessed and modified safely by multiple threads.
+
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/44f6e2d9-3a65-4b86-ab9d-c905b8a5eb70)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/bfe2aa34-0995-403a-9b1f-200103e151c1)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/212dc344-b1b1-4163-8304-d8de03e0e706)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/a97ebdc8-b316-49e5-bfaa-6a8716e941af)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/1bd94f87-7b36-4cf0-84af-e4ee2f78b2eb)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/65e3458b-2fd5-4c56-ad14-6932acd6b0af)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/df9b5a2c-eca1-455c-b957-c5ca6f84187b)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/2473cc9b-cf76-4355-9448-0159fd72bbc3)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/5048bc39-5967-4104-8a42-3bc2e3d03066)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/5c5066dc-3d68-4509-aeeb-44887f6fb4c3)
+
+
+## 
+
+
+
+
+
+
+
 
 
 
