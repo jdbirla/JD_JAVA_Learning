@@ -272,10 +272,39 @@ public class SharedObjects {
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/c0ab7ba2-05f9-4e60-b20f-d75adbbf3eda)
 
 
-## 
+##  Java Synchronized - The synchronized keyword in Java and Java synchronized blocks and methods 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/bdd9ff16-0de4-4201-baf5-18b005be2e34)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/485dd79d-8ad8-4f94-ad6f-a3a5612ace0f)
 
 
+### Reentrance 
+```java
+package synchronizeds.reentrance;
 
+/**
+ * Created by jd birla on 11-07-2023 at 18:39
+ */
+public class Reentrance {
+    private int count = 0;
+
+    public synchronized void inc() {
+        this.count++;
+    }
+
+    public synchronized int intAntGet() {
+        inc();
+        return this.count;
+    }
+}
+
+```
+### java synchronized Visibility guarantee 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/999686ab-c4fc-4410-a3d9-dd8d8b37f513)
+
+### Limitation
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/419ecdab-7061-4a35-82d9-bd9e3f37b718)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/2717d501-eb86-4686-9a52-8dfc23490579)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/12b8c2cf-dafe-4a43-84c3-25b924519b4c)
 
 
 
