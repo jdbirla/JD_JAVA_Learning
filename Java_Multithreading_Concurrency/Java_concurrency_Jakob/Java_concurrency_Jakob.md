@@ -369,11 +369,69 @@ public class ThreadLocalBasicExample {
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/c5902fab-082e-4334-9cb9-54312e072ac3)
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/9b54affa-501f-47f9-b6ec-a840d57d9ba5)
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/d5b3354d-5ee9-4982-8191-312caf3c146a)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/3f29962a-ce86-44e4-866f-d87c65e08f7c)
+### Check and Act
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/2b3c894f-e78a-4990-a7df-db80048d7b73)
+
+```java
+package race;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+/**
+ * Created by jd birla on 12-07-2023 at 14:38
+ */
+public class RaceConditionCheckAndAct {
+
+    public static void main(String[] args) {
+        Map<String, String> sharedMap = new ConcurrentHashMap<>();
+
+        Thread thread1 = new Thread(getRunnable(sharedMap));
+        Thread thread2 = new Thread(getRunnable(sharedMap));
+        thread1.start();
+        thread2.start();
 
 
+    }
 
+    public static Runnable getRunnable(Map<String, String> sahredMap) {
+        return () -> {
+            for (int i = 0; i < 1_000_000; i++) {
+                synchronized (sahredMap) {
+                    if (sahredMap.containsKey("key")) {
+                        String val = sahredMap.remove("key");
+                        if (val == null) {
+                            System.out.println("Iteration: " + i + ": Value for 'key' was null");
+                        }
+                    } else {
+                        sahredMap.put("key", "value");
+                    }
+                }
+            }
+        };
+    }
+}
 
+```
+##  Concurrency vs Parallelism 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/0add8417-72b0-4813-bb4b-3f3d9bbae7cf)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/1b6eaaf4-b49f-478d-8e6a-537e43932c56)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/ffa8df67-37ea-47eb-b483-8f2136183139)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/409a2aa1-079c-47d1-90b2-63d706665208)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/c9c6e8e2-68fb-41e0-a58a-dbf2f237d196)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/c0e4a4f5-7bbc-49d9-b6ea-92c0b71a1bae)
 
+##  Thread Pools in Java 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/7c24b7a5-54fc-42f7-8063-97fec49b436b)
+
+##  Java Lock 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/da934f74-06f1-4c7b-826b-5c8b16990c71)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/983d9a76-8d28-4a09-8406-3a3a39a5f368)
+
+##  Java ExecutorService - Part 1 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/900d2355-dc23-476e-9c94-712a1f7e40e2)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/7907a260-8567-4837-9ec6-408543879483)
 
 
 
