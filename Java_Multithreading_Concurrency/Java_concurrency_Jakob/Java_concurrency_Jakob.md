@@ -307,12 +307,68 @@ public class Reentrance {
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/12b8c2cf-dafe-4a43-84c3-25b924519b4c)
 
 
+## Volatile
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/26bcf7d3-487f-461a-b854-9acda758d489)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/f2ed6020-07e9-4ec0-bb45-d135b4d6d65a)
+
+##  CPU Cache Coherence + Java Concurrency 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/42b8d95d-b2ec-477b-922f-fa551bb52a19)
+
+##  Java ThreadLocal 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/a5df514a-86a2-4eb8-8736-1b18dbfa0aa3)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/f94e55ba-84f5-4b58-be68-388c758bb03d)
+
+### InheritableThreadLocal : can share values to child threads
 
 
+```java
+package threadlocal;
 
+/**
+ * Created by jd birla on 12-07-2023 at 12:44
+ */
+public class ThreadLocalBasicExample {
+    public static void main(String[] args) {
+        ThreadLocal<String> threadLocal = new ThreadLocal<>();
 
+        Thread thread1 = new Thread(
+                () -> {
+                    threadLocal.set("Thread1");
 
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    String val = threadLocal.get();
+                    System.out.println(val);
+                }
+        );
 
+        Thread thread2 = new Thread(
+                () -> {
+                    threadLocal.set("Thread2");
+
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    String val = threadLocal.get();
+                    System.out.println(val);
+                }
+        );
+        thread1.start();
+        thread2.start();
+    }
+}
+
+```
+
+##  Race Conditions in Java Multithreading 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/c5902fab-082e-4334-9cb9-54312e072ac3)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/9b54affa-501f-47f9-b6ec-a840d57d9ba5)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/d5b3354d-5ee9-4982-8191-312caf3c146a)
 
 
 
