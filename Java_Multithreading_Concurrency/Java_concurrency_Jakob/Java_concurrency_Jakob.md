@@ -1,6 +1,41 @@
 # Java_concurrency_Jakob
 Source: Java Concurrency and Multithreading - Introduction(# https://www.youtube.com/watch?v=mTGdtC9f4EU&list=PLL8woMHwr36EDxjUoCzboZjedsnhLP1j4)
 - https://jenkov.com/tutorials/java-concurrency/index.html
+
+  # Table of contents
+
+- [Java_concurrency_Jakob](#java_concurrency_jakob)
+  - [Java Concurrency and Multithreading - Introduction](#java-concurrency-and-multithreading---introduction)
+  - [Java Threads - Creating, starting and stopping threads in Java](#java-threads---creating-starting-and-stopping-threads-in-java)
+    - [How to Stop a thread](#how-to-stop-a-thread)
+    - [Join and deamon](#join-and-deamon)
+    - [The Java Memory Model - The Basics](#the-java-memory-model---the-basics)
+  - [Java Happens Before Guarantee - Java Memory Model - Part 2](#java-happens-before-guarantee---java-memory-model---part-2)
+  - [Java Synchronized - The synchronized keyword in Java and Java synchronized blocks and methods](#java-synchronized---the-synchronized-keyword-in-java-and-java-synchronized-blocks-and-methods)
+    - [Reentrance](#reentrance)
+    - [java synchronized Visibility guarantee](#java-synchronized-visibility-guarantee)
+    - [Limitation](#limitation)
+  - [Volatile](#volatile)
+  - [CPU Cache Coherence + Java Concurrency](#cpu-cache-coherence--java-concurrency)
+  - [Java ThreadLocal](#java-threadlocal)
+    - [InheritableThreadLocal : can share values to child threads](#inheritablethreadlocal--can-share-values-to-child-threads)
+  - [Race Conditions in Java Multithreading](#race-conditions-in-java-multithreading)
+    - [Check and Act](#check-and-act)
+  - [Concurrency vs Parallelism](#concurrency-vs-parallelism)
+  - [Thread Pools in Java](#thread-pools-in-java)
+  - [Java Lock](#java-lock)
+  - [Java ExecutorService - Part 1](#java-executorservice---part-1)
+    - [Future Methods](#future-methods)
+  - [Java ExecutorService - Part 2](#java-executorservice---part-2)
+    - [CompetableFuture Methods](#competablefuture-methods)
+    - [How many threads should be available in thread pool](#how-many-threads-should-be-available-in-thread-pool)
+  - [Java ExecutorService Using Virtual Threads](#java-executorservice-using-virtual-threads)
+  - [Deadlock in Java](#deadlock-in-java)
+    - [Deadlock reason](#deadlock-reason)
+  - [Deadlock Prevention in Java](#deadlock-prevention-in-java)
+    - [Deadlock Detection](#deadlock-detection)
+  - [Producer Consumer Pattern - With Java Example](#producer-consumer-pat
+  - 
 ## Java Concurrency and Multithreading - Introduction
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/a4a715d2-e7bb-4fb1-8494-71cf6aa8b460)
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/a374c303-d957-4d2d-9de0-857131891320)
