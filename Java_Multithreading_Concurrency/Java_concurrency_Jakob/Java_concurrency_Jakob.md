@@ -432,9 +432,11 @@ public class RaceConditionCheckAndAct {
 ##  Java ExecutorService - Part 1 
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/900d2355-dc23-476e-9c94-712a1f7e40e2)
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/7907a260-8567-4837-9ec6-408543879483)
+- invokeAny(), invokeAll()
 
-
-
+##  Java ExecutorService - Part 2 
+- **shutdown** : Shutdown will wait for all task will be comleted
+- ***shutdownnow** : 
 
 
 
