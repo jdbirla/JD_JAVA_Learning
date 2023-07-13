@@ -311,6 +311,17 @@ public class SharedObjects {
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/bdd9ff16-0de4-4201-baf5-18b005be2e34)
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/485dd79d-8ad8-4f94-ad6f-a3a5612ace0f)
 
+## Synchronization Best Practices
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/d8ff8eeb-c8de-44ca-a704-399d71c50fde)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/49a79d00-7caf-4d81-9548-3efefbb7a7ae)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/56e7d1e8-d308-4b24-bb4a-7e9507d3a781)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/6795b2e2-a2ad-4860-a1a0-66ebfe7d368d)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/85b4b81b-ebc2-4622-bec0-c1e02e42a624)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/e84bfdac-64b5-44b9-8b4f-56144d851ae4)
+
+## Thread Cooperation & Management
+
+
 
 ### Reentrance 
 ```java
