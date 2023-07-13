@@ -459,7 +459,7 @@ Please note that not all the methods listed here are necessarily available in ev
 
 ##  Java ExecutorService - Part 2 
 - **shutdown** : Shutdown will wait for all tasks will to be completed and main thread will wait
-- ***shutdownnow** : Shutdown all task immediately
+- **shutdownnow** : Shutdown all task immediately
 
 ### CompetableFuture Methods
 
@@ -490,14 +490,37 @@ Please note that not all the methods listed here are necessarily available in ev
 | `exceptionally(Function<Throwable, ? extends T> fn)` | Returns a new `CompletableFuture` that is completed with the result of applying the given function to the exception thrown by this future, if it completed exceptionally. | `CompletableFuture<T> newFuture = future.exceptionally(exception -> /* Handle exception and return result */);` |
 | `handle(BiFunction<? super T, Throwable, ? extends U> fn)` | Returns a new `CompletableFuture` that is completed with the result of applying the given function to the result and exception (if any) of this future. | `CompletableFuture<U> newFuture = future.handle((result, exception) -> /* Handle result and exception and return value */);` |
 
-Please note that this table provides a subset of the methods available in the `CompletableFuture` class and their overloaded variations. The examples given here are based on the Java standard library's `CompletableFuture` class and the usage patterns for chaining and composing asynchronous operations. Refer to the official Java documentation for a comprehensive list of methods and their detailed usage.
+### How many threads should be available in thread pool
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/65095313-db59-4fcd-9dd8-d8faca2b0afe)
 
+## Java ExecutorService Using Virtual Threads 
+- Virtual thread introduced in java 19
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/c4650bd0-38a9-4a83-8a38-49fc497622b6)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/41dfcf4d-7e95-4daa-b721-b5ab16f66cbf)
 
+##  Deadlock in Java 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/b08800f6-403f-483b-ae1e-1187d6a1da56)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/fbf5b7ef-048b-40c4-a444-d6049324cdcc)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/97945f7a-8d83-4700-916b-efb9dd4e0907)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/d30e1d51-c617-43fd-bd8a-f2d8e667769c)
+### Deadlock reason
+- **Mutual Exclusion** : Mutual exclusion means only one thread can get a lock at time, if both threads can get a lock at same time then no deadlock
+- **No Preemption** : It refers to the idea that resources cannot be forcefully taken away or preempted from a thread that currently holds them  In other words, once a thread acquires a resource, it has exclusive control over that resource until it voluntarily releases it.
+- To understand "No Preemption," let's consider an example involving two threads, Thread A and Thread B, and a shared resource, Resource X:
+   - Thread A acquires a lock on Resource X.
+   - Thread B wants to acquire the lock on Resource X but finds that it is already held by Thread A.
+   - In a system without preemption, Thread B cannot forcibly take away the lock from Thread A. It must wait until Thread A voluntarily releases the lock.
+- **Hold and Wait** :  It refers to the situation where a process or thread holds at least one resource while waiting to acquire additional resources.
+   - To understand "Hold and Wait," let's consider an example involving two threads, Thread A and Thread B, and two resources, Resource X and Resource Y:
 
+   - Thread A acquires a lock on Resource X.
+   - Thread A requires Resource Y to proceed but does not release the lock on Resource X.
+   - Thread A goes into a waiting state, expecting to acquire Resource Y in the future.
+   - Meanwhile, Thread B acquires a lock on Resource Y.
+   - Thread B requires Resource X to proceed but does not release the lock on Resource Y.
+   - Thread B goes into a waiting state, expecting to acquire Resource X in the future.
+- **Circular Wait** : There must be a circular chain of two or more threads, each holding a resource that the next thread in the chain is waiting for.
 
-
-
-
-
+## 
 
 
