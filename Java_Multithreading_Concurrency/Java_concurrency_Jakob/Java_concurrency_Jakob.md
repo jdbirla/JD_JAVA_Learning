@@ -430,13 +430,67 @@ public class RaceConditionCheckAndAct {
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/983d9a76-8d28-4a09-8406-3a3a39a5f368)
 
 ##  Java ExecutorService - Part 1 
+### Future Methods
+
+| Method Name             | Description                                                             | Code Snippet                                                                                                    |
+|-------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| `cancel()`              | Attempts to cancel the execution of the associated task.                 | `future.cancel()`                                                                                               |
+| `cancel(may_interrupt_if_running)` | Attempts to cancel the execution of the associated task.             | `future.cancel(True)`                                                                                           |
+| `done()`                | Returns `True` if the task has completed, whether successfully or not.   | `if future.done():\n    print("Task is done")`                                                                   |
+| `result()`              | Waits for the task to complete and returns its result.                   | `result = future.result()`                                                                                      |
+| `result(timeout)`       | Waits for the task to complete and returns its result within a timeout.  | `result = future.result(5)`                                                                                     |
+| `exception()`           | Returns the exception raised by the task (if any) or `None`.             | `exception = future.exception()`                                                                                |
+| `add_done_callback(fn)` | Adds a callback function to be called when the task is complete.          | `future.add_done_callback(callback_function)`                                                                   |
+| `set_result(result)`    | Sets the result of the task to the provided value.                        | `future.set_result(result_value)`                                                                               |
+| `set_exception(exception)` | Sets the exception of the task to the provided value.                    | `future.set_exception(exception_value)`                                                                         |
+| `running()`             | Returns `True` if the task is currently running.                         | `if future.running():\n    print("Task is running")`                                                            |
+| `timeout(seconds)`      | Sets a timeout value for the task to complete within the given seconds.   | `future.timeout(10)`                                                                                            |
+| `wait(timeout=None)`    | Waits for the task to complete, with an optional timeout.                 | `future.wait()` or `future.wait(5)`                                                                             |
+| `result_at_timeout(default=None)` | Returns the task's result if available, or a default value if timeout occurs. | `result = future.result_at_timeout()` or `result = future.result_at_timeout(default_value)`                   |
+| `exception_at_timeout(default=None)` | Returns the task's exception if available, or a default value if timeout occurs. | `exception = future.exception_at_timeout()` or `exception = future.exception_at_timeout(default_value)`    |
+| `running_or_done()`     | Returns `True` if the task is currently running or has completed.          | `if future.running_or_done():\n    print("Task is running or done")`                                           |
+| `done_and_not_cancelled()` | Returns `True` if the task has completed and was not cancelled.           | `if future.done_and_not_cancelled():\n    print("Task is done and not cancelled")`                              |
+| `cancelled()`           | Returns `True` if the task was successfully cancelled.                    | `if future.cancelled():\n    print("Task was cancelled")`                                                       |
+
+Please note that not all the methods listed here are necessarily available in every implementation of the `Future` class. The examples provided are based on common conventions and usage patterns in asynchronous programming libraries. Make sure to refer to the documentation specific to your programming language or library to find the available methods and their usage.
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/900d2355-dc23-476e-9c94-712a1f7e40e2)
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/7907a260-8567-4837-9ec6-408543879483)
 - invokeAny(), invokeAll()
 
 ##  Java ExecutorService - Part 2 
-- **shutdown** : Shutdown will wait for all task will be comleted
-- ***shutdownnow** : 
+- **shutdown** : Shutdown will wait for all tasks will to be completed and main thread will wait
+- ***shutdownnow** : Shutdown all task immediately
+
+### CompetableFuture Methods
+
+| Method Name                             | Description                                                               | Code Snippet                                                                                           |
+|-----------------------------------------|---------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| `cancel(boolean mayInterruptIfRunning)` | Attempts to cancel the completion of this future.                          | `future.cancel(true)`                                                                                  |
+| `isCancelled()`                         | Returns `true` if the future was cancelled before its completion.          | `if (future.isCancelled()) { /* Handle cancellation */ }`                                              |
+| `isCompletedExceptionally()`            | Returns `true` if the future completed exceptionally.                      | `if (future.isCompletedExceptionally()) { /* Handle exceptional completion */ }`                      |
+| `isDone()`                              | Returns `true` if the future completed, either normally or exceptionally.   | `if (future.isDone()) { /* Handle completion */ }`                                                      |
+| `get()`                                 | Waits if necessary for the future to complete, and then returns its result. | `T result = future.get();`                                                                              |
+| `get(long timeout, TimeUnit unit)`      | Waits if necessary for at most the given time for the future to complete.  | `T result = future.get(5, TimeUnit.SECONDS);`                                                           |
+| `join()`                                | Waits if necessary for the future to complete and returns its result.       | `T result = future.join();`                                                                             |
+| `obtrudeValue(T value)`                  | Completes the future with the given value, regardless of its current state.| `future.obtrudeValue(resultValue);`                                                                     |
+| `obtrudeException(Throwable ex)`         | Completes the future with the given exception, regardless of its current state. | `future.obtrudeException(exception);`                                                                |
+| `complete(T value)`                      | Completes the future with the given value, if it was not already completed. | `future.complete(resultValue);`                                                                         |
+| `completeExceptionally(Throwable ex)`    | Completes the future exceptionally with the given exception, if not completed. | `future.completeExceptionally(exception);`                                                            |
+| `obtrudeValue(T value)`                  | Completes the future with the given value, regardless of its current state.| `future.obtrudeValue(resultValue);`                                                                     |
+| `thenApply(Function<? super T,? extends U> fn)` | Returns a new `CompletableFuture` that is completed with the value obtained by applying the given function to the result of this future. | `CompletableFuture<U> newFuture = future.thenApply(result -> /* Apply function to result */);`    |
+| `thenAccept(Consumer<? super T> action)`    | Returns a new `CompletableFuture` that is completed with `null` after the action is performed on the result of this future. | `CompletableFuture<Void> newFuture = future.thenAccept(result -> /* Perform action on result */);` |
+| `thenRun(Runnable action)`                 | Returns a new `CompletableFuture` that is completed with `null` after the given action is performed. | `CompletableFuture<Void> newFuture = future.thenRun(() -> /* Perform action */);`              |
+| `thenCompose(Function<? super T, ? extends CompletionStage<U>> fn)` | Returns a new `CompletableFuture` that is the result of applying the given function to the result of this future. | `CompletableFuture<U> newFuture = future.thenCompose(result -> /* Apply function to result */);` |
+| `thenCombine(CompletionStage<? extends U> other, BiFunction<? super T, ? super U, ? extends V> fn)` | Returns a new `CompletableFuture` that is the result of applying the given function to the results of this future and another future. | `CompletableFuture<V> newFuture = future.thenCombine(otherFuture, (result1, result2) -> /* Combine results */);` |
+| `thenAcceptBoth(CompletionStage<? extends U> other, BiConsumer<? super T, ? super U> action)` | Returns a new `CompletableFuture` that is completed with `null` after the given action is performed with the results of this future and another future. | `CompletableFuture<Void> newFuture = future.thenAcceptBoth(otherFuture, (result1, result2) -> /* Perform action */);` |
+| `runAfterBoth(CompletionStage<?> other, Runnable action)` | Returns a new `CompletableFuture` that is completed with `null` after both this future and another future have completed. | `CompletableFuture<Void> newFuture = future.runAfterBoth(otherFuture, () -> /* Perform action */);` |
+| `applyToEither(CompletionStage<? extends T> other, Function<? super T, U> fn)` | Returns a new `CompletableFuture` that is completed with the result of either this future or another future, whichever completes first. | `CompletableFuture<U> newFuture = future.applyToEither(otherFuture, result -> /* Apply function to result */);` |
+| `acceptEither(CompletionStage<? extends T> other, Consumer<? super T> action)` | Returns a new `CompletableFuture` that is completed with `null` after the given action is performed on the result of either this future or another future, whichever completes first. | `CompletableFuture<Void> newFuture = future.acceptEither(otherFuture, result -> /* Perform action */);` |
+| `runAfterEither(CompletionStage<?> other, Runnable action)` | Returns a new `CompletableFuture` that is completed with `null` after either this future or another future completes. | `CompletableFuture<Void> newFuture = future.runAfterEither(otherFuture, () -> /* Perform action */);` |
+| `exceptionally(Function<Throwable, ? extends T> fn)` | Returns a new `CompletableFuture` that is completed with the result of applying the given function to the exception thrown by this future, if it completed exceptionally. | `CompletableFuture<T> newFuture = future.exceptionally(exception -> /* Handle exception and return result */);` |
+| `handle(BiFunction<? super T, Throwable, ? extends U> fn)` | Returns a new `CompletableFuture` that is completed with the result of applying the given function to the result and exception (if any) of this future. | `CompletableFuture<U> newFuture = future.handle((result, exception) -> /* Handle result and exception and return value */);` |
+
+Please note that this table provides a subset of the methods available in the `CompletableFuture` class and their overloaded variations. The examples given here are based on the Java standard library's `CompletableFuture` class and the usage patterns for chaining and composing asynchronous operations. Refer to the official Java documentation for a comprehensive list of methods and their detailed usage.
 
 
 
