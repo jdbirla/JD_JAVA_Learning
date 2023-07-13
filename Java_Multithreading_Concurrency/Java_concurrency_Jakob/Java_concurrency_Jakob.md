@@ -531,3 +531,6 @@ Please note that not all the methods listed here are necessarily available in ev
 ### Deadlock Detection
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/b82f5007-b928-4f61-bc01-af68e6f3be04)
 
+##  Producer Consumer Pattern - With Java Example 
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/ad37af1a-ff62-4e9b-9011-0d188d7197ab)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/ef00de1b-eec6-4940-918e-b7531228399e)
