@@ -34,7 +34,7 @@ Source: Java Concurrency and Multithreading - Introduction(# https://www.youtube
     - [Deadlock reason](#deadlock-reason)
   - [Deadlock Prevention in Java](#deadlock-prevention-in-java)
     - [Deadlock Detection](#deadlock-detection)
-  - [Producer Consumer Pattern - With Java Example](#producer-consumer-pat
+  - [Producer Consumer Pattern - With Java Example](#producer-consumer-pat)
   - 
 ## Java Concurrency and Multithreading - Introduction
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/a4a715d2-e7bb-4fb1-8494-71cf6aa8b460)
@@ -345,6 +345,56 @@ public class Reentrance {
 ## Volatile
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/26bcf7d3-487f-461a-b854-9acda758d489)
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/f2ed6020-07e9-4ec0-bb45-d135b4d6d65a)
+
+#### Dheeru Mundluru
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/14d46323-15c8-4a39-a6d6-b1f13b5493c3)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/db26ab17-96b1-4a9a-8957-49b140d3c3ba)
+
+## Atomic Variables
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/ca6497f3-6fc4-47ee-a1d5-c2d41154c76d)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/8fec238d-4ce4-408f-aee6-cb5ea861f8aa)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/3ee65103-5623-43be-932b-c7c7b05f0e73)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/731879b9-83fa-486e-9b97-5c3bda253270)
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/c191eaf2-c013-45ce-a6b7-c41e1c851512)
+
+### AtomicReference:
+- AtomicReference class was categorized under scalars. Below link includes a very
+interesting example on tracking # page views & # accesses that failed due to an
+error in a Web application. Do check it out and in general you can bookmark the
+link javamex.com as it has pretty good articles. The link also discusses about
+AtomicMarkableReference and AtomicStampedReference.
+- http://www.javamex.com/tutorials/synchronization_concurrency_7_atomic_reference.shtml
+- Field Updater Classes:
+As mentioned earlier, field updater classes include AtomicLongFieldUpdater,
+AtomicIntegerFieldUpdater, AtomicReferenceFieldUpdater. These are reflection-
+based utility classes that wrap around corresponding volatile variables and can
+perform atomic operations on them. One use-case is that for a given shared
+variable, you would like it to be mostly used as a simple volatile variable, but
+occasionally you would want to perform some atomic operations on them. For
+this, using scalar atomic classes could be unnecessary. So, you can use these field
+updater classes only when atomicity is required and for the rest of the time the
+volatile field would be used as-is. Check out the below link, which explains this
+use-case with a very nice example involving BufferedInputStream. The link also
+talks about a second use-case.
+- http://www.javamex.com/tutorials/synchronization_concurrency_7_atomic_updaters.shtml
+- Volatile Boolean vs AtomicBoolean:
+- Checkout the following links for a discussion on this. Below is an excerpt from one
+of the answers.
+- “I use volatile fields when said field is ONLY UPDATED by its owner thread and the
+value is only read by other threads, you can think of it as a publish/subscribe
+scenario where there are many observers but only one publisher. However if those
+observers must perform some logic based on the value of the field and then push
+back a new value then I go with Atomic* vars or locks or synchronized blocks,
+whatever suits me best. In many concurrent scenarios it boils down to get the
+value, compare it with another one and update if necessary, hence the
+compareAndSet and getAndSet methods present in the Atomic* classes.”
+- http://stackoverflow.com/questions/3786825/volatile-boolean-vs-atomicboolean
+- http://stackoverflow.com/questions/4876122/when-is-it-preferable-to-use-volatile-boolean-in-java-rather-than-atomicboolean
+- Other Useful References:
+- http://stackoverflow.com/questions/6671020/java-atomic-access-to-field-within-object
+- http://stackoverflow.com/questions/4818699/practical-uses-for-atomicinteger
+
+
 
 ##  CPU Cache Coherence + Java Concurrency 
 ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/42b8d95d-b2ec-477b-922f-fa551bb52a19)
