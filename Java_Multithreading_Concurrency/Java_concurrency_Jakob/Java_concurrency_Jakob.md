@@ -521,6 +521,13 @@ Please note that not all the methods listed here are necessarily available in ev
    - Thread B goes into a waiting state, expecting to acquire Resource X in the future.
 - **Circular Wait** : There must be a circular chain of two or more threads, each holding a resource that the next thread in the chain is waiting for.
 
-## 
+##  Deadlock Prevention in Java 
+- **Resource Ordering**: Acquire resources in a predefined order to avoid circular wait situations.
+- **Lock Timeout**: Use timeouts when acquiring locks to avoid indefinite blocking.
+- **Deadlock Detection and Recovery**: Implement algorithms to detect and resolve deadlocks when they occur.
+- **Avoiding Hold and Wait**: Acquire all necessary resources upfront before starting critical sections of code.
+- **Limit Resource Usage**: Limit the number of resources each thread can acquire to reduce the chances of circular wait.
 
+### Deadlock Detection
+![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/b82f5007-b928-4f61-bc01-af68e6f3be04)
 
