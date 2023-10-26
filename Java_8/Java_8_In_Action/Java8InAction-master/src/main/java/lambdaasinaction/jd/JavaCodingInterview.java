@@ -111,7 +111,40 @@ System.out.println("Find second or nth most frequent occurance in word it will g
 		System.out.println("-------------------------------JDTraversing----------------------------------------------");
 
 		System.out.println("Que1:How to print keys & values of a Map in Java 8 ?");
+  Map<String, Integer> map = new HashMap<>();
+        map.put("one", 1);
+        map.put("two", 2);
+        map.put("three", 3);
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            // Do something with key and value
+            System.out.println(key + " => " + value);
+        }
+        Iterator<Map.Entry<String, Integer>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, Integer> entry = iterator.next();
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            // Do something with key and value
+            System.out.println(key + " => " + value);
+        }
 
+        map.forEach((key, value) -> {
+            // Do something with key and value
+            System.out.println(key + " => " + value);
+        });
+
+        map.entrySet().stream()
+                .forEach(entry -> {
+                    String key = entry.getKey();
+                    Integer value = entry.getValue();
+                    // Do something with key and value
+                    System.out.println(key + " => " + value);
+                });
+
+
+		
 		strMap.keySet().stream().iterator().forEachRemaining(System.out::println);
 		System.out.println("-----------------------------------------------------");
 
