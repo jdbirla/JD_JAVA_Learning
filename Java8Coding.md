@@ -189,7 +189,7 @@ public class EmployeeDatabase {
 ```
 ## Second highest or Nth Highest problem
 ```java
-//1. Find the second largest element in array using stream, it will work for duplicate numbers also
+//1. Find the second largest element in the array using stream, it will work for duplicate numbers also
  int[] arr1={7,7,5,6,6,1,4,4,2};
         Integer integer = Arrays.stream(arr1)
                 .boxed()
@@ -202,6 +202,20 @@ public class EmployeeDatabase {
         System.out.println(integer); //6
 
 /*---------------------------------------------------------------------------*/
+//2. The second highest salary from the employee list returns as employee object and it should work even if two employees have the same salary
+ double secondHighestSalary = EmployeeDatabase.getEmployees().stream()
+                .map(Employee::getSalary)
+                .distinct()
+                .sorted(Comparator.reverseOrder())
+                .skip(1)
+                .findFirst()
+                .orElse(0.0);
+
+        List<Employee> secondHighestSalaryEmployees = EmployeeDatabase.getEmployees().stream()
+                .filter(employee -> employee.getSalary() == secondHighestSalary)
+                .collect(Collectors.toList());
+
+        secondHighestSalaryEmployees.forEach(System.out::println);//Employee{id=103, name='Abhijit', grade='C', dept='DEV', salary=110000.0, address=[Address [city=Kolkata, country=India], Address [city=Bhopal, country=India]]}
 
 ```
 ## Second or nth most frequent occurrence in word
@@ -219,5 +233,18 @@ public class EmployeeDatabase {
                 .findFirst()
                 .get();
         System.out.println(" String :" + s);//String :d
+/*---------------------------------------------------------------------------*/
+
+//1. Find the second or nth most frequent occurrence in the word it will give result as LinkedHashMap 
+  String st = "aaababdddeee";
+        Map<String, Long> collect = Arrays.stream(st.split("")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        collect.forEach((k, v) -> System.out.println(k + ": " + v));//a: 4 b: 2 d: 3
+
+
+        LinkedHashMap<String, Long> collect1 = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .limit(2)
+                .skip(1)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+        collect1.forEach((k,v) -> System.out.println("collect1 :->"+ k +" : "+v));//collect1 :->d : 3
 
 ```
