@@ -202,7 +202,22 @@ public class EmployeeDatabase {
         System.out.println(integer); //6
 
 /*---------------------------------------------------------------------------*/
-//2. Find second or nth most frequent occurance in word it will give result charact
 
 ```
-## 
+## Second or nth most frequent occurrence in word
+```java
+//1. Find the second or nth most frequent occurrence in the word it will give the result character
+   String st = "aaababddd";
+        Map<String, Long> collect = Arrays.stream(st.split("")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        collect.forEach((k, v) -> System.out.println(k + ": " + v));//a: 4 b: 2 d: 3
+
+
+        String s = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .limit(2)
+                .skip(1)
+                .map(Map.Entry::getKey)
+                .findFirst()
+                .get();
+        System.out.println(" String :" + s);//String :d
+
+```
