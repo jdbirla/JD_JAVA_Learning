@@ -267,3 +267,17 @@ public class EmployeeDatabase {
         collect1.forEach((k,v) -> System.out.println("collect1 :->"+ k +" : "+v));//collect1 :->d : 3
 
 ```
+## Find duplicate
+```java
+ List<Integer> list = Arrays.asList(1, 2, 3, 4, 2, 3, 1);
+
+        Map<Integer, Long> counted = list.stream()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        List<Integer> result = counted.entrySet().stream()
+                .filter(entry -> entry.getValue() == 1)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+        System.out.println(result);//[4]
+
+```
