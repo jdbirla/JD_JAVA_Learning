@@ -174,3 +174,21 @@ public class EmployeeDatabase {
 }
 
 ```
+## Iterations
+### Array
+```java
+```
+### List
+```java
+```
+### Set 
+```java
+```
+### Map
+```java
+```
+## Second highest or Nth Highest problem
+```java
+
+```
+## 
