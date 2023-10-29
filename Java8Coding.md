@@ -201,5 +201,8 @@ public class EmployeeDatabase {
                 .get();
         System.out.println(integer); //6
 
+/*---------------------------------------------------------------------------*/
+//2. Find second or nth most frequent occurance in word it will give result charact
+
 ```
 ## 
