@@ -237,7 +237,7 @@ public class EmployeeDatabase {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
         System.out.println(result);//{Raju=2000}
 ```
-## Second or nth most frequent occurrence in word
+## Second or nth most frequent, frequncey, counting occurrence in word
 ```java
 //1. Find the second or nth most frequent occurrence in the word it will give the result character
    String st = "aaababddd";
@@ -254,7 +254,7 @@ public class EmployeeDatabase {
         System.out.println(" String :" + s);//String :d
 /*---------------------------------------------------------------------------*/
 
-//1. Find the second or nth most frequent occurrence in the word it will give result as LinkedHashMap 
+//2. Find the second or nth most frequent occurrence in the word it will give result as LinkedHashMap 
   String st = "aaababdddeee";
         Map<String, Long> collect = Arrays.stream(st.split("")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         collect.forEach((k, v) -> System.out.println(k + ": " + v));//a: 4 b: 2 d: 3
@@ -265,6 +265,18 @@ public class EmployeeDatabase {
                 .skip(1)
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
         collect1.forEach((k,v) -> System.out.println("collect1 :->"+ k +" : "+v));//collect1 :->d : 3
+
+//3. Count the no of occurance of words in given string using java 8
+  String input = "welcome to code decode and code decode welcome you";
+
+        List<String> list = Arrays.asList(input.split(" "));
+
+        Map<String, Long> collect = list.stream()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        Map<String, Long> collect1 = list.stream().collect(Collectors.groupingBy(a -> a, Collectors.counting()));
+
+        System.out.println(collect1);//{code=2, and=1, to=1, decode=2, welcome=2, you=1}
+
 
 ```
 ## Find duplicate
