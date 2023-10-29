@@ -1,5 +1,24 @@
 # Java8 Coding Questrions
 
+# Table of contents
+
+- [Java8 Coding Questrions](#java8-coding-questrions)
+  - [Java Data Reference](#java-data-reference)
+  - [Iterations](#iterations)
+    - [Array](#array)
+    - [List](#list)
+    - [Set](#set)
+    - [Map](#map)
+  - [Second highest or Nth Highest problem](#second-highest-or-nth-highest-problem)
+  - [Second or nth most frequent, frequncey, counting occurrence in word](#second-or-nth-most-frequent-frequncey-counting-occurrence-in-word)
+  - [Find duplicate](#find-duplicate)
+  - [Mapping , MAP , flatmap](#mapping--map--flatmap)
+  - [Filtring](#filtring)
+  - [Max , Min](#max--min)
+  - [Sorting](#sorting)
+  - [Group by , grouping by](#group-by--grouping-by)
+  - [Reducing](#reducing)
+
 ## Java Data Reference
 - Employee.java
 ```java
