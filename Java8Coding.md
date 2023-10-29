@@ -325,6 +325,7 @@ public class EmployeeDatabase {
 ```
 ## Find duplicate
 ```java
+//1. Find duplicate integers from list and delete them
  List<Integer> list = Arrays.asList(1, 2, 3, 4, 2, 3, 1);
 
         Map<Integer, Long> counted = list.stream()
@@ -335,5 +336,30 @@ public class EmployeeDatabase {
                 .map(Map.Entry::getKey)
                 .collect(Collectors.toList());
         System.out.println(result);//[4]
+
+```
+## Mapping , MAP , flatmap
+```java
+//1. FlatMap example
+ List<List<Address>> collect = EmployeeDatabase.getEmployees()
+                .stream()
+                .map(Employee::getAddress)
+                .collect(Collectors.toList());
+        collect.forEach(System.out::println);//[Address [city=Indore, country=India], Address [city=Pune, country=India]] ....
+
+        System.out.println("----------------------------------");
+        List<Address> collect1 = EmployeeDatabase.getEmployees()
+                .stream()
+                .map(Employee::getAddress)
+                .flatMap(List::stream)
+                .collect(Collectors.toList());
+        collect1.forEach(System.out::println);//Address [city=Indore, country=India] ...
+
+        System.out.println("----------------------------------");
+        List<Address> collect2 = EmployeeDatabase.getEmployees()
+                .stream()
+                .flatMap(e -> e.getAddress().stream())
+                .collect(Collectors.toList());
+        collect2.forEach(System.out::println);//Address [city=Bangalore, country=India] ...
 
 ```
