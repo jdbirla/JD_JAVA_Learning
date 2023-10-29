@@ -187,6 +187,40 @@ public class EmployeeDatabase {
 ```
 ### Map
 ```java
+ Map<String, Integer> map = new HashMap<>();
+        map.put("one", 1);
+        map.put("two", 2);
+        map.put("three", 3);
+        //foreach
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            System.out.println(key + " => " + value);
+        }
+        //while loop
+        Iterator<Map.Entry<String, Integer>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, Integer> entry = iterator.next();
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            System.out.println(key + " => " + value);
+        }
+        //forach
+        map.forEach((key, value) -> {
+            System.out.println(key + " => " + value);
+        });
+        //stream
+        map.entrySet().stream()
+                .forEach(entry -> {
+                    String key = entry.getKey();
+                    Integer value = entry.getValue();
+                    System.out.println(key + " => " + value);
+                });
+        // stream for keys
+        map.keySet().stream().iterator().forEachRemaining(System.out::println);
+        System.out.println("-----------------------------------------------------");
+        // stream for values
+        map.values().stream().forEach(a -> System.out.println(a));
 ```
 ## Second highest or Nth Highest problem
 ```java
@@ -265,14 +299,16 @@ public class EmployeeDatabase {
                 .skip(1)
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
         collect1.forEach((k,v) -> System.out.println("collect1 :->"+ k +" : "+v));//collect1 :->d : 3
+/*---------------------------------------------------------------------------*/
 
-//3. How to count occurrences of each character of a String in Java 8? WAP using stream to find frequncy of each character in given string
+//3. How to count occurrences of each character of a String in Java 8? WAP uses stream to find frequency of each character in a given string
   String someString1 = "Jitendra Birla";
         String[] arrstr = someString1.replaceAll("\\W", "").split("");
         Stream s1 = Arrays.stream(arrstr);
         Map<String, Long> collectjd = (Map<String, Long>) s1
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(collectjd);//{a=2, B=1, r=2, d=1, t=1, e=1, i=2, J=1, l=1, n=1}
+/*---------------------------------------------------------------------------*/
 
 //4. Count the no of occurance of words in given string using java 8
   String input = "welcome to code decode and code decode welcome you";
