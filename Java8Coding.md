@@ -481,6 +481,59 @@ public class EmployeeDatabase {
         System.out.println("--------------------------------------------------------------");
 
 //2. WAP to a program to collect the employees by department and sort them by salary
+List<Employee> employees = EmployeeDatabase.getEmployees();
 
+        LinkedHashMap<String, List<Employee>> employeesByDeptSortedBySalary = employees.stream()
+                .collect(Collectors.groupingBy(
+                        Employee::getDept,
+                        LinkedHashMap::new,
+                        Collectors.collectingAndThen(
+                                Collectors.toList(),
+                                list -> list.stream()
+                                        .sorted(Comparator.comparingDouble(Employee::getSalary))
+                                        .collect(Collectors.toList())
+                        )
+                ));
+
+        employeesByDeptSortedBySalary.forEach((department, deptEmployees) -> {
+            System.out.println("Department: " + department);
+            deptEmployees.forEach(employee -> System.out.println("  " + employee.getName() + " - Salary: " + employee.getSalary()));
+        });
+//using another approach
+ List<Employee> employees = EmployeeDatabase.getEmployees();
+
+        Map<String, List<Employee>> departmentToEmployees = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getDept));
+
+        Map<String, List<Employee>> sortedDepartmentToEmployees = new LinkedHashMap<>();
+
+        departmentToEmployees.forEach((department, departmentEmployees) -> {
+            List<Employee> sortedEmployees = departmentEmployees.stream()
+                    .sorted(Comparator.comparing(Employee::getSalary))
+                    .collect(Collectors.toList());
+            sortedDepartmentToEmployees.put(department, sortedEmployees);
+        });
+
+        sortedDepartmentToEmployees.forEach((department, sortedEmployees) -> {
+            System.out.println("Department: " + department);
+            sortedEmployees.forEach(employee -> System.out.println("  " + employee.getName() + " - Salary: " + employee.getSalary()));
+        });
+
+/*
+        Department:
+        Manager
+        Gajanand - Salary: 70000.0
+        Ram - Salary: 120000.0
+        Department: IT
+        Sunil - Salary: 80000.0
+        Raju - Salary: 120000.0
+        Department: DEV
+        Mrp - Salary: 60000.0
+        Abhijit - Salary: 110000.0
+        Department: BAU
+        Bhupendra - Salary: 10000.0
+        Department: Lead
+        Niranjan - Salary: 90000.0
+        */
 
 ```
