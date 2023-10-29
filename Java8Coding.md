@@ -178,6 +178,26 @@ public class EmployeeDatabase {
 ## Iterations
 ### Array
 ```java
+List<String> list = Arrays.asList(new String[]{"One","Two","Three","Four","Five"});
+//Iterate List with Standard for Loop
+//Using standard for loop
+for (int i = 0; i < list.size(); i++) 
+{
+  System.out.println(list.get(i));
+}
+//Iterate List using Iterator
+//Using Iterator
+Iterator<String> iterator = list.iterator();
+while (iterator.hasNext()) {
+  System.out.println(iterator.next());
+}
+//Iterate List using Enhanced for Loop
+//Using enhanced for loop
+for (String str : list) {
+  System.out.println(str);
+}
+//Iterate List using java 8 functional style
+list.forEach(name -> System.out.println(name));
 ```
 ### List
 ```java
