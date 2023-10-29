@@ -389,7 +389,7 @@ public class EmployeeDatabase {
 ## Sorting
 ```java
 //1. Given a list of integers, sort all the values present in it using Stream functions
-      List<Integer> myList4 = Arrays.asList(10, 15, 8, 49, 25, 98, 98, 32, 15);
+       List<Integer> myList4 = Arrays.asList(10, 15, 8, 49, 25, 98, 98, 32, 15);
         //Ascending
         List<Integer> collect = myList4.stream().sorted().collect(Collectors.toList());
         System.out.println(collect);
@@ -442,5 +442,45 @@ public class EmployeeDatabase {
 
         myList4.stream().sorted(Comparator.comparing(Integer::intValue).reversed()).forEach(System.out::println);
         System.out.println("--------------------------------------------------------------");
+/*---------------------------------------------------------------------------*/
+//2. sort the employee based on ID 
+  List<Employee> empList = EmployeeDatabase.getEmployees();
+//By ID
+        List<Employee> empsortbyid = empList.stream().sorted((e1, e2) -> e1.getId().compareTo(e2.getId()))
+                .collect(Collectors.toList());
+        System.out.println("Sort by id: " + empsortbyid);
+
+```
+## Group by , grouping by
+```java
+//1. Assume you have a list of employees in various dept, WAP to find the highest paid employee from each dept?
+
+        Map<String, Optional<Employee>> collect = EmployeeDatabase.getEmployees().stream()
+                .collect(Collectors.groupingBy(Employee::getDept, Collectors.maxBy(Comparator.comparing(e -> e.getSalary()))));
+        collect.forEach((k, v) -> System.out.println(k + ": " + v.get()));
+        System.out.println("--------------------------------------------------------------");
+
+        Map<String, Employee> collect1 = EmployeeDatabase.getEmployees().stream()
+                .collect(Collectors.groupingBy(Employee::getDept,
+                        Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparing(e -> e.getSalary())), Optional::get))
+                );
+        collect1.forEach((k, v) -> System.out.println(k + ": " + v));
+        System.out.println("--------------------------------------------------------------");
+
+
+        BinaryOperator<Employee> be = (a, b) -> a.getSalary() > b.getSalary() ? a : b;
+
+        Map<String, Optional<Employee>> collect2 = EmployeeDatabase.getEmployees().stream()
+                .collect(Collectors.groupingBy(Employee::getDept, Collectors.reducing(be)));
+        collect2.forEach((k, v) -> System.out.println(k + ": " + v.get()));
+        System.out.println("--------------------------------------------------------------");
+
+        Map<String, Employee> collect3 = EmployeeDatabase.getEmployees().stream()
+                .collect(Collectors.groupingBy(Employee::getDept, Collectors.collectingAndThen(Collectors.reducing(be), Optional::get)));
+        collect3.forEach((k, v) -> System.out.println(k + ": " + v));
+        System.out.println("--------------------------------------------------------------");
+
+//2. WAP to a program to collect the employees by department and sort them by salary
+
 
 ```
