@@ -374,3 +374,73 @@ public class EmployeeDatabase {
         myList.stream().filter(n -> n % 2 == 0).forEach(System.out::println);//10 8 98 32
         myList.stream().filter(n -> n % 2 == 0).iterator().forEachRemaining(System.out::println);
 ```
+## Max , Min
+
+```java
+//1. Given a list of integers, find the maximum value element present in it using Stream functions?
+
+        List<Integer> myList3 = Arrays.asList(10, 15, 8, 49, 25, 98, 98, 32, 15);
+        myList3.stream().max(Comparator.comparing(Integer::intValue)).ifPresent(System
+                .out::println);//98
+        myList3.stream().distinct().collect(Collectors.maxBy(Comparator.comparing(Integer::intValue)))
+                .ifPresent(System.out::println);//98
+```
+
+## Sorting
+```java
+//1. Given a list of integers, sort all the values present in it using Stream functions
+      List<Integer> myList4 = Arrays.asList(10, 15, 8, 49, 25, 98, 98, 32, 15);
+        //Ascending
+        List<Integer> collect = myList4.stream().sorted().collect(Collectors.toList());
+        System.out.println(collect);
+        System.out.println("--------------------------------------------------------------");
+
+        Comparator<Integer> com = (a1, a2) -> a1.compareTo(a2);
+        myList4.sort(com);
+        System.out.println(myList4);
+        System.out.println("--------------------------------------------------------------");
+
+        Collections.sort(myList4);
+        System.out.println(myList4);
+
+        System.out.println("--------------------------------------------------------------");
+
+        Comparator<Integer> com2 = (a1, a2) -> {
+            if (a1 < a2)
+                return -1;
+            else if (a1 > a2)
+                return +1;
+            else
+                return 0;
+        };
+
+        Collections.sort(myList4, com2);
+        System.out.println(myList4);
+
+        System.out.println("--------------------------------------------------------------");
+        //Descending
+        Comparator<Integer> com3 = (a1, a2) -> {
+            if (a1 < a2)
+                return +1;
+            else if (a1 > a2)
+                return -1;
+            else
+                return 0;
+        };
+
+        Collections.sort(myList4, com3);
+        System.out.println(myList4);
+        System.out.println("--------------------------------------------------------------");
+
+        Comparator<Integer> com1 = (a1, a2) -> -a1.compareTo(a2);
+        Collections.sort(myList4, com1);
+        System.out.println(myList4);
+        System.out.println("--------------------------------------------------------------");
+
+        myList4.stream().sorted(Collections.reverseOrder()).forEach(System.out::println);
+        System.out.println("--------------------------------------------------------------");
+
+        myList4.stream().sorted(Comparator.comparing(Integer::intValue).reversed()).forEach(System.out::println);
+        System.out.println("--------------------------------------------------------------");
+
+```
