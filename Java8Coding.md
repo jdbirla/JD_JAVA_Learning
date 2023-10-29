@@ -561,3 +561,25 @@ List<Employee> employees = EmployeeDatabase.getEmployees();
         Gajanand - Salary: 70000.0
 */
 ```
+## Reducing
+```java
+//1. Reduce operation practice
+ List<Integer> numbers = Arrays.asList(3, 7, 8, 1, 5, 9);
+
+        Optional<Integer> reduce = numbers.stream().reduce((a, b) -> a + b);
+        if (reduce.isPresent())
+            System.out.println(reduce.get());
+        Optional<Integer> reduce1 = numbers.stream().reduce(Integer::sum);
+        if (reduce1.isPresent())
+            System.out.println(reduce1.get());
+
+        Integer maxval = numbers.stream().reduce(0, (a, b) -> a > b ? a : b);
+        System.out.println(maxval);
+
+        Integer maxval2 = numbers.stream().reduce(Integer::max).get();
+        System.out.println(maxval2);
+
+        List<String> words = Arrays.asList("corejava", "spring", "hibernate");
+        Optional<String> reduce2 = words.stream().reduce((a, b) -> a.length() > b.length() ? a : b);
+        System.out.println(reduce2.get());
+```
