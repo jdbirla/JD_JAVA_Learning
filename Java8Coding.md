@@ -274,7 +274,7 @@ public class EmployeeDatabase {
 ## Second or nth most frequent, frequncey, counting occurrence in word
 ```java
 //1. Find the second or nth most frequent occurrence in the word it will give the result character
-   String st = "aaababddd";
+        String st = "aaababddd";
         Map<String, Long> collect = Arrays.stream(st.split("")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         collect.forEach((k, v) -> System.out.println(k + ": " + v));//a: 4 b: 2 d: 3
 
@@ -302,7 +302,7 @@ public class EmployeeDatabase {
 /*---------------------------------------------------------------------------*/
 
 //3. How to count occurrences of each character of a String in Java 8? WAP uses stream to find frequency of each character in a given string
-  String someString1 = "Jitendra Birla";
+        String someString1 = "Jitendra Birla";
         String[] arrstr = someString1.replaceAll("\\W", "").split("");
         Stream s1 = Arrays.stream(arrstr);
         Map<String, Long> collectjd = (Map<String, Long>) s1
@@ -311,7 +311,7 @@ public class EmployeeDatabase {
 /*---------------------------------------------------------------------------*/
 
 //4. Count the no of occurance of words in given string using java 8
-  String input = "welcome to code decode and code decode welcome you";
+        String input = "welcome to code decode and code decode welcome you";
 
         List<String> list = Arrays.asList(input.split(" "));
 
@@ -326,7 +326,7 @@ public class EmployeeDatabase {
 ## Find duplicate
 ```java
 //1. Find duplicate integers from list and delete them
- List<Integer> list = Arrays.asList(1, 2, 3, 4, 2, 3, 1);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 2, 3, 1);
 
         Map<Integer, Long> counted = list.stream()
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
@@ -336,12 +336,16 @@ public class EmployeeDatabase {
                 .map(Map.Entry::getKey)
                 .collect(Collectors.toList());
         System.out.println(result);//[4]
-
+/*---------------------------------------------------------------------------*/
+//2. How to find duplicate elements in a given integers list in java using Stream
+        List<Integer> myList2 = Arrays.asList(10, 15, 8, 10, 25, 15, 32, 15);
+        HashSet<Integer> s = new HashSet<Integer>();
+        myList2.stream().filter(a -> !s.add(a)).distinct().forEach(System.out::println);//10 15
 ```
 ## Mapping , MAP , flatmap
 ```java
 //1. FlatMap example
- List<List<Address>> collect = EmployeeDatabase.getEmployees()
+         List<List<Address>> collect = EmployeeDatabase.getEmployees()
                 .stream()
                 .map(Employee::getAddress)
                 .collect(Collectors.toList());
@@ -362,4 +366,11 @@ public class EmployeeDatabase {
                 .collect(Collectors.toList());
         collect2.forEach(System.out::println);//Address [city=Bangalore, country=India] ...
 
+```
+## Filtring 
+/1. Given a list of integers, find out all the even numbers exist in the list using Stream functions?
+```java
+ List<Integer> myList = Arrays.asList(10, 15, 8, 49, 25, 98, 32);
+        myList.stream().filter(n -> n % 2 == 0).forEach(System.out::println);//10 8 98 32
+        myList.stream().filter(n -> n % 2 == 0).iterator().forEachRemaining(System.out::println);
 ```
