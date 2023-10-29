@@ -217,7 +217,25 @@ public class EmployeeDatabase {
                 .collect(Collectors.toList());
 
         secondHighestSalaryEmployees.forEach(System.out::println);//Employee{id=103, name='Abhijit', grade='C', dept='DEV', salary=110000.0, address=[Address [city=Kolkata, country=India], Address [city=Bhopal, country=India]]}
+/*---------------------------------------------------------------------------*/
+//3. Second highest salary from map where salary value may duplicate
+  Map<String, Integer> emap = new HashMap<>();
+        emap.put("Ram", 1000);
+        emap.put("Raju", 2000);
+        emap.put("Ramaan", 3000);
+        emap.put("JD", 3000);
 
+        int secondHighestSalary = emap.values().stream()
+                .distinct()
+                .sorted((a, b) -> b - a)
+                .skip(1)
+                .findFirst()
+                .orElse(Integer.MIN_VALUE);
+
+        Map<String, Integer> result = emap.entrySet().stream()
+                .filter(e -> e.getValue() == secondHighestSalary)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        System.out.println(result);//{Raju=2000}
 ```
 ## Second or nth most frequent occurrence in word
 ```java
