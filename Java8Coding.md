@@ -266,7 +266,15 @@ public class EmployeeDatabase {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
         collect1.forEach((k,v) -> System.out.println("collect1 :->"+ k +" : "+v));//collect1 :->d : 3
 
-//3. Count the no of occurance of words in given string using java 8
+//3. How to count occurrences of each character of a String in Java 8? WAP using stream to find frequncy of each character in given string
+  String someString1 = "Jitendra Birla";
+        String[] arrstr = someString1.replaceAll("\\W", "").split("");
+        Stream s1 = Arrays.stream(arrstr);
+        Map<String, Long> collectjd = (Map<String, Long>) s1
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(collectjd);//{a=2, B=1, r=2, d=1, t=1, e=1, i=2, J=1, l=1, n=1}
+
+//4. Count the no of occurance of words in given string using java 8
   String input = "welcome to code decode and code decode welcome you";
 
         List<String> list = Arrays.asList(input.split(" "));
