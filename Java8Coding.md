@@ -189,6 +189,17 @@ public class EmployeeDatabase {
 ```
 ## Second highest or Nth Highest problem
 ```java
+//1. Find the second largest element in array using stream, it will work for duplicate numbers also
+ int[] arr1={7,7,5,6,6,1,4,4,2};
+        Integer integer = Arrays.stream(arr1)
+                .boxed()
+                .distinct()
+                .sorted(Comparator.comparing(Integer::intValue).reversed())
+                .limit(2)
+                .skip(1)
+                .findFirst()
+                .get();
+        System.out.println(integer); //6
 
 ```
 ## 
