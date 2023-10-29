@@ -535,5 +535,29 @@ List<Employee> employees = EmployeeDatabase.getEmployees();
         Department: Lead
         Niranjan - Salary: 90000.0
         */
+//3. WAP to a program to collect the employees by department and sort them by dep
+        LinkedHashMap<String, List<Employee>> collect9 = EmployeeDatabase.getEmployees().stream()
+                .collect(Collectors.groupingBy(Employee::getDept, Collectors.toList())).entrySet().stream()
+                .sorted(Map.Entry.comparingByKey((c1, c2) -> c1.compareTo(c2)))
+                .collect(Collectors.toMap(a -> a.getKey(), b -> b.getValue(), (es1, es2) -> es1, LinkedHashMap::new));
 
+        collect9.forEach((department, sortedEmployees) -> {
+            System.out.println("Department: " + department);
+            sortedEmployees.forEach(employee -> System.out.println("  " + employee.getName() + " - Salary: " + employee.getSalary()));
+        });
+/*
+      Department: BAU
+        Bhupendra - Salary: 10000.0
+      Department: DEV
+        Abhijit - Salary: 110000.0
+        Mrp - Salary: 60000.0
+      Department: IT
+        Raju - Salary: 120000.0
+        Sunil - Salary: 80000.0
+      Department: Lead
+        Niranjan - Salary: 90000.0
+      Department: Manager
+        Ram - Salary: 120000.0
+        Gajanand - Salary: 70000.0
+*/
 ```
