@@ -181,6 +181,35 @@ public class EmployeeDatabase {
 ```
 ### List
 ```java
+//1. For Each Loop (Enhanced For Loop):
+List<Employee> employees = EmployeeDatabase.getEmployees();
+
+for (Employee employee : employees) {
+    System.out.println(employee.getName());
+}
+
+//2. Iterator
+List<Employee> employees = EmployeeDatabase.getEmployees();
+        Iterator<Employee> iterator = employees.iterator();
+
+        while (iterator.hasNext()) {
+            Employee employee = iterator.next();
+            System.out.println(employee.getName());
+        }
+//3.For Loop (Traditional):
+  List<Employee> employees = EmployeeDatabase.getEmployees();
+
+        for (int i = 0; i < employees.size(); i++) {
+            Employee employee = employees.get(i);
+            System.out.println(employee.getName());
+        }
+//4.Java 8 Stream API:
+    List<Employee> employees = EmployeeDatabase.getEmployees();
+
+        employees.stream()
+                .forEach(employee -> System.out.println(employee.getName()));
+
+
 ```
 ### Set 
 ```java
