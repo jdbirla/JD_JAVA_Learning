@@ -13,7 +13,7 @@
   - [Second or nth most frequent, frequncey, counting occurrence in word](#second-or-nth-most-frequent-frequncey-counting-occurrence-in-word)
   - [Find duplicate](#find-duplicate)
   - [Mapping , MAP , flatmap](#mapping--map--flatmap)
-  - [Filtring](#filtring)
+  - [Filtering](#filtering)
   - [Max , Min](#max--min)
   - [Sorting](#sorting)
   - [Group by , grouping by](#group-by--grouping-by)
@@ -497,7 +497,7 @@ for (Object element : charArray) {
         collect2.forEach(System.out::println);//Address [city=Bangalore, country=India] ...
 
 ```
-## Filtring 
+## Filtering 
 /1. Given a list of integers, find out all the even numbers exist in the list using Stream functions?
 ```java
  List<Integer> myList = Arrays.asList(10, 15, 8, 49, 25, 98, 32);
