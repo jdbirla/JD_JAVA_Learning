@@ -178,26 +178,37 @@ public class EmployeeDatabase {
 ## Iterations
 ### Array
 ```java
-List<String> list = Arrays.asList(new String[]{"One","Two","Three","Four","Five"});
-//Iterate List with Standard for Loop
-//Using standard for loop
-for (int i = 0; i < list.size(); i++) 
-{
-  System.out.println(list.get(i));
+//1. Using a for loop:
+int[] numbers = {1, 2, 3, 4, 5};
+for (int i = 0; i < numbers.length; i++) {
+    System.out.println(numbers[i]);
 }
-//Iterate List using Iterator
-//Using Iterator
-Iterator<String> iterator = list.iterator();
-while (iterator.hasNext()) {
-  System.out.println(iterator.next());
+
+//2. Using an enhanced for loop (for-each loop):
+int[] numbers = {1, 2, 3, 4, 5};
+for (int number : numbers) {
+    System.out.println(number);
 }
-//Iterate List using Enhanced for Loop
-//Using enhanced for loop
-for (String str : list) {
-  System.out.println(str);
+
+//3. Using the Arrays class from java.util:
+int[] numbers = {1, 2, 3, 4, 5};
+List<Integer> numberList = Arrays.asList(numbers);
+for (int number : numberList) {
+    System.out.println(number);
 }
-//Iterate List using java 8 functional style
-list.forEach(name -> System.out.println(name));
+
+//4. Using a while loop:
+int[] numbers = {1, 2, 3, 4, 5};
+int i = 0;
+while (i < numbers.length) {
+    System.out.println(numbers[i]);
+    i++;
+}
+
+//5. Using Java Streams (Java 8 and later):
+int[] numbers = {1, 2, 3, 4, 5};
+Arrays.stream(numbers).forEach(number -> System.out.println(number));
+
 ```
 ### List
 ```java
@@ -233,6 +244,57 @@ List<Employee> employees = EmployeeDatabase.getEmployees();
 ```
 ### Set 
 ```java
+//1. Using an enhanced for loop (for-each loop):
+Set<String> stringSet = new HashSet<>();
+stringSet.add("apple");
+stringSet.add("banana");
+stringSet.add("cherry");
+
+for (String element : stringSet) {
+    System.out.println(element);
+}
+
+//2.Using an Iterator:
+Set<Integer> numberSet = new TreeSet<>();
+numberSet.add(1);
+numberSet.add(2);
+numberSet.add(3);
+
+Iterator<Integer> iterator = numberSet.iterator();
+while (iterator.hasNext()) {
+    Integer element = iterator.next();
+    System.out.println(element);
+}
+
+//3.Using Java Streams (Java 8 and later):
+Set<Double> doubleSet = new LinkedHashSet<>();
+doubleSet.add(1.1);
+doubleSet.add(2.2);
+doubleSet.add(3.3);
+
+doubleSet.stream().forEach(element -> System.out.println(element));
+
+//4.Using forEach method (Java 8 and later):
+Set<String> colors = new HashSet<>();
+colors.add("red");
+colors.add("green");
+colors.add("blue");
+
+colors.forEach(color -> System.out.println(color));
+
+//5.Using a while loop and toArray method:
+Set<Character> charSet = new HashSet<>();
+charSet.add('A');
+charSet.add('B');
+charSet.add('C');
+
+Object[] charArray = charSet.toArray();
+for (Object element : charArray) {
+    System.out.println(element);
+}
+
+
+
 ```
 ### Map
 ```java
