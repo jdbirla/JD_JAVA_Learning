@@ -610,7 +610,7 @@ for (Object element : charArray) {
         collect3.forEach((k, v) -> System.out.println(k + ": " + v));
         System.out.println("--------------------------------------------------------------");
 
-//2. WAP to a program to collect the employees by department and sort them by salary
+//2. WAP to a program to collect the employees by department and sort them by salary and collect in linkedhashmap
 List<Employee> employees = EmployeeDatabase.getEmployees();
 
         LinkedHashMap<String, List<Employee>> employeesByDeptSortedBySalary = employees.stream()
@@ -629,7 +629,7 @@ List<Employee> employees = EmployeeDatabase.getEmployees();
             System.out.println("Department: " + department);
             deptEmployees.forEach(employee -> System.out.println("  " + employee.getName() + " - Salary: " + employee.getSalary()));
         });
-//using another approach
+//using another approach collect in linkedhashmap
  List<Employee> employees = EmployeeDatabase.getEmployees();
 
         Map<String, List<Employee>> departmentToEmployees = employees.stream()
@@ -647,6 +647,20 @@ List<Employee> employees = EmployeeDatabase.getEmployees();
         sortedDepartmentToEmployees.forEach((department, sortedEmployees) -> {
             System.out.println("Department: " + department);
             sortedEmployees.forEach(employee -> System.out.println("  " + employee.getName() + " - Salary: " + employee.getSalary()));
+        });
+// Collect into hahmap
+    Map<String, List<Employee>> collect = employees.stream()
+                .collect(
+                        Collectors.groupingBy(Employee::getDept, Collectors.collectingAndThen(Collectors.toList(),
+                                list -> list.stream()
+                                        .sorted(Comparator.comparingDouble(Employee::getSalary))
+                                        .collect(Collectors.toList())))
+
+                );
+        System.out.println("---------------------------------------------------");
+        collect.forEach((department, deptEmployees) -> {
+            System.out.println("Department: " + department);
+            deptEmployees.forEach(employee -> System.out.println("  " + employee.getName() + " - Salary: " + employee.getSalary()));
         });
 
 /*
