@@ -21,7 +21,7 @@ public class MoviesClient {
     public Movie retrieveMovie(Long movieInfoId) {
         var movieInfo = invokeMovieInfoService(movieInfoId);
         var reviews = invokeReviewsService(movieInfoId);
-        return new Movie(movieInfo, reviews);
+        return  new Movie(movieInfo, reviews);
     }
 
     public List<Movie> retrieveMovieList(List<Long> movieInfoIds) {
