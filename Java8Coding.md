@@ -727,3 +727,17 @@ List<Employee> employees = EmployeeDatabase.getEmployees();
         Optional<String> reduce2 = words.stream().reduce((a, b) -> a.length() > b.length() ? a : b);
         System.out.println(reduce2.get());
 ```
+
+## Misc
+### AlphanumericFilterExample
+```java
+String str = "a1b2c3d4e5f6g7h8i9j0";
+		char[] arr = str.toCharArray();
+		System.out.println("Original array: " + Arrays.toString(arr));
+		int[] nums = new String(arr)
+		.chars()
+		.filter(Character::isDigit)
+		.map(Character::getNumericValue)
+		.toArray();
+		System.out.println("Numbers only: " + Arrays.toString(nums));
+```
