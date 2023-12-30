@@ -18,6 +18,8 @@
   - [Sorting](#sorting)
   - [Group by , grouping by](#group-by--grouping-by)
   - [Reducing](#reducing)
+  - [Misc](#misc)
+    - [AlphanumericFilterExample](#alphanumericfilterexample)
 
 ## Java Data Reference
 - Employee.java
