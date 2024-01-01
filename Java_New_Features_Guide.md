@@ -529,7 +529,164 @@ public class TextBlocks {
     }
 }
 ```
-
+---
+## Java16
+### 1. **Pattern Matching of instanceof**
+- Pattern matching on the instanceof allows us to cast our variable inline and use it inside the desired if-else block without explicitly casting it.
+```java
+public class PatternMatching {
+    public static double price(Vehicle v) {
+        if (v instanceof Car c) {
+            return 10000 - c.kilomenters * 0.01 -
+                    (Calendar.getInstance().get(Calendar.YEAR) -
+                            c.year) * 100;
+        } else if (v instanceof Bicycle b) {
+            return 1000 + b.wheelSize * 10;
+        } else throw new IllegalArgumentException();
+    }
+}
+```
+---
 ## Java17
+
+### 1. **Sealed classes and interfaces**: 
+- Sealed classes and interfaces are a preview feature that restricts which other classes or interfaces can extend or implement them. They enable more precise modeling of domain hierarchies and better encapsulation of implementation details¹.
+```java
+// A sealed class that can only be extended by Circle, Rectangle, and Triangle
+public sealed abstract class Shape permits Circle, Rectangle, Triangle {
+  // common fields and methods
+}
+
+// A final class that extends Shape
+public final class Circle extends Shape {
+  // specific fields and methods
+}
+
+// A non-sealed class that extends Shape and can be further extended
+public non-sealed class Rectangle extends Shape {
+  // specific fields and methods
+}
+
+// A sealed class that extends Shape and can only be extended by EquilateralTriangle
+public sealed class Triangle extends Shape permits EquilateralTriangle {
+  // specific fields and methods
+}
+
+// A final class that extends Triangle
+public final class EquilateralTriangle extends Triangle {
+  // specific fields and methods
+}
+```
+### 1 **Pattern matching for switch**: 
+- Pattern matching for switch is a preview feature that extends the switch statement and expression to support testing the type and structure of an expression. It simplifies the code by eliminating the need for instanceof checks and casts².
+### 1**Text blocks**: 
+- Text blocks are a standard feature that allows writing multi-line strings without the need for escape sequences or concatenation. They improve the readability and maintainability of code that deals with text, such as HTML, XML, JSON, or SQL³.
+### 1 **Records**: 
+- Records are a standard feature that provides a compact syntax for declaring classes that are transparent holders for immutable data. They reduce the boilerplate code for data classes and support pattern matching.
+### 1 **Foreign-Memory Access API**: 
+- Foreign-Memory Access API is an incubator feature that provides a low-level API for accessing memory outside of the Java heap, such as native memory or memory-mapped files. It offers better performance and safety than the Java Native Interface (JNI).
+### 1 **Vector API**: 
+- Vector API is an incubator feature that provides a platform-agnostic way to express vector computations that can be optimized by the JVM and the hardware. It enables writing high-performance code for data processing, machine learning, and multimedia applications.
+
+
+
+- Sealed classes and interfaces:
+
+
+
+- Pattern matching for switch:
+
+```java
+// A switch expression that uses pattern matching
+public String getShapeType(Shape shape) {
+  return switch (shape) {
+    case Circle c -> "Circle with radius " + c.getRadius();
+    case Rectangle r -> "Rectangle with width " + r.getWidth() + " and height " + r.getHeight();
+    case Triangle t && t.isRightAngled() -> "Right-angled triangle";
+    case Triangle t -> "Triangle";
+    default -> "Unknown shape";
+  };
+}
+```
+
+- Text blocks:
+
+```java
+// A text block that contains HTML code
+String html = """
+  <html>
+    <body>
+      <p>Hello, world</p>
+    </body>
+  </html>
+  """;
+```
+
+- Records:
+
+```java
+// A record that represents a person
+public record Person(String name, int age) {
+  // additional methods
+}
+
+// Creating and using a record
+Person p = new Person("Alice", 25);
+System.out.println(p.name()); // Alice
+System.out.println(p.age()); // 25
+System.out.println(p); // Person[name=Alice, age=25]
+```
+
+- Foreign-Memory Access API:
+
+```java
+// Allocating and accessing native memory
+try (MemorySegment segment = MemorySegment.allocateNative(100)) {
+  MemoryAccess.setIntAtOffset(segment, 0, 42); // write 42 at offset 0
+  int x = MemoryAccess.getIntAtOffset(segment, 0); // read 42 from offset 0
+  System.out.println(x); // 42
+}
+```
+
+- Vector API:
+
+```java
+// Vector addition using Vector API
+static void vectorAdd(int[] a, int[] b, int[] c) {
+  int i = 0;
+  // Use 256-bit vector if available
+  if (Vector.isHardwareSupported(VectorSpecies.of(int.class, VectorShape.S_256_BIT))) {
+    var species = VectorSpecies.of(int.class, VectorShape.S_256_BIT);
+    int length = species.loopBound(a.length);
+    for (; i < length; i += species.length()) {
+      // Load vectors from arrays
+      var va = IntVector.fromArray(species, a, i);
+      var vb = IntVector.fromArray(species, b, i);
+      // Add vectors
+      var vc = va.add(vb);
+      // Store vector to array
+      vc.intoArray(c, i);
+    }
+  }
+  // Handle remaining elements
+  for (; i < a.length; i++) {
+    c[i] = a[i] + b[i];
+  }
+}
+```
+
+I hope this helps you understand how to use Java 17 features and enhancements. If you want to learn more, you can check out these links:
+
+- [New Features in Java 17 | Baeldung](^1^)
+- [Java 17 new features - Javatpoint](^2^)
+- [Java 17 New Features (with Examples) - HowToDoInJava](^3^)
+
+Source: Conversation with Bing, 01/01/2024
+(1) New Features in Java 17 | Baeldung. https://www.baeldung.com/java-17-new-features.
+(2) Java 17 new features - Javatpoint. https://www.javatpoint.com/java-17-new-features.
+(3) Java 17 New Features (with Examples) - HowToDoInJava. https://howtodoinjava.com/java/new-features/.
+(4) New Features in Java 17 | Baeldung. https://www.baeldung.com/java-17-new-features.
+(5) Java 17 new features - Javatpoint. https://www.javatpoint.com/java-17-new-features.
+(6) Java 17 New Features (with Examples) - HowToDoInJava. https://howtodoinjava.com/java/new-features/.
 
 ## Java21
