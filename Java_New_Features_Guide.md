@@ -605,7 +605,7 @@ String html = """
 ```
 ### 4. **Records**: 
 - Records are a standard feature that provides a compact syntax for declaring classes that are transparent holders for immutable data. They reduce the boilerplate code for data classes and support pattern matching.
-
+- One thing to note is that the record class is, by default, final, and we need to comply with that
 ```java
 // A record that represents a person
 public record Person(String name, int age) {
