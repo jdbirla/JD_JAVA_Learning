@@ -165,7 +165,7 @@ public class TypeAnnotations {
 ```
 
 ### 14. **Repeating Annotations**
-    - Let us imagine we have an application with fully implemented security. It has different levels of authorization. Even though we implemented everything carefully, we want to make sure that we log every unauthorized action. On each unauthorized action, we are sending an email to the owner of the company and our security admin group email. Repeating annotations are our way to go on this example.
+  - Let us imagine we have an application with fully implemented security. It has different levels of authorization. Even though we implemented everything carefully, we want to make sure that we log every unauthorized action. On each unauthorized action, we are sending an email to the owner of the company and our security admin group email. Repeating annotations are our way to go on this example.
 
 ```java
 public class RepeatingAnnotations {
@@ -182,6 +182,125 @@ public class RepeatingAnnotations {
 ```
 ---
 ## Java9
+
+### 1. **Module System (Project Jigsaw):**
+   - **Use Case:** Modularizes the Java SE Platform to improve scalability, maintainability, and security.
+   - **Example:** Creating a module-info.java file to define a module.
+
+   ```java
+   module com.example.myapp {
+       requires java.base;
+       exports com.example.mypackage;
+   }
+   ```
+
+### 2. **JShell (Interactive REPL):**
+   - **Use Case:** Provides an interactive shell for evaluating Java expressions and statements.
+   - **Example:** Launching JShell and executing Java code interactively.
+
+   ```java
+   jshell> int sum = 5 + 7;
+   sum ==> 12
+   ```
+
+### 3. **HTTP/2 Client:**
+   - **Use Case:** Provides a new HTTP client to support HTTP/2 and WebSocket, with improved performance and features.
+   - **Example:** Making a simple HTTP GET request.
+
+   ```java
+   HttpClient httpClient = HttpClient.newHttpClient();
+   HttpRequest request = HttpRequest.newBuilder()
+                                   .uri(URI.create("https://www.example.com"))
+                                   .build();
+   HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+   ```
+
+### 4. **Improved Stream API:**
+   - **Use Case:** Introduces new methods to the Stream API for better functionality and performance.
+   - **Example:** Using `takeWhile` to create a stream while a condition is true.
+
+   ```java
+   List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+   List<Integer> result = numbers.stream().takeWhile(n -> n < 5).collect(Collectors.toList());
+   ```
+
+### 5. **Multi-Release JAR Files:**
+   - **Use Case:** Allows packaging different versions of class files for different Java releases into a single JAR.
+   - **Example:** Including classes for both Java 8 and Java 9 in the same JAR.
+
+   ```
+   META-INF/
+       versions/
+           9/
+               com/example/MyClass.class (for Java 9)
+           8/
+               com/example/MyClass.class (for Java 8)
+   ```
+
+### 6. **Process API Updates:**
+   - **Use Case:** Enhances the Process API to control and manage native processes.
+   - **Example:** Running a process and obtaining its PID.
+
+   ```java
+   ProcessBuilder processBuilder = new ProcessBuilder("echo", "Hello, World!");
+   Process process = processBuilder.start();
+   ProcessHandle handle = process.toHandle();
+   long pid = handle.pid();
+   ```
+
+### 7. **Try-With-Resources Enhancement:**
+   - **Use Case:** Simplifies resource management by allowing effectively final resources to be used in the try-with-resources statement.
+   - **Example:** Using try-with-resources with a resource declared outside the statement.
+
+   ```java
+   BufferedReader reader = new BufferedReader(new FileReader("file.txt"));
+   try (reader) {
+       // Read from the file
+   } catch (IOException e) {
+       // Handle exception
+   }
+   ```
+
+### 8. **Private Methods in Interfaces:**
+   - **Use Case:** Allows the definition of private methods in interfaces, aiding code organization and reuse.
+   - **Example:** Adding a private helper method to an interface.
+
+   ```java
+   public interface MyInterface {
+       default void publicMethod() {
+           privateHelperMethod();
+       }
+
+       private void privateHelperMethod() {
+           // Implementation
+       }
+   }
+   ```
+
+### 9. **Diamond Operator Enhancements:**
+   - **Use Case:** Enables the diamond operator (`<>`) to be used with anonymous classes.
+   - **Example:** Using the diamond operator with an anonymous class.
+
+   ```java
+   List<String> myList = new ArrayList<>() {
+       {
+           add("Java");
+           add("Python");
+           add("JavaScript");
+       }
+   };
+   ```
+
+### 10. **Reactive Streams API:**
+   - **Use Case:** Introduces a standardized API for asynchronous stream processing with non-blocking backpressure.
+   - **Example:** Working with reactive streams using `Publisher`, `Subscriber`, and `Subscription`.
+
+   ```java
+   Publisher<String> publisher = /* ... */;
+   Subscriber<String> subscriber = /* ... */;
+   publisher.subscribe(subscriber);
+   ```
+
 
 ## Java11
 
