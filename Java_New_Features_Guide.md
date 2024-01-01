@@ -577,25 +577,8 @@ public final class EquilateralTriangle extends Triangle {
   // specific fields and methods
 }
 ```
-### 1 **Pattern matching for switch**: 
+### 2. **Pattern matching for switch**: 
 - Pattern matching for switch is a preview feature that extends the switch statement and expression to support testing the type and structure of an expression. It simplifies the code by eliminating the need for instanceof checks and casts².
-### 1**Text blocks**: 
-- Text blocks are a standard feature that allows writing multi-line strings without the need for escape sequences or concatenation. They improve the readability and maintainability of code that deals with text, such as HTML, XML, JSON, or SQL³.
-### 1 **Records**: 
-- Records are a standard feature that provides a compact syntax for declaring classes that are transparent holders for immutable data. They reduce the boilerplate code for data classes and support pattern matching.
-### 1 **Foreign-Memory Access API**: 
-- Foreign-Memory Access API is an incubator feature that provides a low-level API for accessing memory outside of the Java heap, such as native memory or memory-mapped files. It offers better performance and safety than the Java Native Interface (JNI).
-### 1 **Vector API**: 
-- Vector API is an incubator feature that provides a platform-agnostic way to express vector computations that can be optimized by the JVM and the hardware. It enables writing high-performance code for data processing, machine learning, and multimedia applications.
-
-
-
-- Sealed classes and interfaces:
-
-
-
-- Pattern matching for switch:
-
 ```java
 // A switch expression that uses pattern matching
 public String getShapeType(Shape shape) {
@@ -608,9 +591,8 @@ public String getShapeType(Shape shape) {
   };
 }
 ```
-
-- Text blocks:
-
+### 3. **Text blocks**: 
+- Text blocks are a standard feature that allows writing multi-line strings without the need for escape sequences or concatenation. They improve the readability and maintainability of code that deals with text, such as HTML, XML, JSON, or SQL³.
 ```java
 // A text block that contains HTML code
 String html = """
@@ -621,8 +603,8 @@ String html = """
   </html>
   """;
 ```
-
-- Records:
+### 4. **Records**: 
+- Records are a standard feature that provides a compact syntax for declaring classes that are transparent holders for immutable data. They reduce the boilerplate code for data classes and support pattern matching.
 
 ```java
 // A record that represents a person
@@ -636,9 +618,8 @@ System.out.println(p.name()); // Alice
 System.out.println(p.age()); // 25
 System.out.println(p); // Person[name=Alice, age=25]
 ```
-
-- Foreign-Memory Access API:
-
+### 5. **Foreign-Memory Access API**: 
+- Foreign-Memory Access API is an incubator feature that provides a low-level API for accessing memory outside of the Java heap, such as native memory or memory-mapped files. It offers better performance and safety than the Java Native Interface (JNI).
 ```java
 // Allocating and accessing native memory
 try (MemorySegment segment = MemorySegment.allocateNative(100)) {
@@ -647,9 +628,8 @@ try (MemorySegment segment = MemorySegment.allocateNative(100)) {
   System.out.println(x); // 42
 }
 ```
-
-- Vector API:
-
+### 6. **Vector API**: 
+- Vector API is an incubator feature that provides a platform-agnostic way to express vector computations that can be optimized by the JVM and the hardware. It enables writing high-performance code for data processing, machine learning, and multimedia applications.
 ```java
 // Vector addition using Vector API
 static void vectorAdd(int[] a, int[] b, int[] c) {
@@ -674,19 +654,5 @@ static void vectorAdd(int[] a, int[] b, int[] c) {
   }
 }
 ```
-
-I hope this helps you understand how to use Java 17 features and enhancements. If you want to learn more, you can check out these links:
-
-- [New Features in Java 17 | Baeldung](^1^)
-- [Java 17 new features - Javatpoint](^2^)
-- [Java 17 New Features (with Examples) - HowToDoInJava](^3^)
-
-Source: Conversation with Bing, 01/01/2024
-(1) New Features in Java 17 | Baeldung. https://www.baeldung.com/java-17-new-features.
-(2) Java 17 new features - Javatpoint. https://www.javatpoint.com/java-17-new-features.
-(3) Java 17 New Features (with Examples) - HowToDoInJava. https://howtodoinjava.com/java/new-features/.
-(4) New Features in Java 17 | Baeldung. https://www.baeldung.com/java-17-new-features.
-(5) Java 17 new features - Javatpoint. https://www.javatpoint.com/java-17-new-features.
-(6) Java 17 New Features (with Examples) - HowToDoInJava. https://howtodoinjava.com/java/new-features/.
 
 ## Java21
