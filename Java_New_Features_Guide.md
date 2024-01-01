@@ -422,8 +422,52 @@ Java 11 introduced several features and enhancements to the language and platfor
 ---
 ## Java14
 Java 14 introduced several features and enhancements to the language and platform. Here are the key features, along with existing enhancements, and their use cases with examples:
+### 1. **Switch Expressions**
+  - Switch expressions allowed us to omit break calls inside every case block. It helps with the readability of the code and better understanding.
+```java
+public class SwitchExpression {
 
+    public static void main(String[] args) {
+        int days = 0;
+        Month month = Month.APRIL;
 
+        days = switch (month) {
+            case JANUARY, MARCH, MAY, JULY, AUGUST, OCTOBER, DECEMBER -> 31;
+            case FEBRUARY -> 28;
+            case APRIL, JUNE, SEPTEMBER, NOVEMBER -> 30;
+            default -> throw new IllegalStateException();
+        };
+    }
+}
+```
+
+### 2. **The yield Keyword**
+- The logic inside the case block can be a bit more complicated than just returning a value. For example, we want to log which month the user sent us:
+```java
+public class SwitchExpression {
+
+    public static void main(String[] args) {
+        int days = 0;
+        Month month = Month.APRIL;
+
+        days = switch (month) {
+            case JANUARY, MARCH, MAY, JULY, AUGUST, OCTOBER, DECEMBER -> {
+                System.out.println(month);
+                yield 31;
+            }
+            case FEBRUARY -> {
+                System.out.println(month);
+                yield 28;
+            }
+            case APRIL, JUNE, SEPTEMBER, NOVEMBER -> {
+                System.out.println(month);
+                yield 30;
+            }
+            default -> throw new IllegalStateException();
+        };
+    }
+}
+```
 ### 3. **JEP 366: Deprecate the ParallelScavenge + SerialOld GC Combination:**
    - **Use Case:** Deprecates the combination of ParallelScavenge and SerialOld garbage collectors.
    - **Example:** Switching to other garbage collector combinations for better performance.
