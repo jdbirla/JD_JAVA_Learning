@@ -116,8 +116,71 @@
      List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
      int sum = numbers.parallelStream().mapToInt(Integer::intValue).sum();
      ```
+### 12. **Java 8 StringJoiner**
+  - Joining multiple strings in a very common task in day-to-day programming activity. There was no direct way to join multiple String in Java (Other than using the third-party API’s). Java 8 Introduced a new class StringJoiner which is useful to join multiple Strings.StringJoiner is a kind of a Collector.
+```java
+public static void joinerWithDelimiterWithPrefixAndSuffix(){
+    StringJoiner joiner = new StringJoiner(",", "Prefix-", "-Suffix");
+    joiner.add("Sunday");
+    joiner.add("Monday");
+    joiner.add("Tuesday");
+    joiner.add("Wednesday");
 
-These features collectively brought significant improvements to the Java language, making it more expressive, readable, and aligned with modern programming paradigms. They laid the foundation for subsequent Java versions and continue to be widely used in contemporary Java development.
+    //display output
+    System.out.println(joiner.toString());//Prefix-Sunday-Monday-Tuesday-Wednesday-Suffix
+
+}
+```
+
+### 13. **Type Annotations**
+  - Type annotations are one more feature introduced in Java 8. Even though we had annotations available before, now we can use them wherever we use a type. This means that we can use them on
+     -  a local variable definition
+     -  constructor calls
+     -  type casting
+     -  generics
+     -  throw clauses and more
+```java
+public class TypeAnnotations {
+
+    public static void main(String[] args) {
+        @NotNull String userName = args[0];
+    }
+}
+
+public class TypeAnnotations {
+
+    public static void main(String[] args) {
+        List<String> request =
+                new @NotEmpty ArrayList<>(Arrays.stream(args).collect(
+                        Collectors.toList()));
+    }
+}
+
+public class TypeAnnotations {
+
+    public static void main(String[] args) {
+        List<@Email String> emails;
+    }
+}
+```
+
+### 14. **Repeating Annotations**
+    - Let us imagine we have an application with fully implemented security. It has different levels of authorization. Even though we implemented everything carefully, we want to make sure that we log every unauthorized action. On each unauthorized action, we are sending an email to the owner of the company and our security admin group email. Repeating annotations are our way to go on this example.
+
+```java
+public class RepeatingAnnotations {
+    
+    @Repeatable(Notifications.class)
+    public @interface Notify {
+        String email();
+    }
+
+    public @interface Notifications {
+        Notify[] value();
+    }
+}
+```
+---
 ## Java9
 
 ## Java11
