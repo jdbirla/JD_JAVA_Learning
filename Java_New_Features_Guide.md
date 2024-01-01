@@ -505,8 +505,30 @@ public class SwitchExpression {
    - **Use Case:** Enables Z Garbage Collector (ZGC) on macOS.
    - **Example:** Using ZGC for low-latency garbage collection on macOS.
 
-These features and enhancements in Java 14 focused on improving developer productivity, code readability, and removing outdated components. They aimed to keep Java up-to-date with modern development practices and provide better support for new features in the language.
-
+---
+## Java15
+### 1. **Text Blocks**
+```java
+public class TextBlocks {
+    
+    public static void main(String[] args) {
+        System.out.println(
+        """
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <title>Example</title>
+                    </head>
+                    <body>
+                        <p>This is an example of a simple HTML 
+                        page with one paragraph.</p>
+                    </body>
+                </html>      
+                """
+        );
+    }
+}
+```
 
 ## Java17
 
