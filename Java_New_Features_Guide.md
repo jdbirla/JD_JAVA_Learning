@@ -419,7 +419,85 @@ Java 11 introduced several features and enhancements to the language and platfor
      }
      ```
 
-These features and enhancements in Java 11 focused on improving performance, security, and developer experience. They addressed various aspects of the language and runtime, making Java more efficient and up-to-date with modern requirements.
+---
+## Java14
+Java 14 introduced several features and enhancements to the language and platform. Here are the key features, along with existing enhancements, and their use cases with examples:
+
+### 1. **JEP 305: Pattern Matching (Preview):**
+   - **Use Case:** Enhances the instanceof operator for a more concise and expressive code.
+   - **Example:**
+     ```java
+     if (obj instanceof String str) {
+         // Use 'str' directly as a String in this block
+         System.out.println("Length: " + str.length());
+     } else {
+         // obj is not a String
+     }
+     ```
+
+### 2. **JEP 359: Records (Preview):**
+   - **Use Case:** Introduces a new kind of class called a record to model immutable data.
+   - **Example:**
+     ```java
+     record Point(int x, int y) { }
+
+     Point p = new Point(3, 4);
+     System.out.println(p.x()); // 3
+     System.out.println(p.y()); // 4
+     ```
+
+### 3. **JEP 366: Deprecate the ParallelScavenge + SerialOld GC Combination:**
+   - **Use Case:** Deprecates the combination of ParallelScavenge and SerialOld garbage collectors.
+   - **Example:** Switching to other garbage collector combinations for better performance.
+
+### 4. **JEP 367: Remove the Pack200 Tools and API:**
+   - **Use Case:** Removes the Pack200 tools and API from the Java SE Platform.
+   - **Example:** Transitioning away from Pack200 compression.
+
+### 5. **JEP 368: Text Blocks (Second Preview):**
+   - **Use Case:** Improves the presentation of multiline strings for enhanced readability.
+   - **Example:**
+     ```java
+     String html = """
+                   <html>
+                       <body>
+                           <p>Hello, World!</p>
+                       </body>
+                   </html>
+                   """;
+     ```
+
+### 6. **JEP 358: Helpful NullPointerExceptions:**
+   - **Use Case:** Improves the clarity of NullPointerException error messages.
+   - **Example:**
+     ```java
+     String name = user.getAddress().getCity().toUpperCase();
+     ```
+
+     In case of a NullPointerException, the error message will be more informative about which variable was null.
+
+### 7. **JEP 362: Deprecate the Solaris and SPARC Ports:**
+   - **Use Case:** Deprecates the Solaris and SPARC ports for future removal.
+   - **Example:** Migrating to other supported platforms.
+
+### 8. **JEP 363: Remove the Concurrent Mark Sweep (CMS) Garbage Collector:**
+   - **Use Case:** Removes the deprecated CMS garbage collector.
+   - **Example:** Transitioning to other garbage collectors like G1.
+
+### 9. **JEP 357: Migrate from Mercurial to Git:**
+   - **Use Case:** Migrates the source code repository from Mercurial to Git for better collaboration and development.
+   - **Example:** Cloning the OpenJDK repository from the new Git repository.
+
+     ```
+     git clone https://github.com/openjdk/jdk.git
+     ```
+
+### 10. **JEP 365: ZGC on macOS:**
+   - **Use Case:** Enables Z Garbage Collector (ZGC) on macOS.
+   - **Example:** Using ZGC for low-latency garbage collection on macOS.
+
+These features and enhancements in Java 14 focused on improving developer productivity, code readability, and removing outdated components. They aimed to keep Java up-to-date with modern development practices and provide better support for new features in the language.
+
 
 ## Java17
 
