@@ -423,28 +423,6 @@ Java 11 introduced several features and enhancements to the language and platfor
 ## Java14
 Java 14 introduced several features and enhancements to the language and platform. Here are the key features, along with existing enhancements, and their use cases with examples:
 
-### 1. **JEP 305: Pattern Matching (Preview):**
-   - **Use Case:** Enhances the instanceof operator for a more concise and expressive code.
-   - **Example:**
-     ```java
-     if (obj instanceof String str) {
-         // Use 'str' directly as a String in this block
-         System.out.println("Length: " + str.length());
-     } else {
-         // obj is not a String
-     }
-     ```
-
-### 2. **JEP 359: Records (Preview):**
-   - **Use Case:** Introduces a new kind of class called a record to model immutable data.
-   - **Example:**
-     ```java
-     record Point(int x, int y) { }
-
-     Point p = new Point(3, 4);
-     System.out.println(p.x()); // 3
-     System.out.println(p.y()); // 4
-     ```
 
 ### 3. **JEP 366: Deprecate the ParallelScavenge + SerialOld GC Combination:**
    - **Use Case:** Deprecates the combination of ParallelScavenge and SerialOld garbage collectors.
@@ -453,19 +431,6 @@ Java 14 introduced several features and enhancements to the language and platfor
 ### 4. **JEP 367: Remove the Pack200 Tools and API:**
    - **Use Case:** Removes the Pack200 tools and API from the Java SE Platform.
    - **Example:** Transitioning away from Pack200 compression.
-
-### 5. **JEP 368: Text Blocks (Second Preview):**
-   - **Use Case:** Improves the presentation of multiline strings for enhanced readability.
-   - **Example:**
-     ```java
-     String html = """
-                   <html>
-                       <body>
-                           <p>Hello, World!</p>
-                       </body>
-                   </html>
-                   """;
-     ```
 
 ### 6. **JEP 358: Helpful NullPointerExceptions:**
    - **Use Case:** Improves the clarity of NullPointerException error messages.
