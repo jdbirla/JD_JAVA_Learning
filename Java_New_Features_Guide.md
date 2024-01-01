@@ -300,9 +300,126 @@ public class RepeatingAnnotations {
    Subscriber<String> subscriber = /* ... */;
    publisher.subscribe(subscriber);
    ```
+---
+## Java10
+### Local Variable Type Inference
+- Java always needed explicit types on local variables.
+When writing and reading code, we always know which type we expect. On the other hand, a lot of the code is just types with no usability.
+The var type allows us to omit type from the left-hand side of our statements.
+```java
+public class LocalTypeVar {
 
+    public void varTypes() {
+        var Roland = new Person("Roland", "Deschain");
+        var Susan = new Person("Susan", "Delgado");
+        var Eddie = new Person("Eddie", "Dean");
+        var Detta = new Person("Detta", "Walker");
+        var Jake = new Person("Jake", "Chambers");
 
+        var persons = List.of(Roland, Susan, Eddie, Detta, Jake);
+
+        for (var person : persons) {
+            System.out.println(person.name + " - " + person.lastname);
+        }
+    }
+}
+```
+---
 ## Java11
+Java 11 introduced several features and enhancements to the language and platform. Here are the key features, along with existing enhancements, and their use cases with examples:
+
+### 1. **Local-Variable Syntax for Lambda Parameters:**
+   - **Use Case:** Allows using `var` in lambda expressions.
+   - **Example:**
+     ```java
+     BiFunction<Integer, Integer, Integer> add = (var a, var b) -> a + b;
+     ```
+
+### 2. **HTTP Client (Standard):**
+   - **Use Case:** A standardized HTTP client that replaces the old `HttpURLConnection` with a more modern and flexible API.
+   - **Example:**
+     ```java
+     HttpClient httpClient = HttpClient.newHttpClient();
+     HttpRequest request = HttpRequest.newBuilder()
+                                   .uri(URI.create("https://www.example.com"))
+                                   .build();
+     HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+     ```
+
+### 3. **JEP 321: HTTP Client (Upgrade):**
+   - **Use Case:** The HTTP client supports WebSocket communication.
+   - **Example:**
+     ```java
+     WebSocket webSocket = httpClient.newWebSocketBuilder()
+                                     .buildAsync(URI.create("wss://example.com"), listener)
+                                     .join();
+     ```
+
+### 4. **JEP 329: ChaCha20 and Poly1305 Cryptographic Algorithms:**
+   - **Use Case:** Adds support for the ChaCha20 and Poly1305 cryptographic algorithms.
+   - **Example:** Using ChaCha20 and Poly1305 for encryption and authentication.
+
+### 5. **JEP 333: ZGC: A Low-Latency Garbage Collector:**
+   - **Use Case:** Introduces the Z Garbage Collector (ZGC), designed for low-latency applications.
+   - **Example:** Enabling ZGC in Java applications.
+
+     ```
+     java -XX:+UnlockExperimentalVMOptions -XX:+UseZGC -jar myapp.jar
+     ```
+
+### 6. **JEP 330: Launch Single-File Source-Code Programs:**
+   - **Use Case:** Enables running a single-file Java source code program directly.
+   - **Example:**
+     ```java
+     // Hello.java
+     public class Hello {
+         public static void main(String[] args) {
+             System.out.println("Hello, World!");
+         }
+     }
+     ```
+
+     Run using:
+     ```
+     java Hello.java
+     ```
+
+### 7. **JEP 335: Deprecate the Nashorn JavaScript Engine:**
+   - **Use Case:** Deprecates the Nashorn JavaScript engine in favor of GraalVM.
+   - **Example:** Moving to alternative JavaScript engines for better performance.
+
+### 8. **Epsilon: A No-Op Garbage Collector (Experimental):**
+   - **Use Case:** Introduces the Epsilon GC, a no-op garbage collector for performance testing.
+   - **Example:** Disabling garbage collection for testing.
+
+     ```
+     java -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC -jar myapp.jar
+     ```
+
+### 9. **JEP 338: MacOS/OS X Rendering Pipeline:**
+   - **Use Case:** Introduces a new rendering pipeline for macOS.
+   - **Example:** Improved rendering of Java applications on macOS.
+
+### 10. **JEP 332: Transport Layer Security (TLS) 1.3:**
+   - **Use Case:** Adds support for the TLS 1.3 protocol.
+   - **Example:** Using TLS 1.3 for secure communication.
+
+### 11. **JEP 336: Deprecate the Pack200 Tools and API:**
+   - **Use Case:** Deprecates the Pack200 tools and API in preparation for removal.
+   - **Example:** Moving away from Pack200 compression.
+
+### 12. **JEP 342: The JVM Constant API:**
+   - **Use Case:** Provides an API for creating and accessing constants in a more standardized way.
+   - **Example:** Defining constants using the new API.
+
+     ```java
+     class MyConstants {
+         @Native
+         static final int VALUE = 42;
+     }
+     ```
+
+These features and enhancements in Java 11 focused on improving performance, security, and developer experience. They addressed various aspects of the language and runtime, making Java more efficient and up-to-date with modern requirements.
 
 ## Java17
 
