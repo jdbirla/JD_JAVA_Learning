@@ -54,7 +54,7 @@
 
 ### 6. [Mini Project](#mini-project)
 
-### 7. [Ajay-design-pattern][#ajay-design-pattern]
+### 7. [Ajay-design-pattern](#ajay-design-pattern)
 ---
 
 <h2 id="creational-design-pattern">1.Creational Design Pattern</h2>
