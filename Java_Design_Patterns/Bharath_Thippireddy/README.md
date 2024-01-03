@@ -53,6 +53,8 @@
 ### 5. [Inversion of Control Pattern(IOC)](#inversion-of-control-pattern)
 
 ### 6. [Mini Project](#mini-project)
+
+### 7. [Ajay-design-pattern][#ajay-design-pattern]
 ---
 
 <h2 id="creational-design-pattern">1.Creational Design Pattern</h2>
@@ -1191,5 +1193,76 @@ public class UserAgentFilter implements Filter {
 ![image](https://user-images.githubusercontent.com/69948118/210209112-6494567d-8ba1-40d4-81ab-096516e9e559.png)
 
 
+---
+### Ajay-design-pattern
 
+#### Adapter design pattern
+- he Adapter design pattern is a structural pattern that allows two incompatible interfaces to work together. It converts the interface of one class into another interface that clients expect. This pattern is often used when an existing class's interface does not match the interface required by a client, or when a client needs to work with multiple classes that have different interfaces.
+The Adapter pattern involves the following components:
+Target Interface: This is the interface that the client expects to work with.
+Adaptee: This is the class that has the interface that does not match the target interface.
+Adapter: This is the class that adapts the interface of the Adaptee to the Target Interface.
+The Adapter pattern can be implemented in two ways: Class Adapter and Object Adapter.
+In the Class Adapter approach, the Adapter class extends the Adaptee class and implements the Target Interface. The Adapter class inherits the behavior of the Adaptee class and adds the behavior required to match the Target Interface.
+In the Object Adapter approach, the Adapter class contains an instance of the Adaptee class and implements the Target Interface. The Adapter class delegates the requests from the client to the Adaptee instance and adds the behavior required to match the Target Interface.
+
+Here's an example to illustrate how the Adapter pattern works:
+Suppose you have a client that expects a simple interface for a printer that only has a print() method. However, you have an existing class called AdvancedPrinter that has a complex interface with multiple methods. You can create an Adapter class that adapts the interface of the AdvancedPrinter to the simple interface expected by the client. The Adapter class would have a print() method that calls the appropriate methods on the AdvancedPrinter to accomplish the print operation. The client can then use the Adapter class to print documents without having to know about the complex interface of the AdvancedPrinter.
+
+#### Proxy Design pattern:
+- The Proxy design pattern is a structural pattern that provides a surrogate or placeholder for another object to control access to it. The Proxy pattern allows you to create a representative object that can act as an intermediary between a client and the real object. The proxy object can perform additional functionality such as security checks, caching, or remote communication.
+The Proxy pattern involves the following components:
+Subject: This is the interface that both the Real Subject and the Proxy implement. It defines the common interface for the Real Subject and the Proxy so that the client can work with both objects interchangeably.
+Real Subject: This is the object that the client wants to access. It implements the Subject interface and provides the real implementation of the operations.
+Proxy: This is the object that acts as a surrogate for the Real Subject. It also implements the Subject interface and forwards the requests from the client to the Real Subject. In addition to forwarding requests, the Proxy may also perform additional functionality such as caching, logging, or security checks.
+The Proxy pattern can be implemented in several ways, including:
+Virtual Proxy: This is a type of Proxy that creates an object on demand. When the client requests an operation, the Virtual Proxy checks whether the Real Subject has been created, and if not, it creates it. This is useful when creating the Real Subject is expensive, and you want to delay its creation until it is actually needed.
+Protection Proxy: This is a type of Proxy that checks whether the client has the necessary permissions to access the Real Subject. If the client has
+
+the required permissions, the Proxy forwards the request to the Real Subject. Otherwise, it denies the request.
+Remote Proxy: This is a type of Proxy that acts as a local representative for a remote object. When the client requests an operation, the Remote Proxy forwards the request to the remote object and returns the result.
+Here's an example to illustrate how the Proxy pattern works:
+Suppose you have a resource-intensive object that needs to be accessed frequently. You can create a Proxy object that acts as a surrogate for the real object. The Proxy object can cache the results of the operations and return the cached results to the client when the same operation is requested again. This can save time and resources by avoiding the need to recreate the object or perform expensive operations repeatedly.
+Tell me about Decorator Pattern?
+
+#### Decorator Pattern:
+- The Decorator pattern is a design pattern in object-oriented programming that allows behavior to be added to an individual object, either statically or dynamically, without affecting the behavior of other objects from the same class. It is a structural pattern that allows objects to have additional behavior or responsibilities without the need to create a subclass of the original object.
+In the Decorator pattern, a set of decorator classes are created that add new functionality to the original object. These decorators conform to the same interface as the object being decorated, and they contain a reference to the object they are decorating. The decorators can add new behavior to the object by intercepting its method calls and modifying their behavior or adding new functionality.
+Here are some key features of the Decorator pattern:
+It is a way to extend the functionality of an object without sub classing.
+Decorators can be stacked on top of each other to add multiple layers of functionality.
+Decorators can be added and removed at runtime, which makes it easy to change an object's behaviour dynamically.
+The original object can remain unchanged, which helps to ensure that existing code and unit tests still work as expected.
+
+The Decorator pattern allows for a clear separation of concerns between the object being decorated and the code that adds new behaviour.
+A common real-world example of the Decorator pattern is with streaming services. For example, a user might have a basic streaming service that allows them to access a limited library of content. They can then choose to add a set of decorator services, such as one for high-definition video, another for access to live events, and yet another for access to an expanded library of content. Each decorator adds a layer of functionality to the basic streaming service, allowing the user to customize their experience and access additional features without needing to switch to a different service.
+
+#### What is a facade design pattern?
+The facade design pattern is a structural design pattern that provides a unified interface to a set of interfaces in a subsystem. It defines a high-level interface that makes the subsystem easier to use and hides the complexity of the subsystem from the client.
+The facade pattern is often used in libraries and frameworks to provide a simplified interface to their functionality. For example, a facade could be used to provide a single method for starting a database connection, initializing a logging system, and configuring a web server.
+The facade pattern can also be used to decouple clients from the implementation of a subsystem. This can make the code more flexible and easier to maintain. For example, if a client needs to use multiple classes in a subsystem, the facade can provide a single interface that the client can use. This allows the client to be independent of the implementation of the subsystem.
+```java
+public class DatabaseFacade {
+private DatabaseConnection connection;
+private Logger logger;
+public DatabaseFacade(DatabaseConnection connection, Logger logger) {
+this.connection = connection;
+this.logger = logger;
+}
+public void openConnection() {
+connection.open();
+logger.log("Database connection opened");
+}
+public void closeConnection() {
+connection.close();
+logger.log("Database connection closed");
+}
+public void executeQuery(String query) {
+// Execute the query
+logger.log("Query executed: " + query);
+}
+}
+```
+The DatabaseFacade class provides a simplified interface to the database subsystem. It hides the complexity of the database subsystem from the client. To use the database, the client simply needs to create an instance of the DatabaseFacade class and call its methods.
+The facade pattern is a useful design pattern for simplifying the use of complex subsystems and decoupling clients from the implementation of subsystems.
 
