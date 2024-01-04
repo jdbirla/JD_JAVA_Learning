@@ -55,6 +55,8 @@
 ### 6. [Mini Project](#mini-project)
 
 ### 7. [Ajay-design-pattern](#ajay-design-pattern)
+
+### 8. [spring-design-pattern](#spring-design-pattern)
 ---
 
 <h2 id="creational-design-pattern">1.Creational Design Pattern</h2>
@@ -1265,3 +1267,51 @@ logger.log("Query executed: " + query);
 - The DatabaseFacade class provides a simplified interface to the database subsystem. It hides the complexity of the database subsystem from the client. To use the database, the client simply needs to create an instance of the DatabaseFacade class and call its methods.
 The facade pattern is a useful design pattern for simplifying the use of complex subsystems and decoupling clients from the implementation of subsystems.
 
+## spring-design-pattern
+### Tell me the Design pattern used inside the spring framework.
+The Spring Framework makes use of several design patterns to provide its functionality. Some of the key design patterns used in Spring are:
+- Inversion of Control (IoC): This pattern is used throughout the Spring Framework to decouple the application code from the framework and its components. The IoC container is responsible for managing the lifecycle of beans and injecting dependencies between them.
+- Singleton: A singleton pattern is used to ensure that there is only one instance of a bean created in the Spring IoC container. The singleton pattern is used to create a single instance of a class, which is shared across the entire application.
+- Factory: The factory pattern is used in Spring to create objects of different classes based on the configuration. Spring provides a factory pattern to create beans, which is based on the factory method design pattern.
+- Template Method: The template method pattern is used in Spring to provide a common structure for different types of operations. Spring provides several template classes such as JdbcTemplate, Hibernate Template, etc. that provide a common structure for performing database operations.
+- Decorator: The decorator pattern is used in Spring to add additional functionality to existing beans. The Spring AOP (Aspect-Oriented Programming) module uses the decorator pattern to add additional functionality to existing beans through the use of proxies.
+- Observer: The observer pattern is used in Spring to notify other beans of changes to the state of a bean. Spring provides the ApplicationEvent and ApplicationListener interfaces, which can be used to implement the observer pattern.
+- Command: The command pattern is used in Spring to encapsulate the execution of a particular piece of code in a command object. This pattern is used in Spring to create reusable and testable code.
+- Façade: The façade pattern is used in Spring to simplify the interface of a complex system. The Spring Framework uses the façade pattern to provide a simplified interface for interacting with its components.
+### How do factory design patterns work in terms of the spring framework?
+- In Spring, the factory design pattern is used to create objects of different classes based on the configuration. The Spring IoC container uses the factory pattern to create beans, which is based on the factory method design pattern.
+-The factory method is a design pattern that provides a way to create objects of different classes based on a factory interface. In Spring, the IoC container acts as the factory, and the factory interface is represented by the BeanFactory or ApplicationContext interfaces.
+-The IoC container is responsible for creating and managing the lifecycle of beans. When you define a bean in the configuration, the IoC container will use the factory pattern to create an instance of the bean. The IoC container will then manage the lifecycle of the bean, including injecting dependencies, initializing the bean, and destroying the bean when it is no longer needed.
+Here's an example of how you can define a bean in Spring using the factory design pattern:
+```
+@Configuration
+public class MyConfig {
+@Bean
+public MyService myService() {
+return new MyService();
+}
+}
+```
+-In this example, the myService() method is annotated with @Bean. This tells Spring to create an instance of the MyService class when the IoC container is created. The IoC container will use the factory pattern to create the instance and manage its lifecycle.
+Another way to use factory pattern in spring is to use FactoryBean interface, which allows you to create beans that are created by a factory method, it's a factory of bean. The FactoryBean interface defines a single method, getObject(), which returns the object that should be exposed as the bean in the Spring application context.
+### How the proxy design pattern is used in spring?
+- The proxy design pattern is used in Spring to add additional functionality to existing objects. The Spring Framework uses the proxy pattern to provide AOP (Aspect-Oriented Programming) functionality, which allows you to add cross-cutting concerns, such as logging, security, and transaction management, to your application in a modular and reusable way.
+- In Spring, AOP proxies are created by the IoC container, and they are used to intercept method calls made to the target bean. This allows you to add
+additional behaviour, such as logging or security checks, before or after the method call is made to the target bean.
+- AOP proxies are created using one of three proxy types: JDK dynamic proxies, CGLIB proxies, or AspectJ proxies.
+- JDK dynamic proxies: This is the default proxy type in Spring, and it is used to proxy interfaces.
+- CGLIB proxies: This proxy type is used to proxy classes, and it works by creating a subclass of the target bean.
+- AspectJ proxies: This proxy type uses the AspectJ library to create proxies, and it allows you to use AspectJ pointcuts and advice in your application.
+Spring uses the proxy pattern to provide AOP functionality by generating a proxy object that wraps the target bean. The proxy object will intercept method calls made to the target bean, and it will invoke additional behavior, such as logging or security checks, before or after the method call is made to the target bean.
+Here's an example of how you can use Spring AOP to add logging to a bean:
+```java
+@Aspect
+@Component
+public class LoggingAspect {
+@Before("execution(* com.example.service.*.*(..))")
+public void logBefore(JoinPoint joinPoint) {
+log.info("Started method: " + joinPoint.getSignature().getName());
+}
+}
+```
+In this example, the LoggingAspect class is annotated with @Aspect and @Component to make it a Spring bean. The @Before annotation is used to specify that the logBefore() method should be executed before the method call is made to the target bean. The logBefore() method uses the JoinPoint argument to log the name of the method that is being called.
