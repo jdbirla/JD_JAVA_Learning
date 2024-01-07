@@ -29,3 +29,9 @@
           - handle() :  this gets invoked for both success and failure
           - exceptionally() : takeing only exception as areguemtn this call only have exception
           - whenComplete() : It throws the exception to next whencomplete in pipline and go to caller 
+    - userdefine threadpool in copetablefuture
+        - We need to use userdefinethreadpool in completable future when we use parallelstream and competable future together because both uses same commonforkjoinpool if in that thread may blocked by each other
+          ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/4337041b-3f05-4ba3-988b-041c982843fd)
+       - each operation for different thread using async
+         ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/0d215f91-102c-44f2-8515-e3742e0c251a)
+       - 
