@@ -9,7 +9,7 @@ public class SharedObjects {
         PassingObject passingObject = new PassingObject();
         Runnable runnable = new MyRunnable(passingObject);
         Thread thread1 = new Thread(runnable);
-        Thread thread2 = new Thread(runnable );
+        Thread thread2 = new Thread(runnable);
 
         thread1.start();
         thread2.start();
@@ -28,8 +28,6 @@ public class SharedObjects {
 //        passingObject : memory.model.PassingObject@4c8f3013
 //        Thread-0 : 1954068
 //        Thread-1 : 2000000
-
-
 
 
     }

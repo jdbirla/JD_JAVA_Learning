@@ -3,7 +3,7 @@ package creating.threads;
 /**
  * Created by jd birla on 11-07-2023 at 14:56
  */
-public class ThreadExmaple4 {
+public class ThreadExample4 {
 
 
     public static void main(String[] args) {

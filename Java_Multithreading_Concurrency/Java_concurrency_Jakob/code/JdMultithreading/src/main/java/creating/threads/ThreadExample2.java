@@ -15,6 +15,8 @@ public class ThreadExample2 {
 
 
     public static void main(String[] args) {
+        System.out.println("MyThread is running");
+
         MyThread thread = new MyThread();
         thread.start();
 

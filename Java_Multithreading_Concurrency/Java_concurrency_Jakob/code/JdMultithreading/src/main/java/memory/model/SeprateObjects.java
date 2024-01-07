@@ -15,6 +15,15 @@ public class SeprateObjects {
         thread1.start();
         thread2.start();
 
+        //Before synchronization
+//        myObject : memory.model.MyObject@75e8f4d
+//        myObject : memory.model.MyObject@1e5b17c2
+//        passingObject : memory.model.PassingObject@6c014956
+//        passingObject : memory.model.PassingObject@6c014956
+//        Thread-1 : 1000000
+//        Thread-0 : 1000000
+        //After synchronization
+
 //        myObject : memory.model.MyObject@5d9c386
 //        passingObject : memory.model.PassingObject@591e7753
 //        myObject : memory.model.MyObject@2024773f
