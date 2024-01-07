@@ -7,7 +7,7 @@
           - ex: ProductServiceUsingThread.java
           - problesm, code is very verbose nad runnable not retruing anything so that we need to create class variables
           - hanle to creat threads and 
-  - **threadpool**:  Now threadpool is solution for above issue using executersrvice
+  - threadpool:  Now threadpool is solution for above issue using executersrvice
      - this will take also 1 sec for final result
      - no need to manage thread creation and can leverage future
      - ProductServiceUsingExecutor.java
@@ -18,4 +18,14 @@
               - sequntail() and parallel() : for converting in between for operation form squentail to parallel
               -  modygin default parallelism in parallelstream default is no of cors - 1 but we can update using property
  - Common forkjoin pool : used by ParallelStream and CompetableFuture
-     - 
+ - CompetableFuture and reactive programming : CompletableFutureHelloWorld.java
+     - supplyAsync
+     - thenApply
+     - thenCombine
+     - thenCompose
+     - Productservice using compatablefuture  ProductServiceUsingCompletableFuture.java
+     - Combining stream with competableFuture: ProductServiceUsingCompletableFuture.updateInventoryToProductOption_approach2()
+     - exceptionhandling: CompletableFutureHelloWorldException
+          - handle() :  this gets invoked for both success and failure
+          - exceptionally() : takeing only exception as areguemtn this call only have exception
+          - 
