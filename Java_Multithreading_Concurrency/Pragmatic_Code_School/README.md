@@ -7,5 +7,13 @@
           - ex: ProductServiceUsingThread.java
           - problesm, code is very verbose nad runnable not retruing anything so that we need to create class variables
           - hanle to creat threads and 
-  - **threadpool**: Now threadpool is solution for above issue using executersrvice
-     - 
+  - **threadpool**:  Now threadpool is solution for above issue using executersrvice
+     - this will take also 1 sec for final result
+     - no need to manage thread creation and can leverage future
+     - ProductServiceUsingExecutor.java
+     - blocking call , no bettwr way to combine result and no exceptionhnadling
+  - fork/join framwork : used for data parallelism meainf chunking data nd combijne the result : ForkJoinUsingRecursion.java
+  - ParallelStreamAPI : used fork/join framwork
+              - ParallelStreamsExample.ajva
+              - sequntail() and parallel() : for converting in between for operation form squentail to parallel
+    
