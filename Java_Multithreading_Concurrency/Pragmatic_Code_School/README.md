@@ -6,4 +6,6 @@
       - we can call these service in different threads using runnable and the combine the result as both services ar caaling in different thread will take final result only 1 sec
           - ex: ProductServiceUsingThread.java
           - problesm, code is very verbose nad runnable not retruing anything so that we need to create class variables
-  - 
+          - hanle to creat threads and 
+  - **threadpool**: Now threadpool is solution for above issue using executersrvice
+     - 
