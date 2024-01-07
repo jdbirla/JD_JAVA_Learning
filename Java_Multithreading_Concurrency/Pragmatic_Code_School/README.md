@@ -16,4 +16,6 @@
   - ParallelStreamAPI : used fork/join framwork
               - ParallelStreamsExample.ajva
               - sequntail() and parallel() : for converting in between for operation form squentail to parallel
-    
+              -  modygin default parallelism in parallelstream default is no of cors - 1 but we can update using property
+ - Common forkjoin pool : used by ParallelStream and CompetableFuture
+     - 
