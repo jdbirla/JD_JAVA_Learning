@@ -28,4 +28,4 @@
      - exceptionhandling: CompletableFutureHelloWorldException
           - handle() :  this gets invoked for both success and failure
           - exceptionally() : takeing only exception as areguemtn this call only have exception
-          - 
+          - whenComplete() : It throws the exception to next whencomplete in pipline and go to caller 
