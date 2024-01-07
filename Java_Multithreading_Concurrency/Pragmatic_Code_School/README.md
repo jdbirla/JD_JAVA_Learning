@@ -34,4 +34,7 @@
           ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/4337041b-3f05-4ba3-988b-041c982843fd)
        - each operation for different thread using async
          ![image](https://github.com/jdbirla/JD_JAVA_Learning/assets/69948118/0d215f91-102c-44f2-8515-e3742e0c251a)
-       - 
+     - Improve performance for api blocking call using comptable future wrapper
+         - MoviesClient.ajva
+    - allOf() : get all future and use allof and the apply join on that inside competalblefuture list
+    - anyOf() : anyof will complete any of the competablefuture 
