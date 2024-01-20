@@ -636,6 +636,54 @@ public static Character getNonRepeatedCharacter(String str) {
         List<Employee> empsortbyid = empList.stream().sorted((e1, e2) -> e1.getId().compareTo(e2.getId()))
                 .collect(Collectors.toList());
         System.out.println("Sort by id: " + empsortbyid);
+// Sort the employee based on custom depatment ordering
+package com.jd.inttest.core;
+
+import com.jd.inttest.core.combinator.Customer;
+import org.apache.catalina.Manager;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.time.Instant;
+import java.util.*;
+import java.util.function.BinaryOperator;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+/**
+ * Created by jd birla on 04-05-2023 at 08:07
+ */
+
+
+public class Test {
+    public static void main(String[] args) {
+
+
+        List<EmployeeNew> employees = Arrays.asList(
+                new EmployeeNew("JD", "HR"),
+                new EmployeeNew("Ram", "IT"),
+                new EmployeeNew("Ramesh", "Admin")
+        );
+
+        // Define the desired department order
+        List<String> departmentOrder = Arrays.asList("IT", "HR", "Admin");
+
+        // Sort the employees based on department using a custom comparator
+
+        employees.sort(Comparator.comparing(EmployeeNew::getEmpDaprtName,
+                Comparator.comparingInt(departmentOrder::indexOf)));
+
+        employees.forEach(employee -> System.out.println(employee.getEmpName() + " - " + employee.getEmpDaprtName()));
+
+    }
+
+}
+
+
 
 ```
 ## Group by , grouping by
