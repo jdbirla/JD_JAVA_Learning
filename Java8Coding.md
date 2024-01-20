@@ -453,6 +453,61 @@ for (Object element : charArray) {
 
         System.out.println(collect1);//{code=2, and=1, to=1, decode=2, welcome=2, you=1}
 
+//5. Find first non repeated character in String in java?
+public static Character getNonRepeatedCharacter(String str) {
+		Map<Character, Integer> countCharacters = new LinkedHashMap<Character, Integer>();
+		for (int i = 0; i < str.length() - 1; i++) {
+			Character c = str.charAt(i);
+			if (!countCharacters.containsKey(c)) {
+				countCharacters.put(c, 1);
+			} else {
+				countCharacters.put(c, countCharacters.get(c) + 1);
+			}
+		}
+		// As LinkedHashMap maintains insertion order, first character with
+		// count 1 should return first non repeated character
+		for (Entry<Character, Integer> e : countCharacters.entrySet()) {
+			if (e.getValue() == 1)
+				return e.getKey();
+
+		}
+		return null;
+
+	}
+
+	public static Character getNonRepeatedCharacterJava8(String str) {
+		List<Character> charList = str.chars().mapToObj(c -> (char) c).collect(Collectors.toList());
+
+		return charList.stream().collect(Collectors.groupingBy(c -> c, LinkedHashMap::new, Collectors.counting()))
+				.entrySet().stream().filter(entry -> entry.getValue() == 1).map(Map.Entry::getKey).findFirst()
+				.orElse('\0'); // Default
+
+	}
+//6. Find first repeated character in String in java?
+ public static Character getRepeatingCharacter(String str) {
+	        Map<Character, Integer> countCharacters = new LinkedHashMap<>();
+	        for (int i = 0; i < str.length(); i++) {
+	            Character c = str.charAt(i);
+	            if (!countCharacters.containsKey(c)) {
+	                countCharacters.put(c, 1);
+	            } else {
+	                return c; // Return the first repeating character
+	            }
+	        }
+	        return null; // No repeating character found
+	    }
+
+	    public static Character getRepeatingCharacterJava8(String str) {
+	        List<Character> charList = str.chars().mapToObj(c -> (char) c).collect(Collectors.toList());
+
+	        return charList.stream()
+	                .collect(Collectors.groupingBy(c -> c, LinkedHashMap::new, Collectors.counting()))
+	                .entrySet().stream()
+	                .filter(entry -> entry.getValue() > 1) // Check for count greater than 1 (repeating)
+	                .map(Map.Entry::getKey)
+	                .findFirst()
+	                .orElse(null); // No repeating character found
+	    }
 
 ```
 ## Find duplicate
