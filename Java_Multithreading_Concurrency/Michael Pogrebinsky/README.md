@@ -1,3 +1,22 @@
 # Become an expert in Multithreading, Concurrency & Parallel programming in Java, with strong emphasis on high performance
-- https://dxc.udemy.com/course/java-multithreading-concurrency-performance-optimization/learn/quiz/4475230#overview
-- 
+- https://precisely.udemy.com/course/java-multithreading-concurrency-performance-optimization/learn/lecture/10187964#overview
+![image](https://github.com/user-attachments/assets/88a7b716-1187-4190-a77f-73afd31ba072)
+![image](https://github.com/user-attachments/assets/bd4ea89c-2607-4da8-9f3c-8ca9e2c6079c)
+![image](https://github.com/user-attachments/assets/88452328-1be2-439f-bf8a-52e66e29bab5)
+![image](https://github.com/user-attachments/assets/0a5c58e3-e665-484c-b50b-048ca1874d12)
+![image](https://github.com/user-attachments/assets/35893a40-6fd9-4cfb-a401-f6691d6249f3)
+![image](https://github.com/user-attachments/assets/4a62658b-ea59-4f63-a1b8-80c40ecfb11b)
+![image](https://github.com/user-attachments/assets/3785c07e-6a75-4439-984a-7cfca583c649)
+![image](https://github.com/user-attachments/assets/096ccc03-57d4-4545-9dc3-fe78ec47fe3e)
+![image](https://github.com/user-attachments/assets/792abb16-e6cb-4104-a414-b06674333d65)
+![image](https://github.com/user-attachments/assets/49bc5043-e19c-4903-8cff-a535e0fe8fdc)
+![image](https://github.com/user-attachments/assets/f139ce06-8272-4434-baa5-dcc6911d335f)
+![image](https://github.com/user-attachments/assets/4d932355-a416-409c-8e40-1c3d909149ae)
+![image](https://github.com/user-attachments/assets/167c53cb-cf9d-4918-b0ad-4f7a95f3338a)
+![image](https://github.com/user-attachments/assets/e8a062f1-140f-4d7d-83f8-59786b77eef4)
+![image](https://github.com/user-attachments/assets/b48abbf4-f599-46ee-acc7-a309c1f1cc56)
+![image](https://github.com/user-attachments/assets/82e2d4ea-cd82-402f-b75d-94f89db69ce2)
+![image](https://github.com/user-attachments/assets/60c08aaa-7c83-41f6-8223-1b4efc275d66)
+![image](https://github.com/user-attachments/assets/fb642669-3284-4fce-b477-482c9a1d2785)
+![image](https://github.com/user-attachments/assets/8b6ae2ae-6b4a-4358-bcad-28c2664f33fb)
+![image](https://github.com/user-attachments/assets/40987c6b-baaa-47f6-84aa-998a003801c5)
