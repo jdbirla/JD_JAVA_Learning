@@ -1,5 +1,7 @@
 # Become an expert in Multithreading, Concurrency & Parallel programming in Java, with strong emphasis on high performance
 - https://precisely.udemy.com/course/java-multithreading-concurrency-performance-optimization/learn/lecture/10187964#overview
+
+## OS fundamentals-1
 ![image](https://github.com/user-attachments/assets/88a7b716-1187-4190-a77f-73afd31ba072)
 ![image](https://github.com/user-attachments/assets/bd4ea89c-2607-4da8-9f3c-8ca9e2c6079c)
 ![image](https://github.com/user-attachments/assets/88452328-1be2-439f-bf8a-52e66e29bab5)
@@ -20,3 +22,7 @@
 ![image](https://github.com/user-attachments/assets/fb642669-3284-4fce-b477-482c9a1d2785)
 ![image](https://github.com/user-attachments/assets/8b6ae2ae-6b4a-4358-bcad-28c2664f33fb)
 ![image](https://github.com/user-attachments/assets/40987c6b-baaa-47f6-84aa-998a003801c5)
+![image](https://github.com/user-attachments/assets/eef6b4cd-7757-4797-a185-b7745f1d5dc5)
+
+## OS fundamentals-2
+
