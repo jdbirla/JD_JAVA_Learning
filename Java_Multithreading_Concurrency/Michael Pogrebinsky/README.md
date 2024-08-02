@@ -61,6 +61,16 @@
 ![image](https://github.com/user-attachments/assets/d6c437c2-9f46-481c-a738-10a00527f56b)
 ![image](https://github.com/user-attachments/assets/6d8aaf6d-a47a-4410-a242-6c82a0817442)
 
+### Joining
+![image](https://github.com/user-attachments/assets/a887941c-af22-4561-a273-9c41b502b963)
+![image](https://github.com/user-attachments/assets/38a89420-e422-43f6-bb29-57197dac23e3)
+![image](https://github.com/user-attachments/assets/4ac8192d-aff3-4fe0-b902-dbe0c93ffc9c)
+![image](https://github.com/user-attachments/assets/585b7aef-7ab7-4a1f-a992-17237fe56ffb)
+![image](https://github.com/user-attachments/assets/473322c6-8418-4236-b026-50fcd13466fe)
+![image](https://github.com/user-attachments/assets/6c8056d3-e60c-401f-8f13-7f8a8235b400)
+![image](https://github.com/user-attachments/assets/23fc65a5-3c34-4364-be8c-470be3ace085)
+![image](https://github.com/user-attachments/assets/ee78d1b3-4cf9-4399-b19b-673e78bf03bf)
+![image](https://github.com/user-attachments/assets/79ac1db3-24a0-4726-af51-03e07978390f)
 
 
 
