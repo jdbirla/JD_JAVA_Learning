@@ -166,6 +166,17 @@ Section 1 :  Introduction
 
 
 ## Section 6 : The concurrency chanlleges abd Solutions
+![image](https://github.com/user-attachments/assets/92a00bf5-0536-4a63-96f1-eaf6d0b21788)
+![image](https://github.com/user-attachments/assets/5a266dd9-715a-4858-889e-efc96f8532ef)
+![image](https://github.com/user-attachments/assets/dd8abe16-bd7c-41f0-b21b-6fa17122bc1e)
+![image](https://github.com/user-attachments/assets/5028eb4a-d689-47af-b2be-bf0745a3874c)
+![image](https://github.com/user-attachments/assets/9144294b-22d4-4f07-a9b1-4e493f5696f6)
+![image](https://github.com/user-attachments/assets/3d5477f2-1f1a-4f74-8af6-8362998bc4ca)
+![image](https://github.com/user-attachments/assets/37084949-a55a-4347-8284-0e2d83a1cef0)
+![image](https://github.com/user-attachments/assets/0b853c89-b6c6-4117-b07b-07c4c384ec95)
+![image](https://github.com/user-attachments/assets/b6df15a1-20a0-456f-a64c-137d5b1eaeea)
+![image](https://github.com/user-attachments/assets/147a862d-1d66-41d9-bd38-20942e3b8ea7)
+![image](https://github.com/user-attachments/assets/205af31b-a326-40c6-acc6-a09a32405cc6)
 
 
 
