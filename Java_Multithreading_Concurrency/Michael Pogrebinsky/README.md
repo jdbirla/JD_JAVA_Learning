@@ -390,6 +390,40 @@ Section 1 :  Introduction
 
 
 ## Section 10 : Threading Models for High Performance IO
+### Blocking IO
+
+![image](https://github.com/user-attachments/assets/ee2d4159-5591-4173-954c-534ad9b93933)
+![image](https://github.com/user-attachments/assets/5275d815-bfe3-4419-acbe-3a0a90f4a358)
+![image](https://github.com/user-attachments/assets/a4719f55-4416-479e-b535-bd607030d7e6)
+![image](https://github.com/user-attachments/assets/1563a2ff-907f-4c10-ab1a-6a8df798d07c)
+![image](https://github.com/user-attachments/assets/c6592df1-4bda-4e2a-8f72-d2dfc11e9059)
+![image](https://github.com/user-attachments/assets/20a4991d-408a-4fef-af76-7c9eb07a1781)
+![image](https://github.com/user-attachments/assets/70712ca5-0e88-45c5-a5b0-a099dffc687c)
+![image](https://github.com/user-attachments/assets/2afe7a87-3cfe-4083-bf1d-d1067f8c4fcc)
+![image](https://github.com/user-attachments/assets/307e68c3-5885-42c7-b1f8-762573688d11)
+![image](https://github.com/user-attachments/assets/982c43e0-445e-4956-8902-29589fcbc24f)
+![image](https://github.com/user-attachments/assets/495bbf51-a6a4-4cd4-8f1c-a1ddce61376b)
+![image](https://github.com/user-attachments/assets/d89da45b-2a1f-4dcb-afa0-30938e882b32)
+![image](https://github.com/user-attachments/assets/6beda324-a09e-4b3c-ae35-f6467af75761)
+![image](https://github.com/user-attachments/assets/cc89e681-73a3-47ac-acd6-64a30f19c651)
+![image](https://github.com/user-attachments/assets/0e11bfa4-65ea-4d87-9e54-39a801f6130a)
+![image](https://github.com/user-attachments/assets/a66f533b-655f-4305-887d-38a06f0ce4bb)
+![image](https://github.com/user-attachments/assets/37ab7d7c-9b24-4d54-bfd6-063fa4a3c137)
+![image](https://github.com/user-attachments/assets/14eaf9ad-0ffa-44fe-af3b-17f594fa1cf0)
+![image](https://github.com/user-attachments/assets/d76974d1-fba3-4ebf-a4ee-01cd4c5d889c)
+![image](https://github.com/user-attachments/assets/faf7e421-2fa6-4ead-8ec7-9edb0e32289e)
+![image](https://github.com/user-attachments/assets/d98df297-fa9f-41f6-a89b-49b0a5c508ec)
+![image](https://github.com/user-attachments/assets/9fb91e2d-712c-4a8e-8f3e-871a4a9783bc)
+![image](https://github.com/user-attachments/assets/c98a0a3f-de29-448b-8448-09a2de4b96a4)
+![image](https://github.com/user-attachments/assets/70f983f4-ac0c-4f81-a92c-703be57c6006)
+![image](https://github.com/user-attachments/assets/1a5e9fac-db12-41eb-9d23-648d7a67acd3)
+![image](https://github.com/user-attachments/assets/b0d692bc-22e1-483a-bfae-9d7df1093c29)
+![image](https://github.com/user-attachments/assets/c40461db-22fc-45bf-bf60-15b4acd40bac)
+![image](https://github.com/user-attachments/assets/1afb7ae3-ddb1-49de-8985-fecad576b161)
+![image](https://github.com/user-attachments/assets/86f9fd1d-8d86-44b0-a09b-480b1529e08a)
+![image](https://github.com/user-attachments/assets/efe10270-43ff-484d-bad6-a245e932928d)
+![image](https://github.com/user-attachments/assets/6702fa93-0349-44f0-a404-65c98fd9680f)
+![image](https://github.com/user-attachments/assets/c0046652-0e40-4c1b-89c1-72d2f5605934)
 
 
 
