@@ -376,7 +376,10 @@ Section 1 :  Introduction
 ![image](https://github.com/user-attachments/assets/180d0bf1-0e9e-418c-8221-4dea75d35636)
 ![image](https://github.com/user-attachments/assets/47cb45f5-8b33-4613-8bf2-ee953739d110)
 ![image](https://github.com/user-attachments/assets/f959e3a6-646a-46f0-9add-cb745cdced66)
+![image](https://github.com/user-attachments/assets/dde3b150-3a3b-4c3c-b4b1-2b27a67dfe7e)
+![image](https://github.com/user-attachments/assets/6977ca25-2bea-47c0-9867-a66273e211a5)
 
+### Atomic References
 
 
 
