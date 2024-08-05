@@ -139,6 +139,15 @@ Section 1 :  Introduction
 ![image](https://github.com/user-attachments/assets/554d9757-19ae-4b78-af97-94151b468f82)
 ![image](https://github.com/user-attachments/assets/2a3bf934-c8ba-4e14-82e1-7bec2d5a980c)
 
+### Heap memory
+![image](https://github.com/user-attachments/assets/47f5d269-ab72-4870-9d49-49bfa1fc5288)
+![image](https://github.com/user-attachments/assets/989ee616-6177-46ff-8812-40c20c566bb0)
+![image](https://github.com/user-attachments/assets/84080257-dea7-439b-8108-7fe9d2e5347f)
+![image](https://github.com/user-attachments/assets/38ffa00b-62d4-4fe7-945a-1b3db54c8dc4)
+![image](https://github.com/user-attachments/assets/88ce720d-5b47-47ff-a24b-cebb0a05b2bb)
+![image](https://github.com/user-attachments/assets/46f72eed-563e-41cb-b88f-de08a8896547)
+![image](https://github.com/user-attachments/assets/b81f8bcc-1cec-43c6-863c-3239113c2b07)
+
 
 
 
