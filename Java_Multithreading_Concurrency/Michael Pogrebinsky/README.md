@@ -294,6 +294,8 @@ Section 1 :  Introduction
 ![image](https://github.com/user-attachments/assets/23e6c001-989a-458b-973e-9d8996db8705)
 ![image](https://github.com/user-attachments/assets/f0d51fec-9e81-4959-a7a8-1dadeb60505c)
 
+## Section 8: Inter Thread Communication
+
 
 
 
