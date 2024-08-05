@@ -271,6 +271,25 @@ Section 1 :  Introduction
 ![image](https://github.com/user-attachments/assets/8fbd8d69-8797-41b0-b054-2f4398f1f823)
 ![image](https://github.com/user-attachments/assets/6949e407-d042-4b0b-a1f6-ca338be4f1e2)
 
+### ReentrantLoack
+![image](https://github.com/user-attachments/assets/5b5bd7bc-ceb6-472d-9cbd-171482611793)
+![image](https://github.com/user-attachments/assets/a8543243-b3cc-44b1-9fab-016b93b3d55d)
+![image](https://github.com/user-attachments/assets/6846745a-4e72-4ac9-bba6-9497681bb8c3)
+![image](https://github.com/user-attachments/assets/28c2102a-79ec-473e-8190-df24c53f3d7c)
+![image](https://github.com/user-attachments/assets/ffb2eee5-7976-4772-b47f-b8d5dfcfbc4c)
+
+### ReentrantReadWriteLock
+![image](https://github.com/user-attachments/assets/2cd739c9-478d-4d0f-91da-7b52ff676a10)
+![image](https://github.com/user-attachments/assets/6c4b1c9c-e8b1-4e8f-a549-d6c7cf8a9c0e)
+![image](https://github.com/user-attachments/assets/1dc46c6f-9c06-4490-89db-cce314ef1f18)
+![image](https://github.com/user-attachments/assets/bd1fabd5-75a5-4c4b-b9bd-cf1a2aa607e1)
+![image](https://github.com/user-attachments/assets/7a21228e-5d68-4242-a09a-f9340c7cec96)
+![image](https://github.com/user-attachments/assets/52708ac3-7d97-403f-8be3-4c3977e5d6bf)
+![image](https://github.com/user-attachments/assets/99d1494f-9a21-4de6-9e51-f177136f7b63)
+![image](https://github.com/user-attachments/assets/39d8f694-7010-453f-bde0-3119b9d57189)
+![image](https://github.com/user-attachments/assets/2ebe7461-f4a6-445e-9034-594fc91e505a)
+![image](https://github.com/user-attachments/assets/9bbf9d36-ee3c-4365-8ab1-89eb5214ca31)
+![image](https://github.com/user-attachments/assets/73ec3a49-7c6f-4856-85e6-ecb99e77fc73)
 
 
 
