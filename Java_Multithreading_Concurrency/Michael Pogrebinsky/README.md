@@ -464,6 +464,25 @@ Section 1 :  Introduction
 
 
 ## Section 11 : Virtual Threads and High Performance IO
+### Virtual Thread
+
+![image](https://github.com/user-attachments/assets/a21f8723-6e34-4f6d-be24-d2665c876e4d)
+![image](https://github.com/user-attachments/assets/34e8cec3-4398-4486-a6b8-251bf2f9d094)
+![image](https://github.com/user-attachments/assets/b067a44c-123f-45b9-86ff-b6277541f0e1)
+![image](https://github.com/user-attachments/assets/769117db-79a8-42ae-8c81-b71a6be11e79)
+![image](https://github.com/user-attachments/assets/7c78eafe-8f69-49a9-9ece-5937ec2cd316)
+![image](https://github.com/user-attachments/assets/875c2acc-8c6b-43d8-9975-bae7bd140cea)
+![image](https://github.com/user-attachments/assets/3996a0b8-2ccc-4b18-8108-077cc0b6c9d5)
+![image](https://github.com/user-attachments/assets/dd4624ce-43c2-4952-b493-f5ecc4521ec9)
+![image](https://github.com/user-attachments/assets/1d49061b-7f30-4891-a08b-06f9da29d58d)
+![image](https://github.com/user-attachments/assets/0c1e42f6-ac13-45c1-ac6b-995cf982525d)
+![image](https://github.com/user-attachments/assets/f2535747-f538-4f07-a246-3dfb99370a4b)
+![image](https://github.com/user-attachments/assets/d30c71dc-4eea-41d4-a9ed-f6f9292ccfb3)
+![image](https://github.com/user-attachments/assets/ac5d38e2-d6fc-4b2d-9554-c9d07aba953a)
+![image](https://github.com/user-attachments/assets/e90eba91-7403-4ab6-930a-45b274637e52)
+![image](https://github.com/user-attachments/assets/b9ba48da-552b-4992-9f84-48f5ac3e4b81)
+![image](https://github.com/user-attachments/assets/5e822341-a015-4579-bc73-658dcba0a822)
+![image](https://github.com/user-attachments/assets/c08792f6-92a9-4ce6-a775-dec3c32380b1)
 
 
 
