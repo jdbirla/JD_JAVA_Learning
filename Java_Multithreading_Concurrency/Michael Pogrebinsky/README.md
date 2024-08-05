@@ -187,6 +187,20 @@ Section 1 :  Introduction
 ![image](https://github.com/user-attachments/assets/b7b8ed0e-91cb-4c4c-bf60-0445c81267b3)
 ![image](https://github.com/user-attachments/assets/fc2b6147-639d-46b1-be80-32dcf1f259d8)
 
+### Automic operation, volatile & Matrics practicale ex
+![image](https://github.com/user-attachments/assets/b7a85332-1239-4ced-8dbd-14c099cade4d)
+![image](https://github.com/user-attachments/assets/b432b1a0-1f5c-4753-89b7-29f86a3fe120)
+![image](https://github.com/user-attachments/assets/7179c9e3-cb2a-4806-8926-27e4bfa0af11)
+![image](https://github.com/user-attachments/assets/20f98c91-2078-4034-a280-0cbf20d1546c)
+![image](https://github.com/user-attachments/assets/5a20d620-7a63-4ea8-ad64-2d7eaf3eba4d)
+![image](https://github.com/user-attachments/assets/6aaa7424-3402-40f3-8368-3535ba9d7981)
+![image](https://github.com/user-attachments/assets/3640d5d6-58c6-44bf-8082-a45e7610c83c)
+![image](https://github.com/user-attachments/assets/6e6d05c7-f757-4b60-a1b3-7c9c70f943d0)
+![image](https://github.com/user-attachments/assets/ffe61d67-54ff-484d-876c-9e4449b30d51)
+![image](https://github.com/user-attachments/assets/b65a9ff9-39f1-442b-a38d-4ac49484aab3)
+![image](https://github.com/user-attachments/assets/870c460a-abd8-4704-b336-37dc0d597277)
+![image](https://github.com/user-attachments/assets/82fb98df-7620-46e5-9a50-25b2f4fde1d5)
+![image](https://github.com/user-attachments/assets/12992817-f8c4-4ced-947f-61844fcf0236)
 
 
 
