@@ -1,6 +1,6 @@
 # Become an expert in Multithreading, Concurrency & Parallel programming in Java, with strong emphasis on high performance
 - https://precisely.udemy.com/course/java-multithreading-concurrency-performance-optimization/learn/lecture/10187964#overview
-## Introduction
+Section 1 :  Introduction
 ### OS fundamentals-1
 ![image](https://github.com/user-attachments/assets/88a7b716-1187-4190-a77f-73afd31ba072)
 ![image](https://github.com/user-attachments/assets/bd4ea89c-2607-4da8-9f3c-8ca9e2c6079c)
@@ -42,7 +42,7 @@
 ![image](https://github.com/user-attachments/assets/965a920b-4b12-4460-92b0-081f010e9db3)
 ![image](https://github.com/user-attachments/assets/39a9db81-35ca-46d9-8446-e8bb2471e214)
 
-## Threading Fundamental- Thread Creation
+## Section 2 :  Threading Fundamental- Thread Creation
 ### 
 
 ![image](https://github.com/user-attachments/assets/70daf598-8503-4fe9-b1d6-77ae46cece6d)
@@ -52,7 +52,7 @@
  ![image](https://github.com/user-attachments/assets/416acb9d-e9e1-4ca1-8bad-f3bf64d816a1)
 ![image](https://github.com/user-attachments/assets/d39e830e-796d-466b-96b7-de7c33dd9b75)
 
-## Thread Coordination
+## Section 3 : Thread Coordination
 ![image](https://github.com/user-attachments/assets/0c3a5fda-45d3-47d4-9b71-3985b3191d53)
 ![image](https://github.com/user-attachments/assets/0fbc45c7-33e2-43bc-ac1c-ced764bfaeeb)
 ![image](https://github.com/user-attachments/assets/3462175c-fd7b-4163-823c-abf05c323cc8)
@@ -73,7 +73,7 @@
 ![image](https://github.com/user-attachments/assets/79ac1db3-24a0-4726-af51-03e07978390f)
 
 
-## Performance Optimization
+## Section 4 : Performance Optimization
 
 ![image](https://github.com/user-attachments/assets/19d5e069-346c-4e59-af75-dc7a8683411a)
 ![image](https://github.com/user-attachments/assets/8160dedf-ae50-495f-82c2-0d317f5aaec5)
@@ -128,6 +128,15 @@
 ![image](https://github.com/user-attachments/assets/c5d14aa9-ddc6-4b73-a284-266298baebe3)
 ![image](https://github.com/user-attachments/assets/1cbd5fc1-4fe5-4ede-88a2-db4d3796dd0b)
 ![image](https://github.com/user-attachments/assets/5595bd5f-4407-48bc-9458-7d63347dafb0)
+
+## Section 5 : Data Sharing Threads
+![image](https://github.com/user-attachments/assets/a95edbae-ccbd-43e2-829b-170212809555)
+### Stack Memmory
+![image](https://github.com/user-attachments/assets/4c40ab9d-0897-40ab-8218-d112aeb6ed27)
+![image](https://github.com/user-attachments/assets/45bd937b-fba3-4702-ac6d-edceea4bf36e)
+![image](https://github.com/user-attachments/assets/76663564-a678-4580-adb3-e97d218df116)
+![image](https://github.com/user-attachments/assets/46d57cf9-0579-4afc-aa4f-6568686d1cb9)
+![image](https://github.com/user-attachments/assets/554d9757-19ae-4b78-af97-94151b468f82)
 
 
 
