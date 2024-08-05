@@ -350,6 +350,25 @@ Section 1 :  Introduction
 ![image](https://github.com/user-attachments/assets/276a3d06-22de-4cd8-b2b2-0f73e0241b1d)
 
 
+## Section 9 : Lock-Free Algo, Data-Structures and Techniques
+
+![image](https://github.com/user-attachments/assets/08813169-d43e-4eb2-9bb5-e3ea9578ac9f)
+![image](https://github.com/user-attachments/assets/8817fd01-3568-4b4c-9811-7050703fb78a)
+![image](https://github.com/user-attachments/assets/aef5c390-4c0d-4e87-81b2-9ceaab40859d)
+![image](https://github.com/user-attachments/assets/a691cfc7-e7ed-475c-ac3b-8ec675058fcf)
+![image](https://github.com/user-attachments/assets/56e8b5da-9a51-4c03-881e-ad5d446329e6)
+![image](https://github.com/user-attachments/assets/81183c58-543f-4444-934d-c30dbdce69c2)
+![image](https://github.com/user-attachments/assets/6ad44050-a708-4fa9-93eb-13d24b667832)
+![image](https://github.com/user-attachments/assets/fac28730-d6af-4052-8b90-5a53970ebb68)
+![image](https://github.com/user-attachments/assets/98ce2ab3-020e-414e-8047-b3d26fa7f5aa)
+![image](https://github.com/user-attachments/assets/86dfb244-6d29-4f37-afc4-0d2fea0d342c)
+![image](https://github.com/user-attachments/assets/906b1dca-07a6-4438-91d3-7253400c28c2)
+![image](https://github.com/user-attachments/assets/9874bfa0-b1ce-462a-91f7-f29a2bdbd6f9)
+![image](https://github.com/user-attachments/assets/9b6ad4a3-2eb0-4f9e-a13b-fe69ab072d0b)
+![image](https://github.com/user-attachments/assets/9d4693db-3a40-46c6-8577-c85882f43ab5)
+![image](https://github.com/user-attachments/assets/9f3ebb9b-fe54-4abb-bce1-1ad1d8510128)
+
+
 
 
 
