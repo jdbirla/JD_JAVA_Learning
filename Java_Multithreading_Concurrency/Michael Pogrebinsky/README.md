@@ -224,6 +224,19 @@ Section 1 :  Introduction
 ![image](https://github.com/user-attachments/assets/acb086bd-66a4-442c-a637-acff8eb6db38)
 ![image](https://github.com/user-attachments/assets/5683828e-8318-4017-b7da-18560861c889)
 
+### Locking strategies & Deadloacks
+![image](https://github.com/user-attachments/assets/f4dcb943-7f88-45e4-9353-80beb81f895c)
+![image](https://github.com/user-attachments/assets/219ac42b-79ff-462b-87ac-546bc9e22d96)
+![image](https://github.com/user-attachments/assets/6bbacfa8-87b4-4c05-9b67-8bdd9c91b407)
+![image](https://github.com/user-attachments/assets/a02251cc-f3dc-40e6-a522-5f0d9ca795ce)
+![image](https://github.com/user-attachments/assets/ec7e9d84-2dee-43ff-a036-86a5541782d6)
+![image](https://github.com/user-attachments/assets/09266874-48fa-4a3b-8451-e048987ca7fb)
+![image](https://github.com/user-attachments/assets/168cc373-a0ec-48e8-9a25-0d492111e745)
+![image](https://github.com/user-attachments/assets/ec6d9aa0-295b-4a5e-9b30-7156877cde0a)
+![image](https://github.com/user-attachments/assets/8fae2fd9-2e07-4889-b815-dc024ad97f46)
+![image](https://github.com/user-attachments/assets/41671277-d9df-43b1-9f16-cf098770c3e3)
+![image](https://github.com/user-attachments/assets/186e1118-794b-4b15-a1fb-2b317cab0001)
+
 
 
 
