@@ -148,6 +148,35 @@ Section 1 :  Introduction
 ![image](https://github.com/user-attachments/assets/46f72eed-563e-41cb-b88f-de08a8896547)
 ![image](https://github.com/user-attachments/assets/b81f8bcc-1cec-43c6-863c-3239113c2b07)
 
+### Critical Section
+
+![image](https://github.com/user-attachments/assets/4c6c7096-d98c-4170-9e60-78d41bd4d17f)
+![image](https://github.com/user-attachments/assets/49c6ea14-344b-44d0-9b13-acea02b29d38)
+![image](https://github.com/user-attachments/assets/e21f91e5-f12e-4d20-b6ce-94408af53479)
+![image](https://github.com/user-attachments/assets/9f57460b-248b-4b46-a391-a9e9a3b1e21d)
+![image](https://github.com/user-attachments/assets/c357d40d-191f-4096-aa50-9fe430e4ce36)
+![image](https://github.com/user-attachments/assets/2b62ca7b-49d3-4a5d-aa66-008d2699aa0b)
+![image](https://github.com/user-attachments/assets/405c5a60-6442-48f2-b052-c056960e79ce)
+![image](https://github.com/user-attachments/assets/996160f4-b440-45b1-88d8-c173fd80549f)
+![image](https://github.com/user-attachments/assets/0da26bac-b28f-4b62-ae3f-7d1666cdbd68)
+![image](https://github.com/user-attachments/assets/d4c6b748-7d41-428b-a1eb-5b0433350792)
+![image](https://github.com/user-attachments/assets/3db8ed57-3ab6-4f22-9fb1-f03979296832)
+![image](https://github.com/user-attachments/assets/a0e8376e-a20c-42ea-b72f-8a26775fb904)
+![image](https://github.com/user-attachments/assets/a0422df0-9b76-4828-8640-8ddc8b9dfc93)
+![Uploading image.png…]()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
