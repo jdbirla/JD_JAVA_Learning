@@ -163,9 +163,9 @@ Section 1 :  Introduction
 ![image](https://github.com/user-attachments/assets/3db8ed57-3ab6-4f22-9fb1-f03979296832)
 ![image](https://github.com/user-attachments/assets/a0e8376e-a20c-42ea-b72f-8a26775fb904)
 ![image](https://github.com/user-attachments/assets/a0422df0-9b76-4828-8640-8ddc8b9dfc93)
-![Uploading image.png…]()
 
 
+## Section 6 : The concurrency chanlleges abd Solutions
 
 
 
