@@ -380,6 +380,12 @@ Section 1 :  Introduction
 ![image](https://github.com/user-attachments/assets/6977ca25-2bea-47c0-9867-a66273e211a5)
 
 ### Atomic References
+![image](https://github.com/user-attachments/assets/6e0c27a2-6907-4ec6-807a-e28d215ff759)
+![image](https://github.com/user-attachments/assets/74210bb7-7e45-492c-ae12-3ed11a3db9d8)
+![image](https://github.com/user-attachments/assets/037886f1-6e28-486f-a540-1ebc4848c99e)
+![image](https://github.com/user-attachments/assets/e600fd4f-f89c-45a4-bfda-b2170c29c9d0)
+![image](https://github.com/user-attachments/assets/223449c4-c794-4655-b45d-9dd33cb6289c)
+![image](https://github.com/user-attachments/assets/26e6d93b-b33f-4bfd-b447-6d3aa8ac4e38)
 
 
 
