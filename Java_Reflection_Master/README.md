@@ -117,6 +117,13 @@
 ![image](https://github.com/user-attachments/assets/bbdfea72-3e33-4ab1-882b-6348d4a2e7d2)
 ![image](https://github.com/user-attachments/assets/3125e350-c211-4cc8-afec-8634c72bc013)
 
+## Section 4: Field Modification & Array Creation
+![image](https://github.com/user-attachments/assets/aaa24478-e0e7-4b47-a548-846d0c271dad)
+![image](https://github.com/user-attachments/assets/8437c88d-8b7a-4e01-bac8-69ebd3f57094)
+![image](https://github.com/user-attachments/assets/b960e432-c030-4e17-9c95-e399b149f8d9)
+![image](https://github.com/user-attachments/assets/fea48213-81da-43ce-a518-7c3805f4aa3c)
+![image](https://github.com/user-attachments/assets/92312a85-0e86-481d-b4fc-5677e9586f7a)
+![image](https://github.com/user-attachments/assets/e9426dab-2a00-477e-bea9-1cf26953548a)
 
 
 
