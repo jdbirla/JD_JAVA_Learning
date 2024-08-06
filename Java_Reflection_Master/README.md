@@ -90,8 +90,14 @@
 ![image](https://github.com/user-attachments/assets/2a6d371d-4448-4403-8285-00cdd141fb82)
 
 ## Section 3 : Inspection of Fields & Array
-
-
+### Field
+![image](https://github.com/user-attachments/assets/93c1b89e-e06c-495d-b9cb-e813a534d129)
+![image](https://github.com/user-attachments/assets/8c141112-6a77-4334-8788-5ffe5723274f)
+![image](https://github.com/user-attachments/assets/8f768886-0f79-44e3-86e9-ea308326e2c1)
+![image](https://github.com/user-attachments/assets/ed050bec-7e06-4dca-b0c0-a7f8c4f3017a)
+![image](https://github.com/user-attachments/assets/626067e9-93ff-4f4a-8020-b7fddae25de8)
+![image](https://github.com/user-attachments/assets/c9a57740-bb3f-4443-8781-8b2767e040aa)
+![image](https://github.com/user-attachments/assets/8ab9ada2-cf5b-4865-b5f6-0f1a8365c255)
 
 
 
