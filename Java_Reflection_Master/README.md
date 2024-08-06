@@ -130,6 +130,13 @@
 ![image](https://github.com/user-attachments/assets/d296f738-c42e-43ad-84c6-66a92b1eac38)
 ![image](https://github.com/user-attachments/assets/7643257d-49be-4a8d-b8b7-54094d6cc678)
 
+### Array Creation
+![image](https://github.com/user-attachments/assets/08d234e2-469f-46f8-b263-f3cee805468e)
+![image](https://github.com/user-attachments/assets/a9b708b0-5630-406d-8cff-417de9be3cf6)
+![image](https://github.com/user-attachments/assets/b0167903-be9a-42d6-9391-5182d2c9d4ac)
+![image](https://github.com/user-attachments/assets/ce39f89a-3bfd-4ec7-ba31-7e03793cc3e1)
+![image](https://github.com/user-attachments/assets/b93382cb-81b7-40d1-91e2-64d82a0a2835)
+![image](https://github.com/user-attachments/assets/534ff1b0-bab0-4c25-8fee-aa92f5e6d37f)
 
 
 
