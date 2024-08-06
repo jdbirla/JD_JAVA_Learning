@@ -507,7 +507,21 @@ Section 1 :  Introduction
 ![image](https://github.com/user-attachments/assets/d63c98d9-d22a-4125-b40a-dab95dbd2be9)
 ![image](https://github.com/user-attachments/assets/3950c820-af44-4e82-9fcf-7a9417cc09a6)
 ![image](https://github.com/user-attachments/assets/f32841c8-ac39-4102-bbaf-e2afade326d8)
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/8f15e4e3-1677-4cea-958f-9bd2a76c642d)
+
+### Virtual Thread Best Practices
+![image](https://github.com/user-attachments/assets/fef03631-3702-4a6a-abb3-3bb98bffdf3d)
+![image](https://github.com/user-attachments/assets/932858a5-373f-4a95-9b3a-8f3e08e62e07)
+![image](https://github.com/user-attachments/assets/df4eb351-c4b1-4fa8-b9a2-751eda3e79d4)
+![image](https://github.com/user-attachments/assets/675cfddd-8d50-4aaa-9f43-5869c5f07f3e)
+![image](https://github.com/user-attachments/assets/a579c9d1-0051-4efd-a772-ef51bc4fa0eb)
+![image](https://github.com/user-attachments/assets/ddb7c1ab-6012-4078-aafb-01e83f948c17)
+![image](https://github.com/user-attachments/assets/1293de84-4b83-4c17-9677-8e927092e880)
+![image](https://github.com/user-attachments/assets/5fecb31a-9fad-408e-8318-1353626e74fc)
+![image](https://github.com/user-attachments/assets/8284f3f5-ef94-437e-859e-5eac28cd77d3)
+![image](https://github.com/user-attachments/assets/241fca9a-3474-47cf-b4f2-02131b0f0f59)
+![image](https://github.com/user-attachments/assets/645c358f-02a5-4f39-ae71-2f2edcc1ef4c)
+
 
 
 
