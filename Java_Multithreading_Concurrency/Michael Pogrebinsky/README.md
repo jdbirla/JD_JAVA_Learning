@@ -485,7 +485,27 @@ Section 1 :  Introduction
 ![image](https://github.com/user-attachments/assets/c08792f6-92a9-4ce6-a775-dec3c32380b1)
 ![image](https://github.com/user-attachments/assets/60d6b84c-9c54-4c2a-a4ff-30d90c049dc6)
 
+### Virtual Thread Performance
 
+![image](https://github.com/user-attachments/assets/9877037a-2b9f-4ad2-8f61-6f0a9b85c3f9)
+![image](https://github.com/user-attachments/assets/e1927d5e-a590-4d1f-9cbd-3e5442a4fbab)
+![image](https://github.com/user-attachments/assets/d153fa95-b7c4-4cc3-86f9-6557b523df8b)
+![image](https://github.com/user-attachments/assets/630aa02e-d033-4aff-8ec0-18f13bb069f2)
+![image](https://github.com/user-attachments/assets/9d8828c9-1b05-4b7d-90b6-7f2c78d7dc0f)
+![image](https://github.com/user-attachments/assets/bf57e648-fc09-4b9e-a7e8-6d97525b759b)
+![image](https://github.com/user-attachments/assets/236c68ce-4b7e-46e9-875e-5399007b55d2)
+![image](https://github.com/user-attachments/assets/11accb6e-cc2e-46e5-9e2e-72aecec5f589)
+![image](https://github.com/user-attachments/assets/46e4c7a8-160e-43ef-bf13-43a06950b1ab)
+![image](https://github.com/user-attachments/assets/31bab5c6-893b-4d2b-99ef-b92780e9d954)
+![image](https://github.com/user-attachments/assets/54c30348-a206-40fb-bbfc-a0649fb08dc7)
+![image](https://github.com/user-attachments/assets/c51471eb-1a4d-43e4-84a7-e2aee55a7f45)
+![image](https://github.com/user-attachments/assets/c29f97bf-9579-46f5-9678-6c83aeaae32e)
+![image](https://github.com/user-attachments/assets/8390a123-6fca-4404-9551-e83a5339c475)
+![image](https://github.com/user-attachments/assets/36fa7574-aca4-42f5-89fe-ed99b72bb48a)
+![image](https://github.com/user-attachments/assets/de0841cf-e6f4-432d-b985-f46f98c0e31f)
+![image](https://github.com/user-attachments/assets/60f6b5d1-b04f-4a93-92c5-77b20f0ef5d0)
+![image](https://github.com/user-attachments/assets/d63c98d9-d22a-4125-b40a-dab95dbd2be9)
+![image](https://github.com/user-attachments/assets/3950c820-af44-4e82-9fcf-7a9417cc09a6)
 
 
 
