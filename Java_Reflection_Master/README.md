@@ -113,6 +113,10 @@
 ![image](https://github.com/user-attachments/assets/14bd06e4-0164-44ab-ba48-62d0620153b4)
 ![image](https://github.com/user-attachments/assets/77907bbc-78fd-4c9c-8650-41ad5b25ed91)
 
+### Arrays Serialization
+![image](https://github.com/user-attachments/assets/bbdfea72-3e33-4ab1-882b-6348d4a2e7d2)
+![image](https://github.com/user-attachments/assets/3125e350-c211-4cc8-afec-8634c72bc013)
+
 
 
 
