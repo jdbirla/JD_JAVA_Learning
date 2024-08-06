@@ -48,7 +48,7 @@
 ![image](https://github.com/user-attachments/assets/56911c21-0adc-4e47-8d0f-8555ebd37e26)
 
 
-## Section 2: Object Creation and COnstructors
+## Section 2: Object Creation and Constructors
 ![image](https://github.com/user-attachments/assets/45ae3e9b-a179-4d5d-9521-598a02a0c5f9)
 ![image](https://github.com/user-attachments/assets/3f008586-f247-45d2-a46e-03fdc542eca7)
 ![image](https://github.com/user-attachments/assets/b4a153c1-a0d0-42e8-bda1-7311f3245e40)
@@ -61,6 +61,15 @@
 ![image](https://github.com/user-attachments/assets/ba3c8498-33fb-4175-bf98-41b324c6cad7)
 ![image](https://github.com/user-attachments/assets/08f909fb-15be-4b71-aa6d-b4e545c1855d)
 ![image](https://github.com/user-attachments/assets/74b2dfc2-0397-4768-91f0-02238ec65bed)
+
+### Restricted Constructor Access
+![image](https://github.com/user-attachments/assets/8ef684ca-17e6-4018-8d90-583649e41c05)
+![image](https://github.com/user-attachments/assets/070b0518-bcf2-45b1-a2f5-cde82dd4a91c)
+![image](https://github.com/user-attachments/assets/0e4f6cac-dc2a-4085-a8ed-0d01cc28c9d0)
+![image](https://github.com/user-attachments/assets/188fce4a-9dbf-44aa-8639-d7ffa79fd44e)
+![image](https://github.com/user-attachments/assets/73522ad5-6590-4d23-9688-28ed66c40721)
+![image](https://github.com/user-attachments/assets/147b6e7a-d7c4-40b7-a5b9-6a7630a20fbf)
+
 
 
 
