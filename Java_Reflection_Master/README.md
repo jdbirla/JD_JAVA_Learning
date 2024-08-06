@@ -107,6 +107,12 @@
 ![image](https://github.com/user-attachments/assets/d3649bd3-00af-42a9-b0dc-f6ec2fa8e301)
 ![image](https://github.com/user-attachments/assets/0fccdbaf-55f5-48b1-9b87-c73e65fd37de)
 
+### Arrays
+![image](https://github.com/user-attachments/assets/01951b1c-8538-4366-9670-121898c043fb)
+![image](https://github.com/user-attachments/assets/22597a5f-e9bf-49f6-8ced-debcb8ad15ec)
+![image](https://github.com/user-attachments/assets/14bd06e4-0164-44ab-ba48-62d0620153b4)
+![image](https://github.com/user-attachments/assets/77907bbc-78fd-4c9c-8650-41ad5b25ed91)
+
 
 
 
