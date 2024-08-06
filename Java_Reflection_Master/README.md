@@ -89,6 +89,8 @@
 ![image](https://github.com/user-attachments/assets/1ba1e77f-a60f-47e7-a12b-05b11c0d030f)
 ![image](https://github.com/user-attachments/assets/2a6d371d-4448-4403-8285-00cdd141fb82)
 
+## Section 3 : Inspection of Fields & Array
+
 
 
 
