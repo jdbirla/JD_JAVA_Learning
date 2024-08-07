@@ -179,6 +179,7 @@
 ![image](https://github.com/user-attachments/assets/d08f5c23-00c5-43dc-b944-d3a8f6101585)
 
 
+## Section 6 : Java Modifiers Discovery and Analysis
 
 
 
