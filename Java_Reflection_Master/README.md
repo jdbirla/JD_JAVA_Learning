@@ -140,6 +140,18 @@
 
 ## Section  : Methods Discovery & Invocation
 
+![image](https://github.com/user-attachments/assets/0f27e174-fb9b-408a-90c5-97cc99732f87)
+![image](https://github.com/user-attachments/assets/2277e482-e066-487b-b9d1-f31d1945da93)
+![image](https://github.com/user-attachments/assets/169c9ecc-8f4c-4ba6-8e05-4b2f6ef41c38)
+![image](https://github.com/user-attachments/assets/1c30134f-82a1-4a63-b241-3384ef43df40)
+![image](https://github.com/user-attachments/assets/08ebeb42-2340-4947-837c-3fcb47fbc9ec)
+![image](https://github.com/user-attachments/assets/0ffbbd34-dad7-4202-8e59-ee3b4f53ab5e)
+![image](https://github.com/user-attachments/assets/e75398bb-3553-4058-a76b-53f5272d805f)
+![image](https://github.com/user-attachments/assets/d2b2a40b-88e4-457a-b9f8-83ca61e0312e)
+![image](https://github.com/user-attachments/assets/49b6c324-052e-4ab0-aae2-e266ac016591)
+![image](https://github.com/user-attachments/assets/4d9215d5-374a-4083-829f-b077d2f66427)
+![image](https://github.com/user-attachments/assets/2b206aa1-3540-49b2-988a-3d56b476dc25)
+![image](https://github.com/user-attachments/assets/82a7042b-b578-4f1d-a238-327849924698)
 
 
 
