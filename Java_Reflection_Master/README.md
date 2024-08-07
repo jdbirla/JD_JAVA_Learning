@@ -194,8 +194,32 @@
 ![image](https://github.com/user-attachments/assets/5cd10e7b-caa2-4155-959d-d56e585826ed)
 ![image](https://github.com/user-attachments/assets/ed3a2fcd-3304-40b2-bea7-94917cb554c6)
 
-
-
+## Section 7: Annotations with Java Reflection
+![image](https://github.com/user-attachments/assets/6f2369be-d959-4638-8abc-7a52a7d83eed)
+![image](https://github.com/user-attachments/assets/46c13eaf-9ca8-436c-8fc7-31c3b84b0752)
+![image](https://github.com/user-attachments/assets/05667292-fa8d-4eb0-85d8-82b8af6f1adf)
+![image](https://github.com/user-attachments/assets/df701962-bddd-4e18-9e97-8caa07220ae2)
+![image](https://github.com/user-attachments/assets/e166a3bd-3217-4849-9f4b-2b7ae3b31e2a)
+![image](https://github.com/user-attachments/assets/51de6087-a22e-41f9-9f17-18ff95f2feb5)
+![image](https://github.com/user-attachments/assets/6590fc83-c431-4a01-8773-3b5b4ae010cd)
+![image](https://github.com/user-attachments/assets/87ac935d-e992-4930-abc1-c01abae997f9)
+![image](https://github.com/user-attachments/assets/3d494a56-4484-4f64-af3e-fc4a69f54f0d)
+![image](https://github.com/user-attachments/assets/dc7a9ca3-f44b-4200-9217-ee5714627fd9)
+![image](https://github.com/user-attachments/assets/a8b33c56-4a1c-4575-bd28-7786321d3f57)
+![image](https://github.com/user-attachments/assets/c6a32faf-9baa-49dc-80a3-0129f0f8f891)
+![image](https://github.com/user-attachments/assets/0d5ad896-8ee1-43a2-b148-ab54e3b7b94a)
+![image](https://github.com/user-attachments/assets/470c4f76-4c12-4c69-ba51-1cc2fb2d4702)
+![image](https://github.com/user-attachments/assets/ead29588-9a21-4332-a390-4401cde03e3a)
+![image](https://github.com/user-attachments/assets/d0f9778c-5614-4e70-b20f-65db1cd38e69)
+![image](https://github.com/user-attachments/assets/5712d410-4f71-4f2f-81e7-42153d70a471)
+![image](https://github.com/user-attachments/assets/22f7122d-b8ec-475b-8045-8e9139e08b5b)
+![image](https://github.com/user-attachments/assets/14a352c6-8914-4609-b4d5-18ac6d97a238)
+![image](https://github.com/user-attachments/assets/e49f3786-99de-4b7e-b7ba-a6e4660c6d87)
+![image](https://github.com/user-attachments/assets/92117673-799e-4dbd-872b-7a1ea502f37e)
+![image](https://github.com/user-attachments/assets/f8a51789-a03c-43b1-912b-5e60edb46265)
+![image](https://github.com/user-attachments/assets/81efdeec-6fa3-44aa-aa65-8cc341b5b4ec)
+![image](https://github.com/user-attachments/assets/b3668c38-e6c9-4551-85dc-417b55a525a3)
+![image](https://github.com/user-attachments/assets/fb42f435-db56-452d-9218-a704e4bf69da)
 
 
 
