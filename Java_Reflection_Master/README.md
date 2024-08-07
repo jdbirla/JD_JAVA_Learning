@@ -180,6 +180,17 @@
 
 
 ## Section 6 : Java Modifiers Discovery and Analysis
+![image](https://github.com/user-attachments/assets/d177b092-28a9-4a2d-be7d-fa47729cf0ce)
+![image](https://github.com/user-attachments/assets/0ce0e19a-aa08-4430-b76b-8b37c70b3099)
+![image](https://github.com/user-attachments/assets/793c9c2c-70c8-4a14-b801-f9ec03c0d53d)
+![image](https://github.com/user-attachments/assets/b445b714-3a2e-457d-af5f-4722ca219761)
+![image](https://github.com/user-attachments/assets/d9696539-8df9-4cdb-bb12-105ce4548cd9)
+![image](https://github.com/user-attachments/assets/081730a6-aee7-4b2e-b7e0-2cc2a49f8b9f)
+![image](https://github.com/user-attachments/assets/0e7ce507-b867-48dc-af97-932a4bb26f8e)
+![image](https://github.com/user-attachments/assets/15f263ea-fdcb-4bdb-8dc7-bc7fc5fb2743)
+![image](https://github.com/user-attachments/assets/86a9267c-355e-4268-a0c4-392ac38e3801)
+![image](https://github.com/user-attachments/assets/067a9762-8043-4096-8dce-1a22645a74f3)
+![image](https://github.com/user-attachments/assets/3d249bce-4c24-4b43-9580-fc8874a28960)
 
 
 
