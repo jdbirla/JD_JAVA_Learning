@@ -233,6 +233,12 @@
 ![image](https://github.com/user-attachments/assets/836f7b1f-9613-485a-8a64-8d9917372509)
 ![image](https://github.com/user-attachments/assets/0d5b7082-6aab-48b0-ad69-f1a44d0b7fd1)
 
+### Reading Annoatations & Graph Execution
+![image](https://github.com/user-attachments/assets/aafbe43b-b9d6-4c30-86d0-ce038b51bd5d)
+![image](https://github.com/user-attachments/assets/95678a08-e882-4228-8241-9d267e330bda)
+![image](https://github.com/user-attachments/assets/ba9d076f-91e4-4f97-a9b8-0a1295dae4ae)
+![image](https://github.com/user-attachments/assets/8c9c09be-cf3c-4386-b279-665eaa4de9c2)
+![image](https://github.com/user-attachments/assets/a4eb2a7a-2c5e-4bea-b1df-7134a865d5ed)
 
 
 
