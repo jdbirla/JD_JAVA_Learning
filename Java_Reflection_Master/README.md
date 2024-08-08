@@ -258,6 +258,16 @@
 ![image](https://github.com/user-attachments/assets/dd6e72b3-68e0-4bed-867d-53ec8ded7bf5)
 
 
+### Annotations on Fields
+![image](https://github.com/user-attachments/assets/caea7df6-7486-4b14-b424-880c4c1de216)
+![image](https://github.com/user-attachments/assets/17da6099-1bc8-43a4-9554-a6c8e7700268)
+![image](https://github.com/user-attachments/assets/dd3ffe8a-cb39-4825-a046-84fc9c6f38d8)
+![image](https://github.com/user-attachments/assets/7e5f0d65-93be-497b-bfad-a3e547c4b342)
+![image](https://github.com/user-attachments/assets/0f2038b8-b285-4411-adf6-c2431431f304)
+![image](https://github.com/user-attachments/assets/ae0041bc-6490-46ab-ac00-5ab2aa13f66d)
+![image](https://github.com/user-attachments/assets/1bee9bde-5d98-47c0-979e-7240633a08e3)
+![image](https://github.com/user-attachments/assets/625dff7f-9c5f-4684-b2fe-8075c48928e3)
+![image](https://github.com/user-attachments/assets/f9d1dfba-d3c1-40db-9cf2-cc4c0f39a204)
 
 
 
