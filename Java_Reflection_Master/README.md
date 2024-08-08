@@ -242,7 +242,19 @@
 ![image](https://github.com/user-attachments/assets/23ff0edf-c34c-4e97-a7ba-486c0f6b6df4)
 ![image](https://github.com/user-attachments/assets/16b01cd1-72ed-4742-b171-b48de115e00e)
 
-
+### Parameter Annotation
+![image](https://github.com/user-attachments/assets/d8f96879-5096-438a-8dd5-2cb0376dc376)
+![image](https://github.com/user-attachments/assets/e0abb35b-97a7-482f-805e-064fb3df064c)
+![image](https://github.com/user-attachments/assets/1426c77b-a34f-4855-8bed-38bfb88ae509)
+![image](https://github.com/user-attachments/assets/a990864e-a1ec-4215-b76f-f193f426e460)
+![image](https://github.com/user-attachments/assets/5013528d-2053-417e-af7f-c691375287b5)
+![image](https://github.com/user-attachments/assets/4ee93e0f-1356-4ccc-a728-e41018a4a674)
+![image](https://github.com/user-attachments/assets/69a1accd-619d-49b7-8322-65b2d33baabd)
+![image](https://github.com/user-attachments/assets/252fbb76-a656-4ae1-92ad-6771c8412ba3)
+![image](https://github.com/user-attachments/assets/cadd48b2-cb17-49b9-ad35-56232509da63)
+![image](https://github.com/user-attachments/assets/0a36e9c3-7436-44fa-bcb2-604baa03b62c)
+![image](https://github.com/user-attachments/assets/50c2b294-6359-42fe-84dc-c94ff13348ce)
+![image](https://github.com/user-attachments/assets/14324785-98c9-47c9-8371-78fe6ff4a456)
 
 
 
