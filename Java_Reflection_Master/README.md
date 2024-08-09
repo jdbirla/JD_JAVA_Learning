@@ -294,41 +294,24 @@
 ## Section 8: Dynamic Proxies
 
 ![image](https://github.com/user-attachments/assets/a68df3c2-43f3-417f-a181-5f24cabedbc6)
-
 ![image](https://github.com/user-attachments/assets/3a1b739c-0ed6-4d90-97b0-2e63e34d318b)
-
 ![image](https://github.com/user-attachments/assets/a8aa0202-4c22-40ec-967f-cbbc839bb190)
-
 ![image](https://github.com/user-attachments/assets/a70c2282-565f-4bf9-9645-a93fd5a058c4)
-
 ![image](https://github.com/user-attachments/assets/3133a076-6b30-4241-aaa5-34b6a5521599)
-
 ![image](https://github.com/user-attachments/assets/9da96146-1cc5-4a9c-b556-32b4feccb795)
-
 ![image](https://github.com/user-attachments/assets/ad4e56e4-1a5f-4651-bf9c-76abd99cafe5)
-
 ![image](https://github.com/user-attachments/assets/41dff422-6659-4eab-9894-18e535bcc2b6)
 ![image](https://github.com/user-attachments/assets/bc30b99f-b615-4d54-880f-44d33454d279)
 ![image](https://github.com/user-attachments/assets/da8e1fa8-9e44-4fd3-a4bc-aafe07773c15)
 ![image](https://github.com/user-attachments/assets/c0f24a73-247d-4c87-a6cc-d3fddb00dfc4)
-
 ![image](https://github.com/user-attachments/assets/28663795-4d9a-4a97-9727-bf42e9bb7a7d)
-
 ![image](https://github.com/user-attachments/assets/a7af37a9-c1dd-4f03-ba18-a45dc79c743e)
-
 ![image](https://github.com/user-attachments/assets/d2684e95-a48f-469e-9e0a-2158467ab4ae)
-
 ![image](https://github.com/user-attachments/assets/83797f56-2080-43d0-a896-cda1a025b3cb)
-
-
 ![image](https://github.com/user-attachments/assets/d5233c1d-4a6e-4356-8208-7600c2038715)
-
 ![image](https://github.com/user-attachments/assets/b741924b-9c2e-4e9a-8f77-0d7a4a3fb69d)
-
 ![image](https://github.com/user-attachments/assets/a31f705c-cd26-4ed4-804c-f46b2e9530a7)
-
 ![image](https://github.com/user-attachments/assets/2b9727bb-2158-4b22-b256-56caab34719b)
-
 ![image](https://github.com/user-attachments/assets/2e2d76c6-cd24-494e-8217-9d1455db822d)
 ![image](https://github.com/user-attachments/assets/b7a7c0a3-00e9-4130-a308-e3a916d692ac)
 ![image](https://github.com/user-attachments/assets/4355b51b-c2b1-48de-8176-442261609a42)
@@ -341,20 +324,15 @@
 ![image](https://github.com/user-attachments/assets/39442a17-0eb6-4888-b376-a3a5758df30c)
 ![image](https://github.com/user-attachments/assets/3c03434f-8105-4542-8610-2459a0c92a17)
 ![image](https://github.com/user-attachments/assets/42e80c67-74d7-4e95-87f4-fa993723f7c4)
-
 ![image](https://github.com/user-attachments/assets/ffaa27b7-8283-43c2-8cc6-78c6e72b2428)
-
 ![image](https://github.com/user-attachments/assets/372a972d-990a-4c2d-a5e4-6c3a0471edd6)
-
 ![image](https://github.com/user-attachments/assets/b165a310-048c-476c-8c9c-419b3e6c2edb)
-
 ![image](https://github.com/user-attachments/assets/0b63a45b-5ef3-405a-8a10-13aef492fdc5)
-
 ![image](https://github.com/user-attachments/assets/59197663-e556-4e34-887d-816229dd5a18)
-
 ![image](https://github.com/user-attachments/assets/3200ad86-48aa-409f-bdf3-efa6af125f92)
 ![image](https://github.com/user-attachments/assets/fa7932b5-6626-4947-8b96-292b1b0b84f0)
 ![image](https://github.com/user-attachments/assets/85cbb921-e807-4485-ab14-58353a1b1452)
+![image](https://github.com/user-attachments/assets/69aff3ea-1cb3-4742-9fbe-e13db9e7ea12)
 
 
 
