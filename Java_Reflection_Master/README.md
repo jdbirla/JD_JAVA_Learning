@@ -271,10 +271,24 @@
 ![image](https://github.com/user-attachments/assets/78ea40d6-25d6-4651-ae32-6328fb87771a)
 
 
+### Repeatable Annotation: Automic scheduling
 
-
-
-
+![image](https://github.com/user-attachments/assets/6b739a4f-34e8-47e1-aec9-60e8c1a1e951)
+![image](https://github.com/user-attachments/assets/110946b8-89dc-4a79-a475-488b4a9ffbd2)
+![image](https://github.com/user-attachments/assets/3c72f28e-6484-4cdc-b563-29b49ed3ff29)
+![image](https://github.com/user-attachments/assets/0753396d-3cf0-4a83-a928-4d629245343d)
+![image](https://github.com/user-attachments/assets/998c1544-099c-4459-af46-4ce5ef1ee573)
+![image](https://github.com/user-attachments/assets/b935f94f-e494-4e24-97ed-1a0ca30f49ba)
+![image](https://github.com/user-attachments/assets/085b69d5-3432-48d9-a3a5-2e615e3ffa6c)
+![image](https://github.com/user-attachments/assets/f31e41e3-904e-4a85-aa0c-ab6e92142ae2)
+![image](https://github.com/user-attachments/assets/9782bd47-014f-4433-8a10-922b68e72a04)
+![image](https://github.com/user-attachments/assets/df5f2805-1bd5-446b-88e1-0f65888e97b9)
+![image](https://github.com/user-attachments/assets/3707b3a1-5c64-4c81-a6cc-1c18f9551f74)
+![image](https://github.com/user-attachments/assets/4c0595ba-d030-4e75-a54d-2b5b9f5fa022)
+![image](https://github.com/user-attachments/assets/f6f34d79-54d8-4464-a2c0-dc0476c4db1c)
+![image](https://github.com/user-attachments/assets/054193cb-af7b-4f77-a61f-454c1c5e11f0)
+![image](https://github.com/user-attachments/assets/0c833092-e1c5-4f3a-a8f3-ff7e10c79880)
+![image](https://github.com/user-attachments/assets/6f747d54-5f6c-4c37-9fd6-0f0412413576)
 
 
 
