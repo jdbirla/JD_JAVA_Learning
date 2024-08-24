@@ -54,3 +54,36 @@
 ![image](https://github.com/user-attachments/assets/0ecbf0f7-1bd6-41a7-be58-d86788d93c32)
 ![image](https://github.com/user-attachments/assets/ebbb7309-8203-4d35-bd95-ece81a17199c)
 ![image](https://github.com/user-attachments/assets/844295f6-9a39-4c58-bf72-6390eb2cfb58)
+
+
+---
+# Sandeep Khaira
+- https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=sandeepkhaira
+- https://coachsandeepkhaira.com/mistake/?gad_source=2&gclid=Cj0KCQjww5u2BhDeARIsALBuLnMBYZgDA5sMYw_MSQ2W0qKnN-4pbTdlDBudIxMsWaGHiBBDHv7Ap1gaAlRAEALw_wcB
+![image](https://github.com/user-attachments/assets/9f90ddd5-8c49-4ea5-a2a5-111ab1eca2f9)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
