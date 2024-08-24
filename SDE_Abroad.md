@@ -61,6 +61,11 @@
 - https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=sandeepkhaira
 - https://coachsandeepkhaira.com/mistake/?gad_source=2&gclid=Cj0KCQjww5u2BhDeARIsALBuLnMBYZgDA5sMYw_MSQ2W0qKnN-4pbTdlDBudIxMsWaGHiBBDHv7Ap1gaAlRAEALw_wcB
 ![image](https://github.com/user-attachments/assets/9f90ddd5-8c49-4ea5-a2a5-111ab1eca2f9)
+![image](https://github.com/user-attachments/assets/5f78bdde-c143-4824-975d-750e50065685)
+![image](https://github.com/user-attachments/assets/0fba120e-49e1-4758-bf7f-ff1ebb661b1c)
+![image](https://github.com/user-attachments/assets/4c7fdfa4-ab73-407d-9675-667ace8e4c65)
+![image](https://github.com/user-attachments/assets/a1930f57-31b7-48c2-9d2b-bc91cef102cb)
+![image](https://github.com/user-attachments/assets/cabb3e89-0586-4724-870e-857a069449b2)
 
 
 
