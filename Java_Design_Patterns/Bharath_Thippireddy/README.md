@@ -1,39 +1,63 @@
 # Java Design Patterns By Bharath
 
+# Pattern catalog
+## GOF Pattern Catalog
+![image](https://user-images.githubusercontent.com/69948118/172313772-21bf1902-2c87-4faa-89a5-7aa5fa772a1e.png)
 
-- [Java Design Patterns By Bharath](#java-design-patterns-by-bharath)
-    - [Singleton](#singleton)
-  - [Factory Pattern](#factory-pattern)
-  - [Abstract Factory Pattern](#abstract-factory-pattern)
-    - [Prototype Pattern](#prototype-pattern)
-    - [Builder Pattern](#builder-pattern)
-  - [Adapter Pattern](#adapter-pattern)
-  - [Flyweight Pattern](#flyweight-pattern)
-  - [Decorator Pattern](#decorator-pattern)
-    - [Proxy Pattern](#proxy-pattern)
-    - [Facade Pattern](#facade-pattern)
-    - [Composite Pattern](#composite-pattern)
-    - [Bridge Pattern](#bridge-pattern)
-  - [Template Pattern](#template-pattern)
-  - [Command Pattern](#command-pattern)
-  - [- UML](#--uml)
-    - [Iterator Pattern](#iterator-pattern)
-    - [Observer Pattern](#observer-pattern)
-    - [Strategy Pattern Overview](#strategy-pattern-overview)
-    - [Factory Pattern vs Strategy Pattern](#factory-pattern-vs-strategy-pattern)
-  - [JEE Patterns](#jee-patterns)
-  - [Inversion of Control Pattern](#inversion-of-control-pattern)
-  - [Java EE Basics](#java-ee-basics)
-  - [Presentation Tier - Patterns](#presentation-tier---patterns)
-    - [Intercepting Filter](#intercepting-filter)
-    - [Front Conroller](#front-conroller)
-    - [Mini Project](#mini-project)
-    - [Ajay-design-pattern](#ajay-design-pattern)
-  - [spring-design-pattern](#spring-design-pattern)
-    - [Tell me the Design pattern used inside the spring framework.](#tell-me-the-design-pattern-used-inside-the-spring-framework)
-    - [How do factory design patterns work in terms of the spring framework?](#how-do-factory-design-patterns-work-in-terms-of-the-spring-framework)
-    - [How the proxy design pattern is used in spring?](#how-the-proxy-design-pattern-is-used-in-spring)
-    - 
+### [1.Creational Design Pattern](#creational-design-pattern)
+- [Factory Pattern](#factory-pattern)
+- [Abstract Factory Pattern](#abstract-factory-pattern)
+- [Singleton Pattern](#singleton)
+- [Prototype Pattern](#prototype-pattern)
+- [Builder Pattern](#builder-pattern)
+
+### [2.Structural Design Pattern](#structural-design-pattern)
+- [Adapter Pattern](#adapter-pattern)
+- [Bridge Pattern](#bridge-pattern)
+- [Composite Pattern](#composite-pattern)
+- [Decorator Pattern](#decorator-pattern)
+- [Facade Pattern](#facade-pattern)
+- [Flyweight Pattern](#flyweight-pattern)
+- [Proxy Pattern](#proxy-pattern)
+
+### [3. Behavioral Design Pattern](#behavioral-design-pattern)
+- [Chain Of Responsibility Pattern](#chain-of-responsibility-pattern)
+- [Command Pattern](#command-pattern)
+- [Interpreter Pattern](#interpreter-pattern)
+- [Iterator Pattern](#iterator-pattern)
+- [Mediator Pattern](#mediator-pattern)
+- [Memento Pattern](#memento-pattern)
+- [Observer Pattern](#observer-pattern)
+- [State Pattern](#state-pattern)
+- [Strategy Pattern](#strategy-pattern)
+- [Template Pattern](#template-pattern)
+- [Visitor Pattern](#visitor-pattern)
+
+## [JEE Pattern](#jee-pattern)
+### 1.Presentation Layer
+- [Intercepting filter](#intercepting-filter)
+- [Front Controller](#front-conroller)
+- MVC
+- Context Object
+### 2. Business Layer
+- Business Delegate
+- Transfer Object
+- Session Facade
+- Service Locator
+### 3. Data Access Layer
+- Data Access Object
+### 4. Integration Layer
+- Service Activator
+- Web Service Broker
+
+### 5. [Inversion of Control Pattern(IOC)](#inversion-of-control-pattern)
+
+### 6. [Mini Project](#mini-project)
+
+### 7. [Ajay-design-pattern](#ajay-design-pattern)
+
+### 8. [spring-design-pattern](#spring-design-pattern)
+---
 ---
 
 <h2 id="creational-design-pattern">1.Creational Design Pattern</h2>
