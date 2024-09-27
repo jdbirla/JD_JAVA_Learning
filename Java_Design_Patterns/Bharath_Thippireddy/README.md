@@ -1130,7 +1130,259 @@ public class ObserverPatternTest {
 }
 ```
 
+### Strategy Pattern Overview
 
+- The **Strategy Pattern** is a behavioral design pattern that defines a family of algorithms, encapsulates each one, and makes them interchangeable. The strategy pattern lets the algorithm vary independently from the clients that use it. This pattern is particularly useful when you have multiple ways to perform an action and you want to switch between them dynamically at runtime.
+
+#### Key Components of Strategy Pattern:
+
+1. **Strategy Interface**: An interface that declares the common method that different algorithms (strategies) will implement.
+2. **Concrete Strategies**: Different implementations of the strategy interface.
+3. **Context**: The class that uses a `Strategy` to call the algorithm. It holds a reference to a `Strategy` object and delegates the work to the strategy.
+
+#### Benefits:
+- **Open/Closed Principle**: The strategy pattern allows the class behavior to be changed without modifying the class itself.
+- **Dynamic Behavior**: Algorithms can be changed dynamically at runtime.
+
+#### Implementation in Java
+
+Here’s an example where the strategy pattern is implemented for a payment system, where different payment methods (e.g., CreditCard, PayPal) are strategies.
+
+##### Step-by-Step Implementation
+
+1. **Strategy Interface:**
+
+```java
+public interface PaymentStrategy {
+    void pay(double amount);
+}
+```
+
+2. **Concrete Strategies:**
+
+```java
+// Credit Card payment strategy
+public class CreditCardStrategy implements PaymentStrategy {
+    private String cardNumber;
+    private String cardHolder;
+
+    public CreditCardStrategy(String cardNumber, String cardHolder) {
+        this.cardNumber = cardNumber;
+        this.cardHolder = cardHolder;
+    }
+
+    @Override
+    public void pay(double amount) {
+        System.out.println("Paid " + amount + " using Credit Card: " + cardNumber);
+    }
+}
+
+// PayPal payment strategy
+public class PayPalStrategy implements PaymentStrategy {
+    private String email;
+
+    public PayPalStrategy(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public void pay(double amount) {
+        System.out.println("Paid " + amount + " using PayPal with email: " + email);
+    }
+}
+```
+
+3. **Context Class:**
+
+```java
+public class PaymentContext {
+    private PaymentStrategy paymentStrategy;
+
+    // Set the strategy at runtime
+    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
+        this.paymentStrategy = paymentStrategy;
+    }
+
+    // Call the strategy to execute payment
+    public void executePayment(double amount) {
+        if (paymentStrategy != null) {
+            paymentStrategy.pay(amount);
+        } else {
+            System.out.println("No payment strategy selected!");
+        }
+    }
+}
+```
+
+4. **Client Code:**
+
+```java
+public class StrategyPatternDemo {
+    public static void main(String[] args) {
+        PaymentContext paymentContext = new PaymentContext();
+
+        // Pay using Credit Card
+        paymentContext.setPaymentStrategy(new CreditCardStrategy("1234-5678-9876-5432", "John Doe"));
+        paymentContext.executePayment(100.00);
+
+        // Pay using PayPal
+        paymentContext.setPaymentStrategy(new PayPalStrategy("john@example.com"));
+        paymentContext.executePayment(200.00);
+    }
+}
+```
+
+#### Output:
+```
+Paid 100.0 using Credit Card: 1234-5678-9876-5432
+Paid 200.0 using PayPal with email: john@example.com
+```
+
+#### Conclusion:
+The **Strategy Pattern** allows you to define different algorithms and choose them at runtime, and you can use this approach to dynamically select different behaviors in your application. Using **`CompletableFuture`**, we can make the strategy execution asynchronous in Java, simulating an `async/await`-like flow.
+
+### Factory Pattern vs Strategy Pattern
+Yes, the **Strategy Pattern** and the **Factory Pattern** can seem similar because both deal with object creation and behavior. However, there are important differences between the two patterns in terms of purpose, structure, and when to use them.
+
+#### 1. **Purpose**:
+
+- **Strategy Pattern**: 
+  - Focuses on defining a family of algorithms or behaviors that can be swapped at runtime based on the specific needs of the client.
+  - It's about enabling the client to choose **how** something gets done (i.e., different strategies to solve a problem).
+  
+- **Factory Pattern**:
+  - Concerned with object creation. The factory pattern hides the creation logic and allows the client to request objects without knowing the exact instantiation details.
+  - It's about creating **what** the client needs (i.e., different types of objects).
+
+#### 2. **When to Use**:
+
+- **Strategy Pattern**:
+  - Use when you need to dynamically choose between different algorithms or behaviors at runtime.
+  - Use when a class has multiple behaviors, and these behaviors should be interchangeable without modifying the class itself.
+  
+- **Factory Pattern**:
+  - Use when object creation involves complex logic, and you want to centralize and encapsulate the logic of creating instances.
+  - Use when the specific type of object created may vary based on some input, configuration, or condition, and you want to hide the instantiation process.
+
+#### 3. **Structure**:
+
+##### **Strategy Pattern** Structure:
+- **Strategy Interface**: Defines the common method for all strategies.
+- **Concrete Strategies**: Implementations of different strategies.
+- **Context**: Holds a reference to a strategy and delegates the work to the current strategy.
+
+##### **Factory Pattern** Structure:
+- **Factory Interface (optional)**: May define methods for creating objects.
+- **Concrete Factories**: Responsible for creating specific objects.
+- **Products**: The objects being created by the factory.
+
+#### Key Differences:
+
+| Feature                  | Strategy Pattern                                                | Factory Pattern                                                |
+|--------------------------|-----------------------------------------------------------------|----------------------------------------------------------------|
+| **Primary Focus**         | Selecting and using different algorithms or behaviors.          | Creating objects (hides the instantiation details).             |
+| **Client Interaction**    | The client decides which strategy to use and can change it.     | The client asks the factory for an object without knowing its creation process. |
+| **Object Creation**       | The focus is not on creating objects but on encapsulating behavior. | The factory is explicitly responsible for creating objects.     |
+| **Behavior vs Creation**  | Strategy deals with varying **behavior** at runtime.            | Factory deals with varying **object creation** based on conditions. |
+| **Change Flexibility**    | Strategies can be swapped dynamically during runtime.           | The factory is used to create objects, but once created, the behavior is fixed. |
+| **Design Goal**           | To provide flexibility to swap out algorithms or behavior.      | To encapsulate and centralize object creation logic.            |
+
+#### Example for Strategy Pattern (Behavioral Focus):
+
+Imagine you have a payment system, and the client needs to dynamically choose how they want to pay (CreditCard, PayPal, etc.).
+
+```java
+public interface PaymentStrategy {
+    void pay(double amount);
+}
+
+public class CreditCardStrategy implements PaymentStrategy {
+    public void pay(double amount) {
+        System.out.println("Paying with credit card.");
+    }
+}
+
+public class PayPalStrategy implements PaymentStrategy {
+    public void pay(double amount) {
+        System.out.println("Paying with PayPal.");
+    }
+}
+
+public class PaymentContext {
+    private PaymentStrategy strategy;
+    
+    public void setPaymentStrategy(PaymentStrategy strategy) {
+        this.strategy = strategy;
+    }
+    
+    public void processPayment(double amount) {
+        strategy.pay(amount);
+    }
+}
+
+// Client code
+PaymentContext context = new PaymentContext();
+context.setPaymentStrategy(new CreditCardStrategy());
+context.processPayment(100.0);
+```
+
+#### Example for Factory Pattern (Creation Focus):
+
+Imagine you have a system where you need to create different types of users (Admin, Customer, Guest).
+
+```java
+public interface User {
+    void getRole();
+}
+
+public class AdminUser implements User {
+    public void getRole() {
+        System.out.println("Admin role.");
+    }
+}
+
+public class CustomerUser implements User {
+    public void getRole() {
+        System.out.println("Customer role.");
+    }
+}
+
+public class UserFactory {
+    public User createUser(String type) {
+        switch (type) {
+            case "Admin":
+                return new AdminUser();
+            case "Customer":
+                return new CustomerUser();
+            default:
+                throw new IllegalArgumentException("Unknown user type");
+        }
+    }
+}
+
+// Client code
+UserFactory factory = new UserFactory();
+User admin = factory.createUser("Admin");
+admin.getRole();
+```
+
+#### Use Cases: When to Use Strategy vs Factory
+
+##### Use **Strategy Pattern** When:
+- You have multiple ways to perform an operation or algorithm (e.g., sorting algorithms, payment methods).
+- You want to allow the client to choose the algorithm or behavior dynamically.
+- You have classes that need to be open to behavior extension (new strategies) but closed to modification.
+
+##### Use **Factory Pattern** When:
+- Object creation logic is complex or may involve various steps that you want to encapsulate.
+- You need to return different types of objects depending on the input.
+- The exact type of object to create is determined at runtime.
+
+#### Conclusion:
+- **Strategy Pattern** focuses on choosing an algorithm or behavior, and allows for flexibility in selecting or changing behaviors at runtime.
+- **Factory Pattern** focuses on creating objects and abstracts the instantiation process to handle complexity or variety in object creation.
+
+If you're dealing with varying **behavior or algorithms**, the **Strategy Pattern** is the right choice. If you're dealing with the complexity of **object creation** or creating objects based on conditions, the **Factory Pattern** is more suitable.
 
 ---
 ## JEE Patterns
