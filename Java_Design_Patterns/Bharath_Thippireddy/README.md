@@ -28,7 +28,7 @@
 - [Mediator Pattern](#mediator-pattern)
 - [Memento Pattern](#memento-pattern)
 - [Observer Pattern](#observer-pattern)
-- [State Pattern](#state-pattern)
+- [Strategy Pattern Overview](#strategy-pattern-overview)
 - [Strategy Pattern](#strategy-pattern)
 - [Template Pattern](#template-pattern)
 - [Visitor Pattern](#visitor-pattern)
