@@ -130,3 +130,32 @@ obj.run();
 Output: Bike is running safely
 ```
 
+3. Static method hiding
+```java
+class Parent {
+    // Static method in the parent class
+    static void display() {
+        System.out.println("Static method in Parent class");
+    }
+}
+
+class Child extends Parent {
+    // Static method in the child class (hiding the parent method)
+    static void display() {
+        System.out.println("Static method in Child class");
+    }
+}
+
+public class MethodHidingExample {
+    public static void main(String[] args) {
+        Parent obj1 = new Parent();
+        Parent obj2 = new Child();
+        Child obj3 = new Child();
+
+        obj1.display(); // Calls Parent's display method
+        obj2.display(); // Calls Parent's display method (reference type determines the method)
+        obj3.display(); // Calls Child's display method
+    }
+}
+
+```
